@@ -1,0 +1,4 @@
+Windows Azure Storage SDK For PHP 0.1.0
+-------------------------------------------
+- Initial checkin
+	
