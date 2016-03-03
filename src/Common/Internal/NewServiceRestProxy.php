@@ -377,7 +377,7 @@ class NewServiceRestProxy extends RestProxy
      */
     public function generateMetadataHeaders($metadata)
     {
-        $metadataHeaders = array();
+    	$metadataHeaders = array();
         
         if (is_array($metadata) && !is_null($metadata)) {
             foreach ($metadata as $key => $value) {
@@ -388,7 +388,9 @@ class NewServiceRestProxy extends RestProxy
                     throw new \InvalidArgumentException(Resources::INVALID_META_MSG);
                 }
                 
-                $headerName                  .= strtolower($key);
+                // $headerName                  .= strtolower($key);
+                // FIXME: Metadata name is case-presrved and case insensitive
+                $headerName					 .= $key;
                 $metadataHeaders[$headerName] = $value;
             }
         }
@@ -413,12 +415,17 @@ class NewServiceRestProxy extends RestProxy
             );
             
             if ($isMetadataHeader) {
-                $MetadataName = str_replace(
+            	// FIXME: Metadata name is case-presrved and case insensitive
+//                 $MetadataName = str_replace(
+//                     Resources::X_MS_META_HEADER_PREFIX,
+//                     Resources::EMPTY_STRING,
+//                     strtolower($key)
+//                 );
+                $MetadataName = str_ireplace(
                     Resources::X_MS_META_HEADER_PREFIX,
                     Resources::EMPTY_STRING,
-                    strtolower($key)
+                    $key
                 );
-                
                 $metadata[$MetadataName] = $value;
             }
         }
