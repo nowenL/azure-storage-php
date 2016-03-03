@@ -61,13 +61,13 @@ class TableRestProxyTest extends TableServiceRestProxyTestBase
     public function test__construct()
     {
         // Setup
-        $channel = new HttpClient();
+        // $channel = new HttpClient();
         $atomSerializer = new AtomReaderWriter();
         $mimeSerializer = new MimeReaderWriter();
         $url = 'http://www.microsoft.com';
         
         // Test
-        $tableRestProxy = new TableRestProxy($channel, $url, $atomSerializer, $mimeSerializer, null);
+        $tableRestProxy = new TableRestProxy($url, $atomSerializer, $mimeSerializer, null);
         
         // Assert
         $this->assertNotNull($tableRestProxy);
