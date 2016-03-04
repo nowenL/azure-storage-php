@@ -8,9 +8,7 @@
          verbose="true">
   <testsuites>
     <testsuite name="azure-sdk-for-php">
-      <directory suffix="Test.php">tests/unit/WindowsAzure/Blob</directory>
-	  <directory suffix="Test.php">tests/unit/WindowsAzure/Queue</directory>
-	  <directory suffix="Test.php">tests/unit/WindowsAzure/Table</directory>
+      <directory suffix="Test.php">tests/unit</directory>
     </testsuite>
   </testsuites>
 
@@ -24,9 +22,9 @@
 
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">WindowsAzure</directory>
+      <directory suffix=".php">src</directory>
       <exclude>
-        <file>WindowsAzure/WindowsAzure.php</file>
+        <file>src/WindowsAzure.php</file>
       </exclude>
     </whitelist>
   </filter>
