@@ -29,7 +29,6 @@ use Tests\Framework\TestResources;
 use Tests\Framework\VirtualFileSystem;
 use WindowsAzure\Common\Models\ServiceProperties;
 use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
-use WindowsAzure\MediaServices\Models\Asset;
 
 
 /**
@@ -535,41 +534,41 @@ class UtilitiesTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $actual);
     }
 
-    /**
-     * @covers WindowsAzure\Common\Internal\Utilities::getEntityId
-     */
-    public function testGetEntityIdWithString(){
+//     /**
+//      * @covers WindowsAzure\Common\Internal\Utilities::getEntityId
+//      */
+//     public function testGetEntityIdWithString(){
 
-        // Setup
-        $id = 'kjgdfg57';
+//         // Setup
+//         $id = 'kjgdfg57';
 
-        // Test
-        $result = Utilities::GetEntityId($id, 'WindowsAzure\MediaServices\Models\Asset');
+//         // Test
+//         $result = Utilities::GetEntityId($id, 'WindowsAzure\MediaServices\Models\Asset');
 
-        //Assert
-        $this->assertEquals($id, $result);
-    }
+//         //Assert
+//         $this->assertEquals($id, $result);
+//     }
 
-    /**
-     * @covers WindowsAzure\Common\Internal\Utilities::getEntityId
-     */
-    public function testGetEntityIdWithObject(){
+//     /**
+//      * @covers WindowsAzure\Common\Internal\Utilities::getEntityId
+//      */
+//     public function testGetEntityIdWithObject(){
 
-        // Setup
-        $idKey = 'Id';
-        $optionKey = 'Options';
-        $assetArray= array(
-                $idKey                  => 'kjgdfg57',
-                $optionKey             => Asset::OPTIONS_NONE,
-        );
-        $value = Asset::createFromOptions($assetArray);
+//         // Setup
+//         $idKey = 'Id';
+//         $optionKey = 'Options';
+//         $assetArray= array(
+//                 $idKey                  => 'kjgdfg57',
+//                 $optionKey             => Asset::OPTIONS_NONE,
+//         );
+//         $value = Asset::createFromOptions($assetArray);
 
-        // Test
-        $result = Utilities::GetEntityId($value,'WindowsAzure\MediaServices\Models\Asset');
+//         // Test
+//         $result = Utilities::GetEntityId($value,'WindowsAzure\MediaServices\Models\Asset');
 
-        //Assert
-        $this->assertEquals($assetArray[$idKey], $result);
-    }
+//         //Assert
+//         $this->assertEquals($assetArray[$idKey], $result);
+//     }
 
     /**
      * @covers WindowsAzure\Common\Internal\Utilities::generateCryptoKey

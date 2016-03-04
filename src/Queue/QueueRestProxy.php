@@ -44,7 +44,6 @@ use WindowsAzure\Queue\Models\ListMessagesResult;
 use WindowsAzure\Queue\Models\PeekMessagesOptions;
 use WindowsAzure\Queue\Models\PeekMessagesResult;
 use WindowsAzure\Queue\Models\UpdateMessageResult;
-use WindowsAzure\Common\Internal\NewServiceRestProxy;
 use WindowsAzure\Common\Internal\HttpFormatter;
 
 /**
@@ -59,7 +58,7 @@ use WindowsAzure\Common\Internal\HttpFormatter;
  * @version   Release: 0.4.1_2015-03
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-class QueueRestProxy extends NewServiceRestProxy implements IQueue
+class QueueRestProxy extends ServiceRestProxy implements IQueue
 {
     /**
      * Lists all queues in the storage account.

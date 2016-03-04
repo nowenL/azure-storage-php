@@ -27,7 +27,9 @@ use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\IServiceFilter;
 use WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme;
 use WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
+use WindowsAzure\Common\Internal\HttpFormatter;
 use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
+
 use GuzzleHttp\Psr7;
 
 /**
@@ -67,9 +69,9 @@ class AuthenticationFilter implements IServiceFilter
      */
     public function handleRequest($request)
     {
-        echo $request->getUrl();
-    	echo var_dump($request->getHeaders());
-        echo var_dump($request->getUrl()->getQueryVariables());
+//         echo $request->getUrl();
+//     	echo var_dump($request->getHeaders());
+//         echo var_dump($request->getUrl()->getQueryVariables());
     	
     	$signedKey = $this->_authenticationScheme->getAuthorizationHeader(
             $request->getHeaders(), $request->getUrl(),
@@ -103,8 +105,10 @@ class AuthenticationFilter implements IServiceFilter
     	// echo var_dump($request->getMethod());
     	//echo 'end dump' . PHP_EOL;
     	
+    	$requestHeaders = HttpFormatter::formatHeaders($request->getHeaders());
+    	
     	$signedKey = $this->_authenticationScheme->getAuthorizationHeader(
-            $request->getHeaders(), $request->getUri(),
+            $requestHeaders, $request->getUri(),
             \GuzzleHttp\Psr7\parse_query($request->getUri()->getQuery()), $request->getMethod()
         );
         return $request->withHeader(Resources::AUTHENTICATION, $signedKey);

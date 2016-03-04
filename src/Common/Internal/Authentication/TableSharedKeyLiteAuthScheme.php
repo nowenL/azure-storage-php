@@ -81,7 +81,7 @@ class TableSharedKeyLiteAuthScheme extends StorageAuthScheme
         $stringToSign = array();
 
         foreach ($this->includedHeaders as $header) {
-            $stringToSign[] = Utilities::tryGetValue($headers, $header)[0];
+            $stringToSign[] = Utilities::tryGetValue($headers, $header);
         }
 
         $stringToSign[] = $canonicalizedResource;

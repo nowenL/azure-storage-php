@@ -28,8 +28,7 @@ use WindowsAzure\Common\Internal\Utilities;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Validate;
 use WindowsAzure\Common\Models\ServiceProperties;
-// use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Common\Internal\NewServiceRestProxy;
+use WindowsAzure\Common\Internal\ServiceRestProxy;
 use WindowsAzure\Blob\Internal\IBlob;
 use WindowsAzure\Blob\Models\BlobServiceOptions;
 use WindowsAzure\Common\Models\GetServicePropertiesResult;
@@ -89,7 +88,7 @@ use WindowsAzure\Blob\Models\BreakLeaseResult;
  * @version   Release: 0.4.1_2015-03
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-class BlobRestProxy extends NewServiceRestProxy implements IBlob
+class BlobRestProxy extends ServiceRestProxy implements IBlob
 {
     /**
      * @var int Defaults to 32MB
@@ -786,7 +785,7 @@ class BlobRestProxy extends NewServiceRestProxy implements IBlob
      */
     public function createContainer($container, $options = null)
     {
-        Validate::isString($container, 'container');
+    	Validate::isString($container, 'container');
         Validate::notNullOrEmpty($container, 'container');
         
         $method      = Resources::HTTP_PUT;

@@ -23,12 +23,15 @@
  */
  
 namespace WindowsAzure\Common\Internal;
+use WindowsAzure\Common\ServiceException;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Validate;
 use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\RestProxy;
-use WindowsAzure\Common\Internal\Http\Url;
-use WindowsAzure\Common\Internal\Http\HttpCallContext;
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Uri;
 
 /**
  * Base class for all services rest proxies.
@@ -47,19 +50,31 @@ class ServiceRestProxy extends RestProxy
      * @var string
      */
     private $_accountName;
-
+	
+    /**
+     * 
+     * @var \Uri
+     */
+   	private $_psrUri;
+    
     /**
      * Initializes new ServiceRestProxy object.
      *
-     * @param IHttpClient $channel        The HTTP client used to send HTTP requests.
      * @param string      $uri            The storage account uri.
      * @param string      $accountName    The name of the account.
      * @param ISerializer $dataSerializer The data serializer.
      */
-    public function __construct($channel, $uri, $accountName, $dataSerializer)
-    {
-        parent::__construct($channel, $dataSerializer, $uri);
-        $this->_accountName = $accountName;
+    public function __construct($uri, $accountName, $dataSerializer)
+    {   		
+    	if ($uri[strlen($uri)-1] != '/')
+    	{
+    		$uri = $uri.'/';
+    	}
+    	
+    	parent::__construct(NULL, $dataSerializer, $uri);
+    	
+    	$this->_accountName = $accountName;
+        $this->_psrUri = new \GuzzleHttp\Psr7\Uri($uri);
     }
 
     /**
@@ -73,20 +88,6 @@ class ServiceRestProxy extends RestProxy
     }
     
     /**
-     * Sends HTTP request with the specified HTTP call context.
-     * 
-     * @param WindowsAzure\Common\Internal\Http\HttpCallContext $context The HTTP 
-     * call context.
-     * 
-     * @return \HTTP_Request2_Response
-     */
-    protected function sendContext($context)
-    {
-        $context->setUri($this->getUri());
-        return parent::sendContext($context);
-    }
-    
-    /**
      * Sends HTTP request with the specified parameters.
      * 
      * @param string $method         HTTP method used in the request
@@ -97,7 +98,7 @@ class ServiceRestProxy extends RestProxy
      * @param int    $statusCode     Expected status code received in the response
      * @param string $body           Request body
      * 
-     * @return \HTTP_Request2_Response
+     * @return \Response
      */
     protected function send(
         $method, 
@@ -107,24 +108,127 @@ class ServiceRestProxy extends RestProxy
         $path, 
         $statusCode,
         $body = Resources::EMPTY_STRING
-    ) {    	
-    	$context = new HttpCallContext();
-        $context->setBody($body);
-        $context->setHeaders($headers);
-        $context->setMethod($method);
-        $context->setPath($path);
-        $context->setQueryParameters($queryParams);
-        $context->setPostParameters($postParameters);
-        
-        if (is_array($statusCode)) {
-            $context->setStatusCodes($statusCode);
-        } else {
-            $context->addStatusCode($statusCode);
+    ) {
+        // echo 'status: '.$statusCode.PHP_EOL;
+    	
+        // add query parameters into headers
+        $uri = $this->_psrUri;
+        if ($path != NULL)
+        {
+        	$uri = $uri->withPath($path);
         }
         
-        return $this->sendContext($context);
+        if ($queryParams != NULL)
+        {
+        	$queryString = Psr7\build_query($queryParams);
+        	$uri = $uri->withQuery($queryString);
+        }
+        
+    	// add post parameters into bodys
+    	$actualBody = NULL;
+    	if (empty($body))
+    	{
+    		if (empty($headers['content-type']))
+    		{
+    			$headers['content-type'] = 'application/x-www-form-urlencoded';
+    			$actualBody = Psr7\build_query($postParameters);
+    		}
+    	}
+    	else 
+    	{
+    		$actualBody = $body;
+    	}
+        
+    	$request = new Request(
+        		$method, 
+        		$uri,
+        		$headers,
+        		$body);
+        
+    	$client = new \GuzzleHttp\Client(        
+    			array(
+                "defaults" => array(
+                        "allow_redirects" => true, "exceptions" => true,
+                        "decode_content" => true,
+                ),
+                'cookies' => true,
+                'verify' => false,
+                // For testing with Fiddler
+                'proxy' => "localhost:8888",
+        ));
+    	
+    	$bodySize = $request->getBody()->getSize();
+    	$request = $request->withHeader('content-length', $bodySize);
+    	
+    	foreach ($this->getFilters() as $filter) {
+    		$request = $filter->handlePrsRequest($request);
+    	}
+    	
+    	// echo var_dump($request->getBody());
+    	
+    	try {
+    		$response = $client->send($request);
+    		self::throwIfError(
+    				$response->getStatusCode(), 
+    				$response->getReasonPhrase(), 
+    				$response->getBody(), 
+    				$statusCode);
+    		return $response;
+    	}
+    	catch(\GuzzleHttp\Exception\RequestException $e)
+    	{
+    		if ($e->hasResponse())
+    		{
+    			$response = $e->getResponse();	
+    			self::throwIfError(
+    					$response->getStatusCode(), 
+    					$response->getReasonPhrase(), 
+    					$response->getBody(), 
+    					$statusCode);
+    			return $response;
+    		}
+    		else
+    		{
+    			throw $e;
+    		}
+    	}
+    	// FIXME: throw exception for unexpected status code
     }
-
+    
+    protected function sendContext($context)
+    {
+    	return $this->send(
+    			$context->getMethod(), 
+    			$context->getHeaders(), 
+    			$context->getQueryParameters(),
+    			$context->getPostParameters(), 
+    			$context->getPath(), 
+    			$context->getStatusCodes(),
+    			$context->getBody());
+    }
+    
+    /**
+     * Throws ServiceException if the recieved status code is not expected.
+     *
+     * @param string $actual   The received status code.
+     * @param string $reason   The reason phrase.
+     * @param string $message  The detailed message (if any).
+     * @param string $expected The expected status codes.
+     *
+     * @return none
+     *
+     * @static
+     *
+     * @throws ServiceException
+     */
+    public static function throwIfError($actual, $reason, $message, $expected)
+    {
+    	$expectedStatusCodes = is_array($expected) ? $expected : array($expected);
+    	
+    	if (!in_array($actual, $expectedStatusCodes)) {
+    		throw new ServiceException($actual, $reason, $message);
+    	}
+    }
     
     /**
      * Adds optional header to headers if set
@@ -273,7 +377,7 @@ class ServiceRestProxy extends RestProxy
      */
     public function generateMetadataHeaders($metadata)
     {
-        $metadataHeaders = array();
+    	$metadataHeaders = array();
         
         if (is_array($metadata) && !is_null($metadata)) {
             foreach ($metadata as $key => $value) {
@@ -284,7 +388,9 @@ class ServiceRestProxy extends RestProxy
                     throw new \InvalidArgumentException(Resources::INVALID_META_MSG);
                 }
                 
-                $headerName                  .= strtolower($key);
+                // $headerName                  .= strtolower($key);
+                // FIXME: Metadata name is case-presrved and case insensitive
+                $headerName					 .= $key;
                 $metadataHeaders[$headerName] = $value;
             }
         }
@@ -309,12 +415,17 @@ class ServiceRestProxy extends RestProxy
             );
             
             if ($isMetadataHeader) {
-                $MetadataName = str_replace(
+            	// FIXME: Metadata name is case-presrved and case insensitive
+//                 $MetadataName = str_replace(
+//                     Resources::X_MS_META_HEADER_PREFIX,
+//                     Resources::EMPTY_STRING,
+//                     strtolower($key)
+//                 );
+                $MetadataName = str_ireplace(
                     Resources::X_MS_META_HEADER_PREFIX,
                     Resources::EMPTY_STRING,
-                    strtolower($key)
+                    $key
                 );
-                
                 $metadata[$MetadataName] = $value;
             }
         }

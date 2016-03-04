@@ -28,7 +28,7 @@ use WindowsAzure\Common\Internal\Utilities;
 use WindowsAzure\Common\Internal\Validate;
 use WindowsAzure\Common\Internal\Http\HttpCallContext;
 use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Common\Internal\NewServiceRestProxy;
+use WindowsAzure\Common\Internal\ServiceRestProxy;
 use WindowsAzure\Common\Models\GetServicePropertiesResult;
 use WindowsAzure\Table\Internal\ITable;
 use WindowsAzure\Table\Models\TableServiceOptions;
@@ -66,7 +66,7 @@ use WindowsAzure\Common\Internal\HttpFormatter;
  * @version   Release: 0.4.1_2015-03
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-class TableRestProxy extends NewServiceRestProxy implements ITable
+class TableRestProxy extends ServiceRestProxy implements ITable
 {
     /**
      * @var Utilities\IAtomReaderWriter

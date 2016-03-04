@@ -90,23 +90,21 @@ class SharedKeyAuthScheme extends StorageAuthScheme
         $canonicalizedResource = parent::computeCanonicalizedResource(
             $url, $queryParams
         );
-        
 
         $stringToSign   = array();
         $stringToSign[] = strtoupper($httpMethod);
-
+		
         foreach ($this->includedHeaders as $header) {
-        	// FIXME: Array to string
-            $stringToSign[] = Utilities::tryGetValue($headers, $header)[0];
+            $stringToSign[] = Utilities::tryGetValue($headers, $header);
         }
-
+        
         if (count($canonicalizedHeaders) > 0) {
             $stringToSign[] = implode("\n", $canonicalizedHeaders);
         }
 
         $stringToSign[] = $canonicalizedResource;
         $stringToSign   = implode("\n", $stringToSign);
-
+		
         return $stringToSign;
     }
     
