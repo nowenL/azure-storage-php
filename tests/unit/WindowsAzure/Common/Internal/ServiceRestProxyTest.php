@@ -225,7 +225,7 @@ class ServiceRestProxyTest extends \PHPUnit_Framework_TestCase
         $metadata = array('key1' => 'value1', 'MyName' => 'WindowsAzure', 'MyCompany' => 'Microsoft_');
         $expected = array();
         foreach ($metadata as $key => $value) {
-            $expected[Resources::X_MS_META_HEADER_PREFIX . strtolower($key)] = $value;
+            $expected[Resources::X_MS_META_HEADER_PREFIX . $key] = $value;
         }
         
         // Test
