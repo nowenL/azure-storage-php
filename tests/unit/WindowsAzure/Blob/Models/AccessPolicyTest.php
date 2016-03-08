@@ -144,8 +144,8 @@ class AccessPolicyTest extends \PHPUnit_Framework_TestCase
         // Setup
         $accessPolicy = new AccessPolicy();
         $permission = 'rw';
-        $start = '2009-09-28T08:49:37Z';
-        $expiry = '2009-10-28T08:49:37Z';
+        $start = '2009-09-28T08:49:37.3942040Z';
+        $expiry = '2009-10-28T08:49:37.3942040Z';
         $startDate = new \DateTime($start);
         $expiryDate = new \DateTime($expiry);
         $accessPolicy->setPermission($permission);

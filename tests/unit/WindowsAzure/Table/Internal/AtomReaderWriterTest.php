@@ -102,7 +102,8 @@ class AtomReaderWriterTest extends \PHPUnit_Framework_TestCase
                     '   <d:CustomerId m:type="Edm.Int32">890</d:CustomerId>' . "\n" .
                     '   <d:CustomerName>John</d:CustomerName>' . "\n" .
                     '   <d:IsNew m:type="Edm.Boolean">1</d:IsNew>' . "\n" .
-                    '   <d:JoinDate m:type="Edm.DateTime">2012-01-26T18:26:19.0000473Z</d:JoinDate>' . "\n" .
+                    // PHP DateTime only keeps 6 digits of microseconds.
+                    '   <d:JoinDate m:type="Edm.DateTime">2012-01-26T18:26:19.0000470Z</d:JoinDate>' . "\n" .
                     '   <d:Cost m:type="Edm.Double">12.45</d:Cost>' . "\n" .
                     '  </m:properties>' . "\n" .
                     ' </content>' . "\n" .
