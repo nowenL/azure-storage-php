@@ -165,7 +165,7 @@ class BlockList
         
         foreach ($this->_entries as $value) {
             $array[] = array(
-                $value->getType() => base64_encode($value->getBlockId())
+                $value->getType() => $value->getBlockId()
             );
         }
         
