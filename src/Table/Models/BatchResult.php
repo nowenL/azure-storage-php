@@ -23,7 +23,6 @@
  */
  
 namespace WindowsAzure\Table\Models;
-require_once 'HTTP/Request2/Response.php';
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Utilities;
 use WindowsAzure\Common\Internal\Http\HttpClient;
@@ -67,18 +66,30 @@ class BatchResult
         // Decrease the count of parts to remove the batch response body and just
         // include change sets response body. We may need to undo this action in
         // case that batch response body has useful info.
-        $count = count($parts) - 1;
-
+        $count = count($parts);
+        
         for ($i = 0; $i < $count; $i++) {
-            $lines    = explode("\r\n", $parts[$i]);
-            $response = new \HTTP_Request2_Response($lines[0]);
+        	$response = new \stdClass();
+        	
+        	// Split lines
+        	$lines    = explode("\r\n", $parts[$i]);
+        	
+            // Version Status Reason
+            $statusTokens = explode(' ', $lines[0], 3);
+            $response->version = $statusTokens[0];
+            $response->statusCode = $statusTokens[1];
+            $response->reason = $statusTokens[2];
+    		
+            $headers = array();
             $j        = 1;
             do {
                 $headerLine = $lines[$j++];
-                $response->parseHeaderLine($headerLine);
+                $headerTokens = explode(':', $headerLine);
+                $headers[trim($headerTokens[0])] = 
+                	isset($headerTokens[1]) ? trim($headerTokens[1]) : null;   
             } while (Resources::EMPTY_STRING != $headerLine);
-            $body = implode("\r\n", array_slice($lines, $j));
-            $response->appendBody($body);
+            $response->headers = $headers;
+            $response->body = implode("\r\n", array_slice($lines, $j));
             $responses[] = $response;
         }
         
@@ -95,8 +106,8 @@ class BatchResult
      */
     private static function _compareUsingContentId($r1, $r2)
     {
-        $h1 = array_change_key_case($r1->getHeader());
-        $h2 = array_change_key_case($r2->getHeader());
+        $h1 = array_change_key_case($r1->headers);
+        $h2 = array_change_key_case($r2->headers);
         $c1 = Utilities::tryGetValue($h1, Resources::CONTENT_ID, 0);
         $c2 = Utilities::tryGetValue($h2, Resources::CONTENT_ID, 0);
         
@@ -134,14 +145,14 @@ class BatchResult
             $response  = $responses[$i];
             $operation = $operations[$i];
             $type      = $operation->getType();
-            $body      = $response->getBody();
-            $headers   = $response->getHeader();
+            $body      = $response->body;
+            $headers   = $response->headers;
 
             try {
                 HttpClient::throwIfError(
-                    $response->getStatus(),
-                    $response->getReasonPhrase(),
-                    $response->getBody(),
+                    $response->statusCode,
+                    $response->reason,
+                    $response->body,
                     $context->getStatusCodes()
                 );
             
@@ -168,7 +179,7 @@ class BatchResult
                     throw new \InvalidArgumentException();
                 }
             } catch (ServiceException $e) {
-                $entries[] = BatchError::create($e, $response->getHeader());
+                $entries[] = BatchError::create($e, $response->headers);
             }
         }
         $result->setEntries($entries);
