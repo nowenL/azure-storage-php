@@ -71,7 +71,7 @@ class ServiceRestProxy extends RestProxy
     		$uri = $uri.'/';
     	}
     	
-    	parent::__construct(NULL, $dataSerializer, $uri);
+    	parent::__construct($dataSerializer, $uri);
     	
     	$this->_accountName = $accountName;
         $this->_psrUri = new \GuzzleHttp\Psr7\Uri($uri);
@@ -98,7 +98,7 @@ class ServiceRestProxy extends RestProxy
      * @param int    $statusCode     Expected status code received in the response
      * @param string $body           Request body
      * 
-     * @return \Response
+     * @return GuzzleHttp\Psr7\Response
      */
     protected function send(
         $method, 
@@ -108,9 +108,8 @@ class ServiceRestProxy extends RestProxy
         $path, 
         $statusCode,
         $body = Resources::EMPTY_STRING
-    ) {
-        // echo 'status: '.$statusCode.PHP_EOL;
-    	
+    ) { 	
+        echo 'WTF?? NO COVERAGE?' . PHP_EOL;
         // add query parameters into headers
         $uri = $this->_psrUri;
         if ($path != NULL)
@@ -154,17 +153,16 @@ class ServiceRestProxy extends RestProxy
                 'cookies' => true,
                 'verify' => false,
                 // For testing with Fiddler
-                'proxy' => "localhost:8888",
+                // 'proxy' => "localhost:8888",
         ));
     	
     	$bodySize = $request->getBody()->getSize();
     	$request = $request->withHeader('content-length', $bodySize);
     	
+    	// Apply filters to the requests
     	foreach ($this->getFilters() as $filter) {
     		$request = $filter->handlePrsRequest($request);
     	}
-    	
-    	// echo var_dump($request->getBody());
     	
     	try {
     		$response = $client->send($request);
@@ -192,7 +190,6 @@ class ServiceRestProxy extends RestProxy
     			throw $e;
     		}
     	}
-    	// FIXME: throw exception for unexpected status code
     }
     
     protected function sendContext($context)

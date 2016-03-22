@@ -27,7 +27,6 @@ use WindowsAzure\Blob\BlobRestProxy;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Validate;
 use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Http\HttpClient;
 use WindowsAzure\Common\Internal\Filters\DateFilter;
 use WindowsAzure\Common\Internal\Filters\HeadersFilter;
 use WindowsAzure\Common\Internal\Filters\AuthenticationFilter;
@@ -69,16 +68,6 @@ class ServicesBuilder
      * @var ServicesBuilder
      */
     private static $_instance = null;
-
-    /**
-     * Gets the HTTP client used in the REST services construction.
-     *
-     * @return WindowsAzure\Common\Internal\Http\IHttpClient
-     */
-    protected function httpClient()
-    {
-        return new HttpClient();
-    }
 
     /**
      * Gets the serializer used in the REST services construction.
@@ -150,21 +139,6 @@ class ServicesBuilder
     }
 
     /**
-     * Builds a WRAP client.
-     *
-     * @param string $wrapEndpointUri The WRAP endpoint uri.
-     *
-     * @return WindowsAzure\ServiceBus\Internal\IWrap
-     */
-    protected function createWrapService($wrapEndpointUri)
-    {
-        $httpClient  = $this->httpClient();
-        $wrapWrapper = new WrapRestProxy($httpClient, $wrapEndpointUri);
-
-        return $wrapWrapper;
-    }
-
-    /**
      * Builds a queue object.
      *
      * @param string $connectionString The configuration connection string.
@@ -177,14 +151,12 @@ class ServicesBuilder
             $connectionString
         );
 
-        // $httpClient = $this->httpClient();
         $serializer = $this->serializer();
         $uri        = Utilities::tryAddUrlScheme(
             $settings->getQueueEndpointUri()
         );
 
         $queueWrapper = new QueueRestProxy(
-            // $httpClient,
             $uri,
             $settings->getName(),
             $serializer
@@ -230,7 +202,6 @@ class ServicesBuilder
             $connectionString
         );
 
-        $httpClient = $this->httpClient();
         $serializer = $this->serializer();
         $uri        = Utilities::tryAddUrlScheme(
             $settings->getBlobEndpointUri()
@@ -238,7 +209,6 @@ class ServicesBuilder
 	
         // FIXME: hehe
         $blobWrapper = new BlobRestProxy(
-            // $httpClient,
             $uri,
             $settings->getName(),
             $serializer
@@ -283,7 +253,6 @@ class ServicesBuilder
             $connectionString
         );
 
-        // $httpClient     = $this->httpClient();
         $atomSerializer = $this->atomSerializer();
         $mimeSerializer = $this->mimeSerializer();
         $serializer     = $this->serializer();
@@ -292,7 +261,6 @@ class ServicesBuilder
         );
 
         $tableWrapper = new TableRestProxy(
-            // $httpClient,
             $uri,
             $atomSerializer,
             $mimeSerializer,
@@ -334,158 +302,6 @@ class ServicesBuilder
         $tableWrapper = $tableWrapper->withFilter($authFilter);
 
         return $tableWrapper;
-    }
-
-    /**
-     * Builds a Service Bus object.
-     *
-     * @param string $connectionString The configuration connection string.
-     *
-     * @return WindowsAzure\ServiceBus\Internal\IServiceBus
-     */
-    public function createServiceBusService($connectionString)
-    {
-        $settings = ServiceBusSettings::createFromConnectionString(
-            $connectionString
-        );
-
-        $httpClient        = $this->httpClient();
-        $serializer        = $this->serializer();
-        $serviceBusWrapper = new ServiceBusRestProxy(
-            $httpClient,
-            $settings->getServiceBusEndpointUri(),
-            $serializer
-        );
-
-        // Adding headers filter
-        $headers = array(
-            Resources::USER_AGENT => Resources::SDK_USER_AGENT,
-        );
-
-        $headersFilter     = new HeadersFilter($headers);
-        $serviceBusWrapper = $serviceBusWrapper->withFilter($headersFilter);
-
-        $wrapFilter = new WrapFilter(
-            $settings->getWrapEndpointUri(),
-            $settings->getWrapName(),
-            $settings->getWrapPassword(),
-            $this->createWrapService($settings->getWrapEndpointUri())
-        );
-
-        return $serviceBusWrapper->withFilter($wrapFilter);
-    }
-
-    /**
-     * Builds a service management object.
-     *
-     * @param string $connectionString The configuration connection string.
-     *
-     * @return WindowsAzure\ServiceManagement\Internal\IServiceManagement
-     */
-    public function createServiceManagementService($connectionString)
-    {
-        $settings = ServiceManagementSettings::createFromConnectionString(
-            $connectionString
-        );
-
-        $certificatePath = $settings->getCertificatePath();
-        $httpClient      = new HttpClient($certificatePath);
-        $serializer      = $this->serializer();
-        $uri             = Utilities::tryAddUrlScheme(
-            $settings->getEndpointUri(),
-            Resources::HTTPS_SCHEME
-        );
-
-        $serviceManagementWrapper = new ServiceManagementRestProxy(
-            $httpClient,
-            $settings->getSubscriptionId(),
-            $uri,
-            $serializer
-        );
-
-        // Adding headers filter
-        $headers = array(
-            Resources::USER_AGENT => Resources::SDK_USER_AGENT
-        );
-
-        $headers[Resources::X_MS_VERSION] = Resources::SM_API_LATEST_VERSION;
-
-        $headersFilter            = new HeadersFilter($headers);
-        $serviceManagementWrapper = $serviceManagementWrapper->withFilter(
-            $headersFilter
-        );
-
-        return $serviceManagementWrapper;
-    }
-
-    /**
-     * Builds a media services object.
-     *
-     * @param WindowsAzure\Common\Internal\MediaServicesSettings $settings The media
-     * services configuration settings.
-     *
-     * @return WindowsAzure\MediaServices\Internal\IMediaServices
-     */
-    public function createMediaServicesService($settings)
-    {
-        Validate::isA(
-            $settings,
-            'WindowsAzure\Common\Internal\MediaServicesSettings',
-            'settings'
-        );
-
-        $httpClient = new HttpClient();
-        $serializer = $this->serializer();
-        $uri        = Utilities::tryAddUrlScheme(
-            $settings->getEndpointUri(),
-            Resources::HTTPS_SCHEME
-        );
-
-        $mediaServicesWrapper = new MediaServicesRestProxy(
-            $httpClient,
-            $uri,
-            $settings->getAccountName(),
-            $serializer
-        );
-
-        // Adding headers filter
-        $xMSVersion     = Resources::MEDIA_SERVICES_API_LATEST_VERSION;
-        $dataVersion    = Resources::MEDIA_SERVICES_DATA_SERVICE_VERSION_VALUE;
-        $dataMaxVersion = Resources::MEDIA_SERVICES_MAX_DATA_SERVICE_VERSION_VALUE;
-        $accept         = Resources::ACCEPT_HEADER_VALUE;
-        $contentType    = Resources::ATOM_ENTRY_CONTENT_TYPE;
-        $userAgent      = Resources::SDK_USER_AGENT;
-
-        $headers = array(
-            Resources::X_MS_VERSION             => $xMSVersion,
-            Resources::DATA_SERVICE_VERSION     => $dataVersion,
-            Resources::MAX_DATA_SERVICE_VERSION => $dataMaxVersion,
-            Resources::ACCEPT_HEADER            => $accept,
-            Resources::CONTENT_TYPE             => $contentType,
-            Resources::USER_AGENT               => $userAgent,
-        );
-
-        $headersFilter        = new HeadersFilter($headers);
-        $mediaServicesWrapper = $mediaServicesWrapper->withFilter($headersFilter);
-
-        // Adding OAuth filter
-        $oauthService           = new OAuthRestProxy(
-            new HttpClient(),
-            $settings->getOAuthEndpointUri()
-        );
-        $authentification       = new OAuthScheme(
-            $settings->getAccountName(),
-            $settings->getAccessKey(),
-            Resources::OAUTH_GT_CLIENT_CREDENTIALS,
-            Resources::MEDIA_SERVICES_OAUTH_SCOPE,
-            $oauthService
-        );
-        $authentificationFilter = new AuthenticationFilter($authentification);
-        $mediaServicesWrapper   = $mediaServicesWrapper->withFilter(
-            $authentificationFilter
-        );
-
-        return $mediaServicesWrapper;
     }
 
     /**

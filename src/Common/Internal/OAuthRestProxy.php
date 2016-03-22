@@ -44,13 +44,11 @@ class OAuthRestProxy extends ServiceRestProxy
     /**
      * Initializes new OAuthRestProxy object.
      *
-     * @param IHttpClient $channel The HTTP client used to send HTTP requests.
      * @param string      $uri     The storage account uri.
      */
-    public function __construct($channel, $uri)
+    public function __construct($uri)
     {
         parent::__construct(
-            $channel,
             $uri,
             Resources::EMPTY_STRING,
             new JsonSerializer()

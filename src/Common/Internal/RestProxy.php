@@ -39,12 +39,7 @@ use WindowsAzure\Common\Internal\Http\Url;
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 class RestProxy
-{
-    /**
-     * @var WindowsAzure\Common\Internal\Http\IHttpClient
-     */
-    private $_channel;
-    
+{   
     /**
      * @var array
      */
@@ -63,13 +58,11 @@ class RestProxy
     /**
      * Initializes new RestProxy object.
      *
-     * @param IHttpClient $channel        The HTTP client used to send HTTP requests.
      * @param ISerializer $dataSerializer The data serializer.
      * @param string      $uri            The uri of the service.
      */
-    public function __construct($channel, $dataSerializer, $uri)
+    public function __construct($dataSerializer, $uri)
     {
-        $this->_channel       = $channel;
         $this->_filters       = array();
         $this->dataSerializer = $dataSerializer;
         $this->_uri           = $uri;

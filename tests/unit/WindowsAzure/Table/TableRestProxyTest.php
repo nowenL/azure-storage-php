@@ -1045,6 +1045,7 @@ class TableRestProxyTest extends TableServiceRestProxyTestBase
      * @covers WindowsAzure\Table\Models\BatchResult::_constructResponses
      * @covers WindowsAzure\Table\Models\BatchResult::_compareUsingContentId
      * @covers WindowsAzure\Common\Internal\ServiceRestProxy::sendContext
+     * @covers WindowsAzure\Common\Internal\ServiceRestProxy::send
      */
     public function testBatchWithInsertOrReplace()
     {

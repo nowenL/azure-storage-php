@@ -25,8 +25,8 @@
 namespace WindowsAzure\Table\Models;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Http\HttpClient;
 use WindowsAzure\Common\ServiceException;
+use WindowsAzure\Common\Internal\ServiceRestProxy;
 use WindowsAzure\Table\Models\BatchError;
 use WindowsAzure\Table\Models\InsertEntityResult;
 use WindowsAzure\Table\Models\UpdateEntityResult;
@@ -114,7 +114,6 @@ class BatchResult
         return intval($c1) >= intval($c2);
     }
 
-
     /**
      * Creates BatchResult object.
      * 
@@ -149,7 +148,7 @@ class BatchResult
             $headers   = $response->headers;
 
             try {
-                HttpClient::throwIfError(
+                ServiceRestProxy::throwIfError(
                     $response->statusCode,
                     $response->reason,
                     $response->body,
