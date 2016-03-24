@@ -23,7 +23,6 @@
  */
 
 namespace Tests\Unit\WindowsAzure\Table\internal;
-use WindowsAzure\Common\Internal\Http\HttpClient;
 use WindowsAzure\Table\Internal\AtomReaderWriter;
 use WindowsAzure\Table\Internal\MimeReaderWriter;
 use Tests\Framework\TableServiceRestProxyTestBase;
@@ -61,7 +60,6 @@ class TableRestProxyTest extends TableServiceRestProxyTestBase
     public function test__construct()
     {
         // Setup
-        // $channel = new HttpClient();
         $atomSerializer = new AtomReaderWriter();
         $mimeSerializer = new MimeReaderWriter();
         $url = 'http://www.microsoft.com';

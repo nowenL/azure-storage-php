@@ -24,7 +24,6 @@
 
 namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
 use WindowsAzure\Common\Internal\Filters\HeadersFilter;
-use WindowsAzure\Common\Internal\Http\HttpClient;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Uri;
 

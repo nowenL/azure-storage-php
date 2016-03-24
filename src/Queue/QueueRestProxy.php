@@ -26,7 +26,6 @@ namespace WindowsAzure\Queue;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Validate;
 use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Http\IHttpClient;
 use WindowsAzure\Common\Internal\Http\Url;
 use WindowsAzure\Common\Internal\ServiceRestProxy;
 use WindowsAzure\Common\Models\GetServicePropertiesResult;

@@ -45,7 +45,6 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @covers WindowsAzure\Common\ServicesBuilder::createQueueService
-     * @covers WindowsAzure\Common\ServicesBuilder::httpClient
      * @covers WindowsAzure\Common\ServicesBuilder::serializer
      * @covers WindowsAzure\Common\ServicesBuilder::queueAuthenticationScheme
      */
@@ -63,7 +62,6 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers WindowsAzure\Common\ServicesBuilder::createBlobService
-     * @covers WindowsAzure\Common\ServicesBuilder::httpClient
      * @covers WindowsAzure\Common\ServicesBuilder::serializer
      * @covers WindowsAzure\Common\ServicesBuilder::blobAuthenticationScheme
      */
@@ -81,7 +79,6 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers WindowsAzure\Common\ServicesBuilder::createTableService
-     * @covers WindowsAzure\Common\ServicesBuilder::httpClient
      * @covers WindowsAzure\Common\ServicesBuilder::serializer
      * @covers WindowsAzure\Common\ServicesBuilder::mimeSerializer
      * @covers WindowsAzure\Common\ServicesBuilder::atomSerializer

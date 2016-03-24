@@ -24,7 +24,6 @@
 
 namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
 use WindowsAzure\Common\Internal\Filters\DateFilter;
-use WindowsAzure\Common\Internal\Http\HttpClient;
 use WindowsAzure\Common\Internal\Resources;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Uri;
