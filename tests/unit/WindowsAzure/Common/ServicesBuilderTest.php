@@ -100,58 +100,6 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\ServicesBuilder::createServiceManagementService
-     * @covers WindowsAzure\Common\ServicesBuilder::httpClient
-     * @covers WindowsAzure\Common\ServicesBuilder::serializer
-     */
-    public function testBuildForServiceManagement()
-    {
-        // Setup
-        $builder = new ServicesBuilder();
-
-        // Test
-        $serviceManagementRestProxy = $builder->createServiceManagementService(TestResources::getServiceManagementConnectionString());
-
-        // Assert
-        $this->assertInstanceOf('WindowsAzure\ServiceManagement\Internal\IServiceManagement', $serviceManagementRestProxy);
-    }
-
-    /**
-     * @covers WindowsAzure\Common\ServicesBuilder::createServiceBusService
-     * @covers WindowsAzure\Common\ServicesBuilder::createWrapService
-     * @covers WindowsAzure\Common\ServicesBuilder::httpClient
-     * @covers WindowsAzure\Common\ServicesBuilder::serializer
-     */
-    public function testBuildForServiceBus()
-    {
-        // Setup
-        $builder = new ServicesBuilder();
-
-        // Test
-        $serviceBusRestProxy = $builder->createServiceBusService(TestResources::getServiceBusConnectionString());
-
-        // Assert
-        $this->assertInstanceOf('WindowsAzure\ServiceBus\Internal\IServiceBus', $serviceBusRestProxy);
-    }
-
-    /**
-     * @covers WindowsAzure\Common\ServicesBuilder::createMediaServicesService
-     */
-    public function testBuildForMediaServices()
-    {
-        // Setup
-        $builder            = new ServicesBuilder();
-        $connection         = TestResources::getMediaServicesConnectionParameters();
-        $settings           = new MediaServicesSettings($connection['accountName'], $connection['accessKey']);
-
-        // Test
-        $mediaServicesRestProxy = $builder->createMediaServicesService($settings);
-
-        // Assert
-        $this->assertInstanceOf('WindowsAzure\MediaServices\Internal\IMediaServices', $mediaServicesRestProxy);
-    }
-
-    /**
      * @covers WindowsAzure\Common\ServicesBuilder::getInstance
      */
     public function testGetInstance()

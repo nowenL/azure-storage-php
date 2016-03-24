@@ -52,7 +52,7 @@ class FunctionalTestBase extends IntegrationTestBase
         }
 
         foreach(QueueServiceFunctionalTestData::$testQueueNames as $name)  {
-            self::println('Creating queue: ' . $name);
+            // self::println('Creating queue: ' . $name);
             $this->restProxy->createQueue($name);
         }
     }
@@ -77,7 +77,7 @@ class FunctionalTestBase extends IntegrationTestBase
 
     public static function tmptostring($obj)
     {
-        return $obj;
+        return var_export($obj, true);
     }
 }
 

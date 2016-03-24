@@ -959,7 +959,7 @@ class QueueServiceFunctionalTest extends FunctionalTestBase
     private function updateMessageWorker($messageText, $startingMessage, $visibilityTimeoutInSeconds, $options)
     {
         self::println( 'Trying $options: ' . self::tmptostring($options) .
-                ' and $visibilityTimeoutInSeconds: ' . self::tmptostring($visibilityTimeoutInSeconds));
+                ' and $visibilityTimeoutInSeconds: ' . $visibilityTimeoutInSeconds);
         $queue = QueueServiceFunctionalTestData::$testQueueNames;
         $queue = $queue[0];
         $this->restProxy->clearMessages($queue);
@@ -993,10 +993,10 @@ class QueueServiceFunctionalTest extends FunctionalTestBase
                 sleep(QueueServiceFunctionalTestData::INTERESTING_TTL);
                 // Try again, not that the 4 second visibility has passed
                 $lmr = $this->restProxy->listMessages($queue);
-                if ($visibilityTimeoutInSeconds > QueueServiceFunctionalTestData::INTERESTING_TTL) {
+                if ($visibilityTimeoutInSeconds >= QueueServiceFunctionalTestData::INTERESTING_TTL) {
                     $this->assertEquals(0, count($lmr->getQueueMessages()), 'getQueueMessages() count');
                 } else {
-                    $this->assertEquals(1, count($lmr->getQueueMessages()), 'getQueueMessages() count');
+                	$this->assertEquals(1, count($lmr->getQueueMessages()), 'getQueueMessages() count');
                     $qm = $lmr->getQueueMessages();
                     $qm = $qm[0];
                     $this->assertEquals($messageText, $qm->getMessageText(), '$qm->getMessageText');

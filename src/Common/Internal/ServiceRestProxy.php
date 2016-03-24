@@ -109,7 +109,6 @@ class ServiceRestProxy extends RestProxy
         $statusCode,
         $body = Resources::EMPTY_STRING
     ) { 	
-        echo 'WTF?? NO COVERAGE?' . PHP_EOL;
         // add query parameters into headers
         $uri = $this->_psrUri;
         if ($path != NULL)
@@ -161,7 +160,7 @@ class ServiceRestProxy extends RestProxy
     	
     	// Apply filters to the requests
     	foreach ($this->getFilters() as $filter) {
-    		$request = $filter->handlePrsRequest($request);
+    		$request = $filter->handleRequest($request);
     	}
     	
     	try {

@@ -25,11 +25,7 @@
 namespace WindowsAzure\Common\Internal\Filters;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\IServiceFilter;
-use WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme;
-use WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
 use WindowsAzure\Common\Internal\HttpFormatter;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
-
 use GuzzleHttp\Psr7;
 
 /**
@@ -59,44 +55,15 @@ class AuthenticationFilter implements IServiceFilter
     {
         $this->_authenticationScheme = $authenticationScheme;
     }
-
+    
     /**
      * Adds authentication header to the request headers.
      *
-     * @param HttpClient $request HTTP channel object.
+     * @param \GuzzleHttp\Psr7\Request $request HTTP request object.
      * 
-     * @return \HTTP_Request2
+     * @return \GuzzleHttp\Psr7\Request
      */
     public function handleRequest($request)
-    {
-//         echo $request->getUrl();
-//     	echo var_dump($request->getHeaders());
-//         echo var_dump($request->getUrl()->getQueryVariables());
-    	
-    	$signedKey = $this->_authenticationScheme->getAuthorizationHeader(
-            $request->getHeaders(), $request->getUrl(),
-            $request->getUrl()->getQueryVariables(), $request->getMethod()
-        );
-        $request->setHeader(Resources::AUTHENTICATION, $signedKey);
-
-        return $request;
-    }
-
-    /**
-     * Does nothing with the response.
-     *
-     * @param HttpClient              $request  HTTP channel object.
-     * @param \HTTP_Request2_Response $response HTTP response object.
-     * 
-     * @return \HTTP_Request2_Response
-     */
-    public function handleResponse($request, $response) 
-    {
-        // Do nothing with the response.
-        return $response;
-    }
-    
-    public function handlePrsRequest($request)
     {
     	//echo 'start dump' . PHP_EOL;
     	//echo $request->getUri();
@@ -114,8 +81,17 @@ class AuthenticationFilter implements IServiceFilter
         return $request->withHeader(Resources::AUTHENTICATION, $signedKey);
     }
     
-    public function handlePrsResponse($request, $response)
+    /**
+     * Does nothing with the response.
+     *
+     * @param \GuzzleHttp\Psr7\Request  $request  HTTP request object.
+     * @param \GuzzleHttp\Psr7\Response $response HTTP response object.
+     *
+     * @return \GuzzleHttp\Psr7\Response
+     */
+    public function handleResponse($request, $response)
     {
+    	// Do nothing with the response.
     	return $response;
     }
 }

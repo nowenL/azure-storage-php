@@ -25,7 +25,8 @@
 namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
 use WindowsAzure\Common\Internal\Filters\HeadersFilter;
 use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\Common\Internal\Resources;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Uri;
 
 /**
  * Unit tests for class HeadersFilter
@@ -47,14 +48,16 @@ class HeadersFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleRequestEmptyHeaders()
     {
         // Setup
-        $channel = new HttpClient();
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $filter = new HeadersFilter(array());
+        $expected = $request->getHeaders();
         
         // Test
-        $request = $filter->handleRequest($channel);
+        $request = $filter->handleRequest($request);
         
         // Assert
-        $this->assertCount(0, $request->getHeaders());
+        $this->assertEquals($expected, $request->getHeaders());
     }
     
     /**
@@ -64,18 +67,19 @@ class HeadersFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleRequestOneHeader()
     {
         // Setup
-        $channel = new HttpClient();
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $header1 = 'header1';
         $value1 = 'value1';
         $expected = array($header1 => $value1);
         $filter = new HeadersFilter($expected);
         
         // Test
-        $request = $filter->handleRequest($channel);
+        $request = $filter->handleRequest($request);
         
         // Assert
         $headers = $request->getHeaders();
-        $this->assertEquals($value1, $headers[$header1]);
+        $this->assertEquals($value1, $headers[$header1][0]);
     }
     
     /**
@@ -85,7 +89,8 @@ class HeadersFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleRequestMultipleHeaders()
     {
         // Setup
-        $channel = new HttpClient();
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $header1 = 'header1';
         $value1 = 'value1';
         $header2 = 'header2';
@@ -94,12 +99,12 @@ class HeadersFilterTest extends \PHPUnit_Framework_TestCase
         $filter = new HeadersFilter($expected);
         
         // Test
-        $request = $filter->handleRequest($channel);
+        $request = $filter->handleRequest($request);
         
         // Assert
         $headers = $request->getHeaders();
-        $this->assertEquals($value1, $headers[$header1]);
-        $this->assertEquals($value2, $headers[$header2]);
+        $this->assertEquals($value1, $headers[$header1][0]);
+        $this->assertEquals($value2, $headers[$header2][0]);
     }
     
     /**
@@ -108,12 +113,13 @@ class HeadersFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleResponse()
     {
         // Setup
-        $channel = new HttpClient();
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $response = null;
         $filter = new HeadersFilter(array());
         
         // Test
-        $response = $filter->handleResponse($channel, $response);
+        $response = $filter->handleResponse($request, $response);
         
         // Assert
         $this->assertNull($response);

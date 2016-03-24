@@ -56,10 +56,6 @@ interface IServiceFilter
      * @return mix processed HTTP response object.
      */
     public function handleResponse($request, $response);
-    
-    public function handlePrsRequest($request);
-    
-    public function handlePrsResponse($request, $response);
 }
 
 

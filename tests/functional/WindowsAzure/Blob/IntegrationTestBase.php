@@ -24,7 +24,6 @@
 
 namespace Tests\Functional\WindowsAzure\Blob;
 
-use Tests\Framework\FiddlerFilter;
 use Tests\Framework\BlobServiceRestProxyTestBase;
 use WindowsAzure\Common\Internal\StorageServiceSettings;
 use WindowsAzure\Common\Internal\Utilities;
@@ -36,9 +35,6 @@ class IntegrationTestBase extends BlobServiceRestProxyTestBase
     public function setUp()
     {
         parent::setUp();
-        $fiddlerFilter = new FiddlerFilter();
-        $this->restProxy = $this->restProxy->withFilter($fiddlerFilter);
-
         if (!self::$isOneTimeSetup) {
             self::$isOneTimeSetup = true;
         }

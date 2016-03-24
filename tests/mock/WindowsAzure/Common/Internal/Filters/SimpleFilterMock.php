@@ -49,24 +49,11 @@ class SimpleFilterMock implements \WindowsAzure\Common\Internal\IServiceFilter
     
     public function handleRequest($request)
     {
-        $request->setHeader($this->_headerName, $this->_data);
-        $request->setHeader('Accept-Encoding', 'identity', true);
-        return $request;
-    }
-    
-    public function handleResponse($request, $response)
-    {
-        $response->appendBody($this->_data);
-        return $response;
-    }
-    
-    public function handlePrsRequest($request)
-    {
     	return $request->withHeader($this->_headerName, $this->_data)
     				   ->withHeader('Accept-Encoding', 'identity');
     }
     
-    public function handlePrsResponse($request, $response)
+    public function handleResponse($request, $response)
     {
     	$body = $response->getBody();
     	return $response->withBody($body.$this->_data);

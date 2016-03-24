@@ -23,7 +23,6 @@
  */
  
 namespace WindowsAzure\Common\Internal\Filters;
-use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\IServiceFilter;
 
 /**
@@ -59,37 +58,11 @@ class HeadersFilter implements IServiceFilter
     /**
      * Adds static header(s) to the HTTP request headers
      *
-     * @param HttpClient $request HTTP channel object.
+     * @param \GuzzleHttp\Psr7\Request $request HTTP request object.
      * 
-     * @return \HTTP_Request2
+     * @return \GuzzleHttp\Psr7\Request
      */
-    public function handleRequest($request) 
-    {
-        foreach ($this->_headers as $key => $value) {
-            $headers = $request->getHeaders();
-            if (!array_key_exists($key, $headers)) {
-                $request->setHeader($key, $value);
-            }
-        }
-
-        return $request;
-    }
-
-    /**
-     * Does nothing with the response.
-     *
-     * @param HttpClient              $request  HTTP channel object.
-     * @param \HTTP_Request2_Response $response HTTP response object.
-     * 
-     * @return \HTTP_Request2_Response
-     */
-    public function handleResponse($request, $response) 
-    {
-        // Do nothing with the response.
-        return $response;
-    }
-    
-    public function handlePrsRequest($request)
+    public function handleRequest($request)
     {
     	$result = $request;
     	
@@ -103,8 +76,17 @@ class HeadersFilter implements IServiceFilter
     	return $result;
     }
     
-    public function handlePrsResponse($request, $response)
+    /**
+     * Does nothing with the response.
+     *
+     * @param \GuzzleHttp\Psr7\Request  $request  HTTP request object.
+     * @param \GuzzleHttp\Psr7\Response $response HTTP response object.
+     *
+     * @return \GuzzleHttp\Psr7\Response
+     */
+    public function handleResponse($request, $response)
     {
+    	// Do nothing with the response.
     	return $response;
     }
 }

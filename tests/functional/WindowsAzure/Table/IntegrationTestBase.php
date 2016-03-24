@@ -24,7 +24,6 @@
 
 namespace Tests\Functional\WindowsAzure\Table;
 
-use Tests\Framework\FiddlerFilter;
 use Tests\Framework\TableServiceRestProxyTestBase;
 
 class IntegrationTestBase extends TableServiceRestProxyTestBase
@@ -34,8 +33,6 @@ class IntegrationTestBase extends TableServiceRestProxyTestBase
     public function setUp()
     {
         parent::setUp();
-        $fiddlerFilter = new FiddlerFilter();
-        $this->restProxy = $this->restProxy->withFilter($fiddlerFilter);
         if (!self::$isOneTimeSetup) {
             self::$isOneTimeSetup = true;
         }

@@ -173,13 +173,13 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
     {
         // Setup
         $blockList = new BlockList();
-        $blockList->addLatestEntry('1234');
-        $blockList->addCommittedEntry('1239');
-        $blockList->addLatestEntry('1236');
-        $blockList->addCommittedEntry('1237');
-        $blockList->addUncommittedEntry('1238');
-        $blockList->addLatestEntry('1235');
-        $blockList->addUncommittedEntry('1240');
+        $blockList->addLatestEntry(base64_encode('1234'));
+        $blockList->addCommittedEntry(base64_encode('1239'));
+        $blockList->addLatestEntry(base64_encode('1236'));
+        $blockList->addCommittedEntry(base64_encode('1237'));
+        $blockList->addUncommittedEntry(base64_encode('1238'));
+        $blockList->addLatestEntry(base64_encode('1235'));
+        $blockList->addUncommittedEntry(base64_encode('1240'));
         $expected = '<?xml version="1.0" encoding="UTF-8"?>' . "\n" .
                     '<BlockList>' . "\n" .
                     ' <Latest>MTIzNA==</Latest>' . "\n" .
@@ -196,7 +196,6 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
         
         // Assert
         $this->assertEquals($expected, $actual);
-        
     }
 }
 

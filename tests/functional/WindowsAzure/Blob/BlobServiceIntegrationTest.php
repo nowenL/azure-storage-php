@@ -802,9 +802,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         $container = self::$_test_container_for_blobs;
         $blob = 'test14';
         $this->restProxy->createBlockBlob($container, $blob, '');
-        $this->restProxy->createBlobBlock($container, $blob, '123', str_pad('', 256));
-        $this->restProxy->createBlobBlock($container, $blob, '124', str_pad('', 512));
-        $this->restProxy->createBlobBlock($container, $blob, '125', str_pad('', 195));
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('123'), str_pad('', 256));
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('124'), str_pad('', 512));
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('125'), str_pad('', 195));
 
         $opts = new ListBlobBlocksOptions();
         $opts->setIncludeCommittedBlobs(true);
@@ -842,14 +842,14 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         $container = self::$_test_container_for_blobs;
         $blob = 'test14';
         $this->restProxy->createBlockBlob($container, $blob, '');
-        $this->restProxy->createBlobBlock($container, $blob, '123', str_pad('', 256));
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('123'), str_pad('', 256));
 
         $blockList = new BlockList();
-        $blockList->addUncommittedEntry('123');
+        $blockList->addUncommittedEntry(base64_encode('123'));
         $this->restProxy->commitBlobBlocks($container, $blob, $blockList);
 
-        $this->restProxy->createBlobBlock($container, $blob, '124', str_pad('', 512));
-        $this->restProxy->createBlobBlock($container, $blob, '125', str_pad('', 195));
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('124'), str_pad('', 512));
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('125'), str_pad('', 195));
 
         $opts = new ListBlobBlocksOptions();
         $opts->setIncludeCommittedBlobs(true);
@@ -884,9 +884,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         // Act
         $container = self::$_test_container_for_blobs;
         $blob = 'test14';
-        $blockId1 = '1fedcba';
-        $blockId2 = '2abcdef';
-        $blockId3 = '3zzzzzz';
+        $blockId1 = base64_encode('1fedcba');
+        $blockId2 = base64_encode('2abcdef');
+        $blockId3 = base64_encode('3zzzzzz');
         $this->restProxy->createBlockBlob($container, $blob, '');
         $this->restProxy->createBlobBlock($container, $blob, $blockId1, str_pad('', 256));
         $this->restProxy->createBlobBlock($container, $blob, $blockId2, str_pad('', 512));
@@ -933,9 +933,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         // Act
         $container = self::$_test_container_for_blobs;
         $blob = 'test14a';
-        $blockId1 = '1fedcba';
-        $blockId2 = '2abcdef';
-        $blockId3 = '3zzzzzz';
+        $blockId1 = base64_encode('1fedcba');
+        $blockId2 = base64_encode('2abcdef');
+        $blockId3 = base64_encode('3zzzzzz');
         $this->restProxy->createBlockBlob($container, $blob, '');
         $this->restProxy->createBlobBlock($container, $blob, $blockId1, str_pad('', 256));
         $this->restProxy->createBlobBlock($container, $blob, $blockId2, str_pad('', 512));
@@ -986,8 +986,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         $blob = 'test13';
         $content = str_pad('', 512);
         $this->restProxy->createBlockBlob($container, $blob, $content);
-        $this->restProxy->createBlobBlock($container, $blob, '123', $content);
-        $this->restProxy->createBlobBlock($container, $blob, '124', $content);
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('123'), $content);
+        $this->restProxy->createBlobBlock($container, $blob, base64_encode('124'), $content);
 
         // Assert
         $this->assertTrue(true, 'success');

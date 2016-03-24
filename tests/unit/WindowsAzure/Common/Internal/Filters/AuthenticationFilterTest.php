@@ -24,10 +24,11 @@
 
 namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
 use WindowsAzure\Common\Internal\Filters\AuthenticationFilter;
-use WindowsAzure\Common\Internal\Http\HttpClient;
 use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
 use WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme;
+use WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Uri;
 
 /**
  * Unit tests for class AuthenticationFilterTest
@@ -49,14 +50,13 @@ class AuthenticationFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleRequest()
     {
         // Setup
-        $channel = new HttpClient();
-        $url = new \WindowsAzure\Common\Internal\Http\Url('http://microsoft.com');
-        $channel->setUrl($url);
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $scheme = new SharedKeyAuthScheme('acount', 'key');
         $filter = new AuthenticationFilter($scheme);
         
         // Test
-        $request = $filter->handleRequest($channel);
+        $request = $filter->handleRequest($request);
         
         // Assert
         $this->assertArrayHasKey(strtolower(Resources::AUTHENTICATION), $request->getHeaders());
@@ -69,14 +69,13 @@ class AuthenticationFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleRequestWithTable()
     {
         // Setup
-        $channel = new HttpClient();
-        $url = new \WindowsAzure\Common\Internal\Http\Url('http://microsoft.com');
-        $channel->setUrl($url);
-        $scheme = new SharedKeyAuthScheme('acount', 'key');
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
+        $scheme = new TableSharedKeyLiteAuthScheme('acount', 'key');
         $filter = new AuthenticationFilter($scheme);
         
         // Test
-        $request = $filter->handleRequest($channel);
+        $request = $filter->handleRequest($request);
         
         // Assert
         $this->assertArrayHasKey(strtolower(Resources::AUTHENTICATION), $request->getHeaders());
@@ -84,19 +83,19 @@ class AuthenticationFilterTest extends \PHPUnit_Framework_TestCase
     
     /**
      * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::handleResponse
+     * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::__construct
      */
     public function testHandleResponse()
     {
         // Setup
-        $channel = new HttpClient();
-        $url = new \WindowsAzure\Common\Internal\Http\Url('http://microsoft.com');
-        $channel->setUrl($url);
+    	$uri = new Uri('http://microsoft.com');
+    	$request = new Request('Get', $uri, array(), NULL);
         $response = null;
         $scheme = new SharedKeyAuthScheme('acount', 'key');
         $filter = new AuthenticationFilter($scheme);
         
         // Test
-        $response = $filter->handleResponse($channel, $response);
+        $response = $filter->handleResponse($request, $response);
         
         // Assert
         $this->assertNull($response);

@@ -24,7 +24,6 @@
 
 namespace Tests\Functional\WindowsAzure\Queue;
 
-use Tests\Framework\FiddlerFilter;
 use Tests\Framework\QueueServiceRestProxyTestBase;
 
 class IntegrationTestBase extends QueueServiceRestProxyTestBase
@@ -34,8 +33,6 @@ class IntegrationTestBase extends QueueServiceRestProxyTestBase
     public function setUp()
     {
         parent::setUp();
-        $fiddlerFilter = new FiddlerFilter();
-        $this->restProxy = $this->restProxy->withFilter($fiddlerFilter);
         if (!self::$isOneTimeSetup) {
             self::$isOneTimeSetup = true;
         }

@@ -26,6 +26,8 @@ namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
 use WindowsAzure\Common\Internal\Filters\DateFilter;
 use WindowsAzure\Common\Internal\Http\HttpClient;
 use WindowsAzure\Common\Internal\Resources;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Uri;
 
 /**
  * Unit tests for class DateFilter
@@ -46,11 +48,12 @@ class DateFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleRequest()
     {
         // Setup
-        $channel = new HttpClient();
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $filter = new DateFilter();
         
         // Test
-        $request = $filter->handleRequest($channel);
+        $request = $filter->handleRequest($request);
         
         // Assert
         $this->assertArrayHasKey(Resources::DATE, $request->getHeaders());
@@ -62,12 +65,13 @@ class DateFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleResponse()
     {
         // Setup
-        $channel = new HttpClient();
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $response = null;
         $filter = new DateFilter();
         
         // Test
-        $response = $filter->handleResponse($channel, $response);
+        $response = $filter->handleResponse($request, $response);
         
         // Assert
         $this->assertNull($response);

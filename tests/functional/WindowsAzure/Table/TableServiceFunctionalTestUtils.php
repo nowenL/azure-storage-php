@@ -269,7 +269,8 @@ class TableServiceFunctionalTestUtils
                 $op = self::filterInterperter($filter->getOperand(), $obj);
                 if (is_null($op)) {
                     // http://msdn.microsoft/com/en-us/library/ms191504.aspx
-                    $ret = true;
+                    // Not (null) -> null
+                    $ret = null;
                 } else {
                     $ret = !$op;
                 }
@@ -279,9 +280,6 @@ class TableServiceFunctionalTestUtils
         } else if ($filter instanceof BinaryFilter) {
             $left = self::filterInterperter($filter->getLeft(), $obj);
             $right = self::filterInterperter($filter->getRight(), $obj);
-			
-            echo strval($left);
-            echo strval($right);
             
             $ret = null;
             if ($filter->getOperator() == ('and')) {

@@ -46,7 +46,7 @@ class FunctionalTestBase extends IntegrationTestBase
         TableServiceFunctionalTestData::setupData();
 
         foreach(TableServiceFunctionalTestData::$testTableNames as $name)  {
-            self::println('Creating Table: ' . $name);
+            // self::println('Creating Table: ' . $name);
             $this->restProxy->createTable($name);
         }
     }

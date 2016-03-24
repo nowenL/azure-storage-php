@@ -200,52 +200,52 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
         $ret = array();
         $e = self::$entitiesInTable[count(self::$entitiesInTable) - 3];
 
-//         $options = new QueryEntitiesOptions();
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $query = new Query();
-//         $options->setQuery($query);
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $query = new Query();
+        $options->setQuery($query);
+        array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $query = new Query();
-//         $query->setTop(2);
-//         $options->setQuery($query);
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $query = new Query();
+        $query->setTop(2);
+        $options->setQuery($query);
+        array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $query = new Query();
-//         $query->setTop(-2);
-//         $options->setQuery($query);
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $query = new Query();
+        $query->setTop(-2);
+        $options->setQuery($query);
+        array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $query = new Query();
-//         $query->addSelectField('TableName');
-//         $options->setQuery($query);
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $query = new Query();
+        $query->addSelectField('TableName');
+        $options->setQuery($query);
+        array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $query = new Query();
-//         $filter = Filter::applyPropertyName('BOOLEAN');
-//         $query->setFilter($filter);
-//         $options->setQuery($query);
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $query = new Query();
+        $filter = Filter::applyPropertyName('BOOLEAN');
+        $query->setFilter($filter);
+        $options->setQuery($query);
+        array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $query = new Query();
-//         $filter = Filter::applyConstant(false, EdmType::BOOLEAN);
-//         $query->setFilter($filter);
-//         $options->setQuery($query);
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $query = new Query();
+        $filter = Filter::applyConstant(false, EdmType::BOOLEAN);
+        $query->setFilter($filter);
+        $options->setQuery($query);
+        array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $query = new Query();
-//         $filter = Filter::applyEq(Filter::applyConstant(23, EdmType::INT32), Filter::applyPropertyName('INT32'));
-//         $query->setFilter($filter);
-//         $options->setQuery($query);
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $query = new Query();
+        $filter = Filter::applyEq(Filter::applyConstant(23, EdmType::INT32), Filter::applyPropertyName('INT32'));
+        $query->setFilter($filter);
+        $options->setQuery($query);
+        array_push($ret, $options);
 
         $options = new QueryEntitiesOptions();
         $query = new Query();
@@ -261,16 +261,16 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
         $options->setQuery($query);
         array_push($ret, $options);
 
-//         $options = new QueryEntitiesOptions();
-//         $options->setNextPartitionKey($e->getPartitionKey());
-//         $options->setNextRowKey($e->getRowKey());
-//         array_push($ret, $options);
+        $options = new QueryEntitiesOptions();
+        $options->setNextPartitionKey($e->getPartitionKey());
+        $options->setNextRowKey($e->getRowKey());
+        array_push($ret, $options);
 
-//         // Ask for an entity that does not exist.
-//         $options = new QueryEntitiesOptions();
-//         $options->setNextPartitionKey(self::$Partitions[2] . 'X');
-//         $options->setNextRowKey($e->getRowKey() . 'X');
-//         array_push($ret, $options);
+        // Ask for an entity that does not exist.
+        $options = new QueryEntitiesOptions();
+        $options->setNextPartitionKey(self::$Partitions[2] . 'X');
+        $options->setNextRowKey($e->getRowKey() . 'X');
+        array_push($ret, $options);
 
         return $ret;
     }
@@ -618,7 +618,6 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
             $expectedData = $expectedDataTmp;
         }
 		
-        echo var_dump($q);
         $this->compareEntityLists($ret->getEntities(), $expectedData, $projected);
     }
 
@@ -627,9 +626,6 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
         // Need to sort the lists.
         $actualData = self::sortEntitiesByCompositeKey($actualData);
         $expectedData = self::sortEntitiesByCompositeKey($expectedData);
-        echo 'GOGOGO';
-		echo strval(count($expectedData)) . PHP_EOL;
-		echo strval(count($actualData)) . PHP_EOL;
         $this->assertEquals(count($expectedData) , count($actualData), 'count(getEntities)');
         for ($i = 0; $i < count($expectedData); $i++) {
             $e1 = $expectedData[$i];
