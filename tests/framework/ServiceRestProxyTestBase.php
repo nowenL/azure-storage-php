@@ -80,10 +80,10 @@ class ServiceRestProxyTestBase extends RestProxyTestBase
         $propertiesArray['Logging']['Read'] = 'false';
         $propertiesArray['Logging']['Write'] = 'false';
         $propertiesArray['Logging']['RetentionPolicy']['Enabled'] = 'false';
-        $propertiesArray['Metrics']['Version'] = '1.0';
-        $propertiesArray['Metrics']['Enabled'] = 'false';
-        $propertiesArray['Metrics']['IncludeAPIs'] = 'false';
-        $propertiesArray['Metrics']['RetentionPolicy']['Enabled'] = 'false';
+        $propertiesArray['HourMetrics']['Version'] = '1.0';
+        $propertiesArray['HourMetrics']['Enabled'] = 'false';
+        $propertiesArray['HourMetrics']['IncludeAPIs'] = 'false';
+        $propertiesArray['HourMetrics']['RetentionPolicy']['Enabled'] = 'false';
         $this->defaultProperties = ServiceProperties::create($propertiesArray);
     }
 

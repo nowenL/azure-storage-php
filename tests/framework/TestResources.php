@@ -213,11 +213,11 @@ class TestResources
         $sample['Logging']['Write'] = 'true';
         $sample['Logging']['RetentionPolicy']['Enabled'] = 'true';
         $sample['Logging']['RetentionPolicy']['Days'] = '20';
-        $sample['Metrics']['Version'] = '1.0';
-        $sample['Metrics']['Enabled'] = 'true';
-        $sample['Metrics']['IncludeAPIs'] = 'false';
-        $sample['Metrics']['RetentionPolicy']['Enabled'] = 'true';
-        $sample['Metrics']['RetentionPolicy']['Days'] = '20';
+        $sample['HourMetrics']['Version'] = '1.0';
+        $sample['HourMetrics']['Enabled'] = 'true';
+        $sample['HourMetrics']['IncludeAPIs'] = 'false';
+        $sample['HourMetrics']['RetentionPolicy']['Enabled'] = 'true';
+        $sample['HourMetrics']['RetentionPolicy']['Days'] = '20';
 
         return $sample;
     }
@@ -231,11 +231,11 @@ class TestResources
         $sample['Logging']['Write'] = 'true';
         $sample['Logging']['RetentionPolicy']['Enabled'] = 'true';
         $sample['Logging']['RetentionPolicy']['Days'] = '10';
-        $sample['Metrics']['Version'] = '1.0';
-        $sample['Metrics']['Enabled'] = 'true';
-        $sample['Metrics']['IncludeAPIs'] = 'false';
-        $sample['Metrics']['RetentionPolicy']['Enabled'] = 'true';
-        $sample['Metrics']['RetentionPolicy']['Days'] = '10';
+        $sample['HourMetrics']['Version'] = '1.0';
+        $sample['HourMetrics']['Enabled'] = 'true';
+        $sample['HourMetrics']['IncludeAPIs'] = 'false';
+        $sample['HourMetrics']['RetentionPolicy']['Enabled'] = 'true';
+        $sample['HourMetrics']['RetentionPolicy']['Days'] = '10';
 
         return $sample;
     }
@@ -288,9 +288,10 @@ class TestResources
     public static function listQueuesOneEntry()
     {
         $sample = array();
+        $sample['@attributes']['ServiceEndpoint'] = 'http://myaccount.blob.core.windows.net/';
         $sample['Marker'] = '/account/listqueueswithnextmarker3';
         $sample['MaxResults'] = '2';
-        $sample['Queues'] = array('Queue' => array('Name' => 'myqueue', 'Url' => 'http://account.queue.core.windows.net/myqueue'));
+        $sample['Queues'] = array('Queue' => array('Name' => 'myqueue'));
         $sample['NextMarker'] = '';
 
         return $sample;
@@ -299,10 +300,11 @@ class TestResources
     public static function listQueuesMultipleEntries()
     {
         $sample = array();
+        $sample['@attributes']['ServiceEndpoint'] = 'http://myaccount.blob.core.windows.net/';
         $sample['MaxResults'] = '2';
         $sample['Queues'] = array ('Queue' => array(
-          0 => array('Name' => 'myqueue1', 'Url' => 'http://account.queue.core.windows.net/myqueue1'),
-          1 => array('Name' => 'myqueue2', 'Url' => 'http://account.queue.core.windows.net/myqueue2')
+          0 => array('Name' => 'myqueue1'),
+          1 => array('Name' => 'myqueue2')
         ));
         $sample['NextMarker'] = '/account/myqueue3';
 
@@ -321,11 +323,11 @@ class TestResources
     public static function listContainersOneEntry()
     {
         $sample = array();
+        $sample['@attributes']['ServiceEndpoint'] = 'http://myaccount.blob.core.windows.net/';
         $sample['Marker'] = '/account/listqueueswithnextmarker3';
         $sample['MaxResults'] = '2';
         $sample['Containers'] = array('Container' => array(
             'Name' => 'audio',
-            'Url' => 'http://myaccount.blob.core.windows.net/audio',
             'Properties' => array(
                 'Last-Modified' => 'Wed, 12 Aug 2009 20:39:39 GMT',
                 'Etag' => '0x8CACB9BD7C6B1B2'
@@ -339,11 +341,11 @@ class TestResources
     public static function listContainersMultipleEntries()
     {
         $sample = array();
+        $sample['@attributes']['ServiceEndpoint'] = 'http://myaccount.blob.core.windows.net/';
         $sample['MaxResults'] = '3';
         $sample['Containers'] = array ('Container' => array(
           0 => array(
             'Name' => 'audio',
-            'Url' => 'http://myaccount.blob.core.windows.net/audio',
             'Properties' => array(
                 'Last-Modified' => 'Wed, 12 Aug 2009 20:39:39 GMT',
                 'Etag' => '0x8CACB9BD7C6B1B2'
@@ -351,7 +353,6 @@ class TestResources
             ),
           1 => array(
             'Name' => 'images',
-            'Url' => 'http://myaccount.blob.core.windows.net/images',
             'Properties' => array(
                 'Last-Modified' => 'Wed, 12 Aug 2009 20:39:39 GMT',
                 'Etag' => '0x8CACB9BD7C1EEEC'
@@ -408,6 +409,7 @@ class TestResources
     public static function listBlobsOneEntry()
     {
         $sample = array();
+        $sample['@attributes']['ServiceEndpoint'] = 'http://myaccount.blob.core.windows.net/';
         $sample['Marker'] = '/account/listblobswithnextmarker3';
         $sample['MaxResults'] = '2';
         $sample['Delimiter'] = 'mydelimiter';
@@ -416,7 +418,6 @@ class TestResources
             'BlobPrefix' => array('Name' => 'myblobprefix'),
             'Blob' => array(
                 'Name' => 'myblob',
-                'Url' => 'http://account.blob.core.windows.net/myblob',
                 'Snapshot' => '10-12-2011',
                 'Metadata' => array('Name1' => 'Value1', 'Name2' => 'Value2'),
                 'Properties' => array(
@@ -443,6 +444,7 @@ class TestResources
     public static function listBlobsMultipleEntries()
     {
         $sample = array();
+        $sample['@attributes']['ServiceEndpoint'] = 'http://myaccount.blob.core.windows.net/';
         $sample['Marker'] = '/account/listblobswithnextmarker3';
         $sample['MaxResults'] = '2';
         $sample['Blobs'] = array(
@@ -451,7 +453,6 @@ class TestResources
                 1 => array('Name' => 'myblobprefix2')),
             'Blob' => array( 0 => array(
                 'Name' => 'myblob',
-                'Url' => 'http://account.blob.core.windows.net/myblob',
                 'Snapshot' => '10-12-2011',
                 'Metadata' => array('Name1' => 'Value1', 'Name2' => 'Value2'),
                 'Properties' => array(
@@ -471,7 +472,6 @@ class TestResources
 
             1 => array(
                 'Name' => 'myblob2',
-                'Url' => 'http://account.blob.core.windows.net/myblob2',
                 'Snapshot' => '10-12-2011',
                 'Metadata' => array('Name1' => 'Value1', 'Name2' => 'Value2'),
                 'Properties' => array(

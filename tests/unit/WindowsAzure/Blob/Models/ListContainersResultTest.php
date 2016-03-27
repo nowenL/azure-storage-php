@@ -71,7 +71,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
         $containers = $actual->getContainers();
         $this->assertCount(1, $containers);
         $this->assertEquals($sample['Containers']['Container']['Name'], $containers[0]->getName());
-        $this->assertEquals($sample['Containers']['Container']['Url'], $containers[0]->getUrl());
+        $this->assertEquals($sample['@attributes']['ServiceEndpoint'] . $sample['Containers']['Container']['Name'], $containers[0]->getUrl());
         $this->assertEquals(
          Utilities::rfc1123ToDateTime($sample['Containers']['Container']['Properties']['Last-Modified']),
         $containers[0]->getProperties()->getLastModified());
@@ -98,7 +98,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
         $containers = $actual->getContainers();
         $this->assertCount(2, $containers);
         $this->assertEquals($sample['Containers']['Container'][0]['Name'], $containers[0]->getName());
-        $this->assertEquals($sample['Containers']['Container'][0]['Url'], $containers[0]->getUrl());
+        $this->assertEquals($sample['@attributes']['ServiceEndpoint'] . $sample['Containers']['Container'][0]['Name'], $containers[0]->getUrl());
         $this->assertEquals(
             Utilities::rfc1123ToDateTime($sample['Containers']['Container'][0]['Properties']['Last-Modified']), 
             $containers[0]->getProperties()->getLastModified());
@@ -106,7 +106,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
             $sample['Containers']['Container'][0]['Properties']['Etag'],
             $containers[0]->getProperties()->getETag());
         $this->assertEquals($sample['Containers']['Container'][1]['Name'], $containers[1]->getName());
-        $this->assertEquals($sample['Containers']['Container'][1]['Url'], $containers[1]->getUrl());
+        $this->assertEquals($sample['@attributes']['ServiceEndpoint'] . $sample['Containers']['Container'][1]['Name'], $containers[1]->getUrl());
         $this->assertEquals(
             Utilities::rfc1123ToDateTime($sample['Containers']['Container'][1]['Properties']['Last-Modified']), 
             $containers[1]->getProperties()->getLastModified());

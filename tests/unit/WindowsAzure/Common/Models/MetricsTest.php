@@ -50,13 +50,13 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         $sample = TestResources::getServicePropertiesSample();
         
         // Test
-        $actual = Metrics::create($sample['Metrics']);
+        $actual = Metrics::create($sample['HourMetrics']);
         
         // Assert
-        $this->assertEquals(Utilities::toBoolean($sample['Metrics']['Enabled']), $actual->getEnabled());
-        $this->assertEquals(Utilities::toBoolean($sample['Metrics']['IncludeAPIs']), $actual->getIncludeAPIs());
-        $this->assertEquals(RetentionPolicy::create($sample['Metrics']['RetentionPolicy']), $actual->getRetentionPolicy());
-        $this->assertEquals($sample['Metrics']['Version'], $actual->getVersion());
+        $this->assertEquals(Utilities::toBoolean($sample['HourMetrics']['Enabled']), $actual->getEnabled());
+        $this->assertEquals(Utilities::toBoolean($sample['HourMetrics']['IncludeAPIs']), $actual->getIncludeAPIs());
+        $this->assertEquals(RetentionPolicy::create($sample['HourMetrics']['RetentionPolicy']), $actual->getRetentionPolicy());
+        $this->assertEquals($sample['HourMetrics']['Version'], $actual->getVersion());
     }
     
     /**
@@ -67,7 +67,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = RetentionPolicy::create($sample['Metrics']['RetentionPolicy']);
+        $expected = RetentionPolicy::create($sample['HourMetrics']['RetentionPolicy']);
         $metrics->setRetentionPolicy($expected);
         
         // Test
@@ -85,7 +85,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = RetentionPolicy::create($sample['Metrics']['RetentionPolicy']);
+        $expected = RetentionPolicy::create($sample['HourMetrics']['RetentionPolicy']);
         
         // Test
         $metrics->setRetentionPolicy($expected);
@@ -103,7 +103,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = $sample['Metrics']['Version'];
+        $expected = $sample['HourMetrics']['Version'];
         $metrics->setVersion($expected);
         
         // Test
@@ -121,7 +121,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = $sample['Metrics']['Version'];
+        $expected = $sample['HourMetrics']['Version'];
         
         // Test
         $metrics->setVersion($expected);
@@ -139,7 +139,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = Utilities::toBoolean($sample['Metrics']['Enabled']);
+        $expected = Utilities::toBoolean($sample['HourMetrics']['Enabled']);
         $metrics->setEnabled($expected);
         
         // Test
@@ -157,7 +157,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = Utilities::toBoolean($sample['Metrics']['Enabled']);
+        $expected = Utilities::toBoolean($sample['HourMetrics']['Enabled']);
         
         // Test
         $metrics->setEnabled($expected);
@@ -175,7 +175,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = Utilities::toBoolean($sample['Metrics']['IncludeAPIs']);
+        $expected = Utilities::toBoolean($sample['HourMetrics']['IncludeAPIs']);
         $metrics->setIncludeAPIs($expected);
         
         // Test
@@ -193,7 +193,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $metrics = new Metrics();
-        $expected = Utilities::toBoolean($sample['Metrics']['IncludeAPIs']);
+        $expected = Utilities::toBoolean($sample['HourMetrics']['IncludeAPIs']);
         
         // Test
         $metrics->setIncludeAPIs($expected);
@@ -210,11 +210,11 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     {
         // Setup
         $sample = TestResources::getServicePropertiesSample();
-        $metrics = Metrics::create($sample['Metrics']);
+        $metrics = Metrics::create($sample['HourMetrics']);
         $expected = array(
-            'Version'         => $sample['Metrics']['Version'],
-            'Enabled'         => $sample['Metrics']['Enabled'],
-            'IncludeAPIs'     => $sample['Metrics']['IncludeAPIs'],
+            'Version'         => $sample['HourMetrics']['Version'],
+            'Enabled'         => $sample['HourMetrics']['Enabled'],
+            'IncludeAPIs'     => $sample['HourMetrics']['IncludeAPIs'],
             'RetentionPolicy' => $metrics->getRetentionPolicy()->toArray()
         );
         
@@ -232,11 +232,11 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     {
         // Setup
         $sample = TestResources::getServicePropertiesSample();
-        $sample['Metrics']['Enabled'] = 'false';
-        $metrics = Metrics::create($sample['Metrics']);
+        $sample['HourMetrics']['Enabled'] = 'false';
+        $metrics = Metrics::create($sample['HourMetrics']);
         $expected = array(
-            'Version'         => $sample['Metrics']['Version'],
-            'Enabled'         => $sample['Metrics']['Enabled'],
+            'Version'         => $sample['HourMetrics']['Version'],
+            'Enabled'         => $sample['HourMetrics']['Enabled'],
             'RetentionPolicy' => $metrics->getRetentionPolicy()->toArray()
         );
         

@@ -56,7 +56,7 @@ class ServiceProperties
     {
         $result = new ServiceProperties();
         $result->setLogging(Logging::create($parsedResponse['Logging']));
-        $result->setMetrics(Metrics::create($parsedResponse['Metrics']));
+        $result->setMetrics(Metrics::create($parsedResponse['HourMetrics']));
         
         return $result;
     }
@@ -114,7 +114,7 @@ class ServiceProperties
     {
         return array(
             'Logging' => !empty($this->_logging) ? $this->_logging->toArray() : null,
-            'Metrics' => !empty($this->_metrics) ? $this->_metrics->toArray() : null
+            'HourMetrics' => !empty($this->_metrics) ? $this->_metrics->toArray() : null
         );
     }
     

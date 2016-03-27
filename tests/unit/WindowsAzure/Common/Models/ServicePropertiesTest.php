@@ -52,7 +52,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
         // Setup
         $sample = TestResources::getServicePropertiesSample();
         $logging = Logging::create($sample['Logging']);
-        $metrics = Metrics::create($sample['Metrics']);
+        $metrics = Metrics::create($sample['HourMetrics']);
         
         // Test
         $result = ServiceProperties::create($sample);
@@ -104,7 +104,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     {
         // Setup
         $sample = TestResources::getServicePropertiesSample();
-        $metrics = Metrics::create($sample['Metrics']);
+        $metrics = Metrics::create($sample['HourMetrics']);
         $result = new ServiceProperties();
         
         // Test
@@ -121,7 +121,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     {
         // Setup
         $sample = TestResources::getServicePropertiesSample();
-        $metrics = Metrics::create($sample['Metrics']);
+        $metrics = Metrics::create($sample['HourMetrics']);
         $result = new ServiceProperties();
         $result->setMetrics($metrics);
         
@@ -141,7 +141,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
         $properties = ServiceProperties::create(TestResources::getServicePropertiesSample());
         $expected = array(
             'Logging' => $properties->getLogging()->toArray(),
-            'Metrics' => $properties->getMetrics()->toArray()
+            'HourMetrics' => $properties->getMetrics()->toArray()
         );
         
         // Test
