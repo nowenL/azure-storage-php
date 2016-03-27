@@ -91,9 +91,9 @@ class ListQueuesResultTest extends \PHPUnit_Framework_TestCase
         $queues = $actual->getQueues();
         $this->assertCount(2, $queues);
         $this->assertEquals($sample['Queues']['Queue'][0]['Name'], $queues[0]->getName());
-        $this->assertEquals($sample['Queues']['Queue'][0]['Url'], $queues[0]->getUrl());
+        $this->assertEquals($sample['@attributes']['ServiceEndpoint'] . $sample['Queues']['Queue'][0]['Name'], $queues[0]->getUrl());
         $this->assertEquals($sample['Queues']['Queue'][1]['Name'], $queues[1]->getName());
-        $this->assertEquals($sample['Queues']['Queue'][1]['Url'], $queues[1]->getUrl());
+        $this->assertEquals($sample['@attributes']['ServiceEndpoint'] . $sample['Queues']['Queue'][1]['Name'], $queues[1]->getUrl());
         $this->assertEquals($sample['MaxResults'], $actual->getMaxResults());
         $this->assertEquals($sample['NextMarker'], $actual->getNextMarker());
         

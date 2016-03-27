@@ -96,7 +96,7 @@ class SharedKeyAuthSchemeTest extends \PHPUnit_Framework_TestCase
         $headers = array(Resources::X_MS_VERSION => $apiVersion, Resources::X_MS_DATE => $date1);
         $queryParams = array(Resources::QP_COMP => 'list');
         $httpMethod = 'GET';
-        $expected = 'SharedKey ' . $accountName . ':7O9UOMTnAEF+cuwZzo1BlDj2qJm8yNywajta5he6Qig=';
+        $expected = 'SharedKey ' . $accountName . ':YDjZ61Lqt6HeMx+vv5QzFjW1juW7XEECVXJ4V9/pFgA=';
 
         $mock = new SharedKeyAuthSchemeMock($accountName, $accountKey);
 
