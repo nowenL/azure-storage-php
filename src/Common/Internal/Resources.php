@@ -247,7 +247,7 @@ class Resources
 
     // Header values
     const SDK_USER_AGENT                                = 'Azure-SDK-For-PHP/0.4.1';
-    const STORAGE_API_LATEST_VERSION                    = '2012-02-12';
+    const STORAGE_API_LATEST_VERSION                    = '2015-04-05';
     const SM_API_LATEST_VERSION                         = '2011-10-01';
     const DATA_SERVICE_VERSION_VALUE                    = '1.0;NetFx';
     const MAX_DATA_SERVICE_VERSION_VALUE                = '2.0;NetFx';
