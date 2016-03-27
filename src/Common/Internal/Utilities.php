@@ -76,7 +76,24 @@ class Utilities
 
         return $url;
     }
-
+	
+    /**
+     * Parse storage account name from an endpoint url.
+     * 
+     * @param string $url The endpoint $url
+     * 
+     * @static
+     * 
+     * @return string
+     */
+    public static function tryParseAccountNameFromUrl($url)
+    {
+    	$host = parse_url($url, PHP_URL_HOST);
+    	
+    	// first token of the url host is account name
+    	return explode('.', $host)[0];
+    }
+    
     /**
      * tries to get nested array with index name $key from $array.
      *

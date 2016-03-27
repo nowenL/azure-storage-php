@@ -57,10 +57,13 @@ class ListQueuesResult
     public static function create($parsedResponse)
     {
         $result               = new ListQueuesResult();
-        $result->_accountName = Utilities::tryGetKeysChainValue(
+        $serviceEndpoint      = Utilities::tryGetKeysChainValue(
             $parsedResponse,
             Resources::XTAG_ATTRIBUTES,
-            Resources::XTAG_ACCOUNT_NAME
+            Resources::XTAG_SERVICE_ENDPOINT
+        );
+        $result->_accountName = Utilities::tryParseAccountNameFromUrl(
+        		$serviceEndpoint
         );
         $result->_prefix      = Utilities::tryGetValue(
             $parsedResponse, Resources::QP_PREFIX
@@ -82,7 +85,7 @@ class ListQueuesResult
         }
         
         foreach ($rawQueues as $value) {
-            $queue    = new Queue($value['Name'], $value['Url']);
+            $queue    = new Queue($value['Name'], $serviceEndpoint . $value['Name']);
             $metadata = Utilities::tryGetValue($value, Resources::QP_METADATA);
             $queue->setMetadata(is_null($metadata) ? array() : $metadata);
             $result->_queues[] = $queue;

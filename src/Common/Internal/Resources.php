@@ -328,6 +328,7 @@ class Resources
     const XTAG_CODE                       = 'Code';
     const XTAG_MESSAGE                    = 'Message';
     const XTAG_STORAGE_SERVICE_PROPERTIES = 'StorageServiceProperties';
+    const XTAG_SERVICE_ENDPOINT           = 'ServiceEndpoint';
     const XTAG_ENDPOINT                   = 'Endpoint';
     const XTAG_ENDPOINTS                  = 'Endpoints';
     const XTAG_PRIMARY                    = 'Primary';

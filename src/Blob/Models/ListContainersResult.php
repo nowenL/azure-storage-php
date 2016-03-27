@@ -26,6 +26,7 @@ namespace WindowsAzure\Blob\Models;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Utilities;
 use WindowsAzure\Blob\Models\Container;
+use Tests\Unit\WindowsAzure\Common\Internal\UtilitiesTest;
 
 /**
  * Container to hold list container response object.
@@ -79,11 +80,14 @@ class ListContainersResult
      */
     public static function create($parsedResponse)
     {
-        $result               = new ListContainersResult();
-        $result->_accountName = Utilities::tryGetKeysChainValue(
+    	$result               = new ListContainersResult();
+        $serviceEndpoint      = Utilities::tryGetKeysChainValue(
             $parsedResponse,
             Resources::XTAG_ATTRIBUTES,
-            Resources::XTAG_ACCOUNT_NAME
+            Resources::XTAG_SERVICE_ENDPOINT
+        );
+        $result->_accountName = Utilities::tryParseAccountNameFromUrl(
+        		$serviceEndpoint
         );
         $result->_prefix      = Utilities::tryGetValue(
             $parsedResponse, Resources::QP_PREFIX
@@ -108,7 +112,7 @@ class ListContainersResult
         foreach ($rawContainer as $value) {
             $container = new Container();
             $container->setName($value['Name']);
-            $container->setUrl($value['Url']);
+            $container->setUrl($serviceEndpoint . $value['Name']);
             $container->setMetadata(
                 Utilities::tryGetValue($value, Resources::QP_METADATA, array())
             );

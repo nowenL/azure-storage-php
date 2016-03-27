@@ -91,11 +91,17 @@ class ListBlobsResult
     public static function create($parsed)
     {
         $result                 = new ListBlobsResult();
-        $result->_containerName = Utilities::tryGetKeysChainValue(
+        $serviceEndpoint        = Utilities::tryGetKeysChainValue(
+        	$parsed,
+        	Resources::XTAG_ATTRIBUTES,
+        	Resources::XTAG_SERVICE_ENDPOINT
+        );
+        $containerName          = Utilities::tryGetKeysChainValue(
             $parsed,
             Resources::XTAG_ATTRIBUTES,
             Resources::XTAG_CONTAINER_NAME
         );
+        $result->_containerName = $containerName;
         $result->_prefix        = Utilities::tryGetValue(
             $parsed, Resources::QP_PREFIX
         );
@@ -125,7 +131,7 @@ class ListBlobsResult
         foreach ($rawBlobs as $value) {
             $blob = new Blob();
             $blob->setName($value['Name']);
-            $blob->setUrl($value['Url']);
+            $blob->setUrl($serviceEndpoint . $containerName . '/' . $value['Name']);
             $blob->setSnapshot(Utilities::tryGetValue($value, 'Snapshot'));
             $blob->setProperties(
                 BlobProperties::create(
