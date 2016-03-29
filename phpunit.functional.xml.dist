@@ -9,7 +9,7 @@
          verbose="true">
   <testsuites>
     <testsuite name="azure-sdk-for-php">
-      <directory suffix="Test.php">tests/functional/WindowsAzure/Table</directory>
+      <directory suffix="Test.php">tests/functional</directory>
     </testsuite>
   </testsuites>
 
