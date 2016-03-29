@@ -72,7 +72,7 @@ class FunctionalTestBase extends IntegrationTestBase
 
     public static function println($msg)
     {
-        error_log($msg);
+        // error_log($msg);
     }
 
     public static function tmptostring($obj)
