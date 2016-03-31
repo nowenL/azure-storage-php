@@ -1104,16 +1104,16 @@ class QueueServiceFunctionalTest extends FunctionalTestBase
         $this->restProxy->clearMessages($queue);
     }
 
-//     /**
-//     * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
-//     * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-//     * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
-//     * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
-//     */
-//     public function testListMessagesNoOptions()
-//     {
-//         $this->listMessagesWorker(new ListMessagesOptions());
-//     }
+    /**
+    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
+    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
+    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    */
+    public function testListMessagesNoOptions()
+    {
+        $this->listMessagesWorker(new ListMessagesOptions());
+    }
 
     /**
     * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages

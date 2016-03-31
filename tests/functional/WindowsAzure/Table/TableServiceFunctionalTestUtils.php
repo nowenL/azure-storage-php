@@ -92,7 +92,6 @@ class TableServiceFunctionalTestUtils
             $ret = new QueryStringFilter($filter->getQueryString());
             return $ret;
         } else {
-            var_dump($filter);
             throw new \Exception();
         }
     }
@@ -303,7 +302,6 @@ class TableServiceFunctionalTestUtils
             return $ret;
         }
 
-        var_dump(array($filter, $obj));
         throw new \Exception();
     }
 

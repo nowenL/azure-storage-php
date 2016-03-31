@@ -822,11 +822,11 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         $this->assertEquals(3, count($result->getUncommittedBlocks()), 'count($result->getUncommittedBlocks())');
         $uncom = $result->getUncommittedBlocks();
         $keys = array_keys($uncom);
-        $this->assertEquals('123', $keys[0], '$keys[0]');
+        $this->assertEquals(base64_encode('123'), $keys[0], '$keys[0]');
         $this->assertEquals(256, $uncom[$keys[0]], '$uncom[$keys[0]]');
-        $this->assertEquals('124', $keys[1], '$keys[1]');
+        $this->assertEquals(base64_encode('124'), $keys[1], '$keys[1]');
         $this->assertEquals(512, $uncom[$keys[1]], '$uncom[$keys[1]]');
-        $this->assertEquals('125', $keys[2], '$keys[2]');
+        $this->assertEquals(base64_encode('125'), $keys[2], '$keys[2]');
         $this->assertEquals(195, $uncom[$keys[2]], '$uncom[$keys[2]]');
     }
 

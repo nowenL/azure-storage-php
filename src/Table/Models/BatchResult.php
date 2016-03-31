@@ -25,6 +25,7 @@
 namespace WindowsAzure\Table\Models;
 use WindowsAzure\Common\Internal\Resources;
 use WindowsAzure\Common\Internal\Utilities;
+use WindowsAzure\Common\Internal\HttpFormatter;
 use WindowsAzure\Common\ServiceException;
 use WindowsAzure\Common\Internal\ServiceRestProxy;
 use WindowsAzure\Table\Models\BatchError;
@@ -60,8 +61,8 @@ class BatchResult
      * @return array
      */
     private static function _constructResponses($body, $mimeSerializer)
-    {
-        $responses = array();
+    {	
+    	$responses = array();
         $parts     = $mimeSerializer->decodeMimeMultipart($body);
         // Decrease the count of parts to remove the batch response body and just
         // include change sets response body. We may need to undo this action in
@@ -81,7 +82,7 @@ class BatchResult
             $response->reason = $statusTokens[2];
     		
             $headers = array();
-            $j        = 1;
+            $j       = 1;
             do {
                 $headerLine = $lines[$j++];
                 $headerTokens = explode(':', $headerLine);
@@ -145,8 +146,8 @@ class BatchResult
             $operation = $operations[$i];
             $type      = $operation->getType();
             $body      = $response->body;
-            $headers   = $response->headers;
-
+            $headers   = HttpFormatter::formatHeaders($response->headers);
+            
             try {
                 ServiceRestProxy::throwIfError(
                     $response->statusCode,

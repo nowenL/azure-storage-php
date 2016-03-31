@@ -1139,7 +1139,7 @@ class TableServiceIntegrationTest extends IntegrationTestBase
 
             $this->assertEquals('001', $entity->getPartitionKey(), '$entity->getPartitionKey()');
             $this->assertEquals('batchWorks-' . $i, $entity->getRowKey(), '$entity->getRowKey()');
-            $this->assertNotNull($entity->getTimestamp(), '$entity->getTimestamp()');
+            $this->assertNotNull($entity->getTimestamp(), '$entity->getTimestamp()');                     
             $this->assertNotNull($entity->getETag(), '$entity->getETag()');
 
             $this->assertNotNull($entity->getProperty('test'), '$entity->getProperty(\'test\')');
