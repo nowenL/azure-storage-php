@@ -152,7 +152,7 @@ class ServiceRestProxy extends RestProxy
                 'cookies' => true,
                 'verify' => false,
                 // For testing with Fiddler
-                'proxy' => "localhost:8888",
+                // 'proxy' => "localhost:8888",
         ));
     	
     	$bodySize = $request->getBody()->getSize();

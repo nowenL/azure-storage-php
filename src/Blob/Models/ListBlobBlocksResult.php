@@ -93,7 +93,7 @@ class ListBlobBlocksResult
             }
             
             foreach ($rawEntries as $value) {
-                $entries[base64_decode($value['Name'])] = $value['Size'];
+                $entries[$value['Name']] = $value['Size'];
             }
         }
         

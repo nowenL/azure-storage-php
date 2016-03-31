@@ -111,6 +111,12 @@ class TableServiceIntegrationTest extends IntegrationTestBase
         }
         parent::tearDownAfterClass();
     }
+    
+    protected function tearDown()
+    {
+    	// tearDown of parent will delete the container created in setUp
+    	// Do nothing here
+    }
 
     private function createTables($prefix, $list)
     {
