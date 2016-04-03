@@ -1,6 +1,6 @@
 {
-    "name": "microsoft/windowsazure",
-    "description": "This project provides a set of PHP client libraries that make it easy to access Windows Azure tables, blobs, queues, service runtime and service management APIs.",
+    "name": "microsoft/azure-storage",
+    "description": "This project provides a set of PHP client libraries that make it easy to access Microsoft Azure storage APIs.",
     "keywords": [ "php", "azure", "storage", "sdk" ],
     "license": "Apache-2.0",
     "authors": [
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WindowsAzure\\": "src/"
+            "MicrosoftAzure\\Storage\\": "src/"
         }
     },
     "autoload-dev": {
