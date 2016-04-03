@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\AcquireLeaseOptions;
-use WindowsAzure\Blob\Models\AccessCondition;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\AcquireLeaseOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
 
 /**
  * Unit tests for class AcquireLeaseOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Blob\Models\AccessCondition;
 class AcquireLeaseOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\AcquireLeaseOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\AcquireLeaseOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -56,7 +56,7 @@ class AcquireLeaseOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AcquireLeaseOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\AcquireLeaseOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {

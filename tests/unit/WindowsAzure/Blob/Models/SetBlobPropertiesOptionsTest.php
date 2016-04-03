@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\SetBlobPropertiesOptions;
-use WindowsAzure\Blob\Models\AccessCondition;
-use WindowsAzure\Blob\Models\BlobProperties;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Blob\Models\BlobProperties;
 
 /**
  * Unit tests for class SetBlobPropertiesOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,7 +41,7 @@ use WindowsAzure\Blob\Models\BlobProperties;
 class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::__construct
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::__construct
      */
     public function test__construct()
     {
@@ -59,8 +59,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setBlobContentType
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getBlobContentType
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setBlobContentType
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getBlobContentType
      */
     public function testSetBlobContentType()
     {
@@ -77,8 +77,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setBlobContentEncoding
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getBlobContentEncoding
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setBlobContentEncoding
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getBlobContentEncoding
      */
     public function testSetBlobContentEncoding()
     {
@@ -95,8 +95,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setBlobContentLength
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getBlobContentLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setBlobContentLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getBlobContentLength
      */
     public function testSetContentLength()
     {
@@ -113,8 +113,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setBlobContentLanguage
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getBlobContentLanguage
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setBlobContentLanguage
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getBlobContentLanguage
      */
     public function testSetBlobContentLanguage()
     {
@@ -131,8 +131,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setBlobContentMD5
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getBlobContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setBlobContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getBlobContentMD5
      */
     public function testSetBlobContentMD5()
     {
@@ -149,8 +149,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setBlobCacheControl
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getBlobCacheControl
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setBlobCacheControl
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getBlobCacheControl
      */
     public function testSetBlobCacheControl()
     {
@@ -167,8 +167,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getLeaseId
      */
     public function testSetLeaseId()
     {
@@ -185,8 +185,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setSequenceNumberAction
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getSequenceNumberAction
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setSequenceNumberAction
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getSequenceNumberAction
      */
     public function testSetSequenceNumberAction()
     {
@@ -203,8 +203,8 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setSequenceNumber
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getSequenceNumber
      */
     public function testSetSequenceNumber()
     {
@@ -221,7 +221,7 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -238,7 +238,7 @@ class SetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {

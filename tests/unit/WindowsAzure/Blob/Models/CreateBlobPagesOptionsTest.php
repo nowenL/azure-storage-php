@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\CreateBlobPagesOptions;
-use WindowsAzure\Blob\Models\AccessCondition;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
 
 /**
  * Unit tests for class CreateBlobPagesOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Blob\Models\AccessCondition;
 class CreateBlobPagesOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -56,7 +56,7 @@ class CreateBlobPagesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {
@@ -72,8 +72,8 @@ class CreateBlobPagesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesOptions::setContentMD5
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesOptions::getContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions::setContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions::getContentMD5
      */
     public function testSetContentMD5()
     {
@@ -90,8 +90,8 @@ class CreateBlobPagesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions::getLeaseId
      */
     public function testSetLeaseId()
     {

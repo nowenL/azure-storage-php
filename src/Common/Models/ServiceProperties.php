@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Models
+ * @package   MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Models;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Models\Logging;
-use WindowsAzure\Common\Models\Metrics;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
+namespace MicrosoftAzure\Storage\Common\Models;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Models\Logging;
+use MicrosoftAzure\Storage\Common\Models\Metrics;
+use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
 
 /**
  * Encapsulates service properties
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Models
+ * @package   MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -50,7 +50,7 @@ class ServiceProperties
      *
      * @param array $parsedResponse XML response parsed into array.
      * 
-     * @return WindowsAzure\Common\Models\ServiceProperties.
+     * @return MicrosoftAzure\Storage\Common\Models\ServiceProperties.
      */
     public static function create($parsedResponse)
     {
@@ -64,7 +64,7 @@ class ServiceProperties
     /**
      * Gets logging element.
      *
-     * @return WindowsAzure\Common\Models\Logging.
+     * @return MicrosoftAzure\Storage\Common\Models\Logging.
      */
     public function getLogging()
     {
@@ -74,7 +74,7 @@ class ServiceProperties
     /**
      * Sets logging element.
      *
-     * @param WindowsAzure\Common\Models\Logging $logging new element.
+     * @param MicrosoftAzure\Storage\Common\Models\Logging $logging new element.
      * 
      * @return none.
      */
@@ -86,7 +86,7 @@ class ServiceProperties
     /**
      * Gets metrics element.
      *
-     * @return WindowsAzure\Common\Models\Metrics.
+     * @return MicrosoftAzure\Storage\Common\Models\Metrics.
      */
     public function getMetrics()
     {
@@ -96,7 +96,7 @@ class ServiceProperties
     /**
      * Sets metrics element.
      *
-     * @param WindowsAzure\Common\Models\Metrics $metrics new element.
+     * @param MicrosoftAzure\Storage\Common\Models\Metrics $metrics new element.
      * 
      * @return none.
      */

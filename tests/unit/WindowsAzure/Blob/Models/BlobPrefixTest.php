@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\BlobPrefix;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\BlobPrefix;
 use Tests\Framework\TestResources;
 
 /**
  * Unit tests for class BlobPrefix
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use Tests\Framework\TestResources;
 class BlobPrefixTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\BlobPrefix::setName
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobPrefix::setName
      */
     public function testSetName()
     {
@@ -55,7 +55,7 @@ class BlobPrefixTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobPrefix::getName
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobPrefix::getName
      */
     public function testGetName()
     {

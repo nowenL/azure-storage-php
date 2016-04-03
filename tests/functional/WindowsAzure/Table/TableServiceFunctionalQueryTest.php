@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Table
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Table
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Table;
+namespace Tests\Functional\MicrosoftAzure\Storage\Table;
 
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Table\Models\BatchOperations;
-use WindowsAzure\Table\Models\EdmType;
-use WindowsAzure\Table\Models\Entity;
-use WindowsAzure\Table\Models\Query;
-use WindowsAzure\Table\Models\QueryEntitiesOptions;
-use WindowsAzure\Table\Models\Filters\Filter;
+use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Table\Models\BatchOperations;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
+use MicrosoftAzure\Storage\Table\Models\Entity;
+use MicrosoftAzure\Storage\Table\Models\Query;
+use MicrosoftAzure\Storage\Table\Models\QueryEntitiesOptions;
+use MicrosoftAzure\Storage\Table\Models\Filters\Filter;
 
 class TableServiceFunctionalQueryTest extends FunctionalTestBase
 {
@@ -393,7 +393,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesaab()
     {
@@ -407,7 +407,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesBooleanLevel1()
     {
@@ -421,7 +421,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesDateTimeLevel1()
     {
@@ -435,7 +435,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesDoubleLevel1()
     {
@@ -449,7 +449,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesGuidLevel1()
     {
@@ -463,7 +463,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesIntLevel1()
     {
@@ -477,7 +477,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesLongLevel1()
     {
@@ -491,7 +491,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesStringLevel1()
     {
@@ -505,7 +505,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesBinaryLevel1()
     {
@@ -519,7 +519,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesLevel2()
     {
@@ -533,7 +533,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesLevel3()
     {
@@ -547,7 +547,7 @@ class TableServiceFunctionalQueryTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     private function queryEntitiesWorker($options)
     {

@@ -15,18 +15,18 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Blob
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Blob
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Blob;
+namespace Tests\Functional\MicrosoftAzure\Storage\Blob;
 
 use Tests\Framework\BlobServiceRestProxyTestBase;
-use WindowsAzure\Common\Internal\StorageServiceSettings;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\StorageServiceSettings;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 class IntegrationTestBase extends BlobServiceRestProxyTestBase
 {

@@ -15,30 +15,30 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Table
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Table
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Table;
+namespace Tests\Functional\MicrosoftAzure\Storage\Table;
 
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Table\Models\DeleteEntityOptions;
-use WindowsAzure\Table\Models\EdmType;
-use WindowsAzure\Table\Models\Entity;
-use WindowsAzure\Table\Models\QueryEntitiesOptions;
-use WindowsAzure\Table\Models\TableServiceOptions;
-use WindowsAzure\Table\Models\Filters\Filter;
+use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Table\Models\DeleteEntityOptions;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
+use MicrosoftAzure\Storage\Table\Models\Entity;
+use MicrosoftAzure\Storage\Table\Models\QueryEntitiesOptions;
+use MicrosoftAzure\Storage\Table\Models\TableServiceOptions;
+use MicrosoftAzure\Storage\Table\Models\Filters\Filter;
 
 class TableServiceFunctionalParametersTest extends FunctionalTestBase
 {
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getServiceProperties
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getServiceProperties
     */
     public function testGetServicePropertiesNullOptions()
     {
@@ -57,7 +57,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions1()
     {
@@ -70,7 +70,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions2()
     {
@@ -84,7 +84,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions3()
     {
@@ -98,7 +98,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions4()
     {
@@ -111,7 +111,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryTables
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryTables
     */
     public function testQueryTablesNullOptions()
     {
@@ -120,7 +120,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::createTable
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::createTable
     */
     public function testCreateTableNullOptions()
     {
@@ -134,7 +134,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteTable
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteTable
     */
     public function testDeleteTableNullOptions()
     {
@@ -148,7 +148,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getTable
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getTable
     */
     public function testGetTableNullOptions()
     {
@@ -163,7 +163,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
 
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityEntityNull()
     {
@@ -180,7 +180,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityTableAndEntityNull()
     {
@@ -197,7 +197,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityTableNull()
     {
@@ -214,7 +214,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityEntityAndOptionsNull()
     {
@@ -231,7 +231,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityEntityNullWithOptions()
     {
@@ -248,7 +248,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityOptionsNull()
     {
@@ -260,7 +260,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityEmptyPartitionKey()
     {
@@ -275,7 +275,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertEntityEmptyRowKey()
     {
@@ -290,7 +290,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testInsertStringWithAllAsciiCharacters()
     {
@@ -333,7 +333,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
     */
     public function testGetEntityPartKeyNull()
     {
@@ -350,7 +350,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
     */
     public function testGetEntityRowKeyNull()
     {
@@ -367,7 +367,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
     */
     public function testGetEntityKeysNull()
     {
@@ -384,7 +384,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
     */
     public function testGetEntityTableAndKeysNull()
     {
@@ -401,7 +401,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
     */
     public function testGetEntityTableNull()
     {
@@ -418,7 +418,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
     */
     public function testGetEntityKeysAndOptionsNull()
     {
@@ -435,8 +435,8 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testGetEntityKeysNullWithOptions()
     {
@@ -455,8 +455,8 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::getEntity
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::getEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testGetEntityOptionsNull()
     {
@@ -470,7 +470,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
     */
     public function testDeleteEntityPartKeyNull()
     {
@@ -487,7 +487,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
     */
     public function testDeleteEntityRowKeyNull()
     {
@@ -504,7 +504,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
     */
     public function testDeleteEntityKeysNull()
     {
@@ -521,7 +521,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
     */
     public function testDeleteEntityTableAndKeysNull()
     {
@@ -538,7 +538,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
     */
     public function testDeleteEntityTableNull()
     {
@@ -555,7 +555,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
     */
     public function testDeleteEntityKeysAndOptionsNull()
     {
@@ -572,8 +572,8 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testDeleteEntityKeysNullWithOptions()
     {
@@ -592,8 +592,8 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testDeleteEntityOptionsNull()
     {
@@ -607,8 +607,8 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testDeleteEntityTroublesomePartitionKey()
     {
@@ -661,8 +661,8 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::deleteEntity
-    * @covers WindowsAzure\Table\TableRestProxy::insertEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::deleteEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertEntity
     */
     public function testDeleteEntityTroublesomeRowKey()
     {
@@ -715,7 +715,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::mergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::mergeEntity
     */
     public function testMergeEntityEntityNull()
     {
@@ -732,7 +732,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::mergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::mergeEntity
     */
     public function testMergeEntityTableAndEntityNull()
     {
@@ -749,7 +749,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::mergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::mergeEntity
     */
     public function testMergeEntityTableNull()
     {
@@ -766,7 +766,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::mergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::mergeEntity
     */
     public function testMergeEntityEntityAndOptionsNull()
     {
@@ -783,7 +783,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::mergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::mergeEntity
     */
     public function testMergeEntityEntityNullWithOptions()
     {
@@ -800,7 +800,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::mergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::mergeEntity
     */
     public function testMergeEntityOptionsNull()
     {
@@ -816,7 +816,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::updateEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::updateEntity
     */
     public function testUpdateEntityEntityNull()
     {
@@ -833,7 +833,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::updateEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::updateEntity
     */
     public function testUpdateEntityTableAndEntityNull()
     {
@@ -850,7 +850,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::updateEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::updateEntity
     */
     public function testUpdateEntityTableNull()
     {
@@ -867,7 +867,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::updateEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::updateEntity
     */
     public function testUpdateEntityEntityAndOptionsNull()
     {
@@ -884,7 +884,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::updateEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::updateEntity
     */
     public function testUpdateEntityEntityNullWithOptions()
     {
@@ -901,7 +901,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::updateEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::updateEntity
     */
     public function testUpdateEntityOptionsNull()
     {
@@ -917,7 +917,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrMergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrMergeEntity
     */
     public function testInsertOrMergeEntityEntityNull()
     {
@@ -934,7 +934,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrMergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrMergeEntity
     */
     public function testInsertOrMergeEntityTableAndEntityNull()
     {
@@ -951,7 +951,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrMergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrMergeEntity
     */
     public function testInsertOrMergeEntityTableNull()
     {
@@ -968,7 +968,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrMergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrMergeEntity
     */
     public function testInsertOrMergeEntityEntityAndOptionsNull()
     {
@@ -985,7 +985,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrMergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrMergeEntity
     */
     public function testInsertOrMergeEntityEntityNullWithOptions()
     {
@@ -1002,7 +1002,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrMergeEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrMergeEntity
     */
     public function testInsertOrMergeEntityOptionsNull()
     {
@@ -1021,7 +1021,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrReplaceEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrReplaceEntity
     */
     public function testInsertOrReplaceEntityEntityNull()
     {
@@ -1038,7 +1038,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrReplaceEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrReplaceEntity
     */
     public function testInsertOrReplaceEntityTableAndEntityNull()
     {
@@ -1055,7 +1055,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrReplaceEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrReplaceEntity
     */
     public function testInsertOrReplaceEntityTableNull()
     {
@@ -1072,7 +1072,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrReplaceEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrReplaceEntity
     */
     public function testInsertOrReplaceEntityEntityAndOptionsNull()
     {
@@ -1089,7 +1089,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrReplaceEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrReplaceEntity
     */
     public function testInsertOrReplaceEntityEntityNullWithOptions()
     {
@@ -1106,7 +1106,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::insertOrReplaceEntity
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::insertOrReplaceEntity
     */
     public function testInsertOrReplaceEntityOptionsNull()
     {
@@ -1125,7 +1125,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesTableNull()
     {
@@ -1142,7 +1142,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesTableNullOptionsNull()
     {
@@ -1159,7 +1159,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesTableNullWithOptions()
     {
@@ -1176,7 +1176,7 @@ class TableServiceFunctionalParametersTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Table\TableRestProxy::queryEntities
+    * @covers MicrosoftAzure\Storage\Table\TableRestProxy::queryEntities
     */
     public function testQueryEntitiesOptionsNull()
     {

@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\ListContainersResult;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\ListContainersResult;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class ListContainersResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,7 +41,7 @@ use WindowsAzure\Common\Internal\Utilities;
 class ListContainersResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::create 
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::create 
      */
     public function testCreateWithEmpty()
     {
@@ -57,7 +57,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::create 
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::create 
      */
     public function testCreateWithOneEntry()
     {
@@ -84,7 +84,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::create 
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::create 
      */
     public function testCreateWithMultipleEntries()
     {
@@ -120,7 +120,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::getContainers
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::getContainers
      * @depends testCreateWithMultipleEntries
      */
     public function testGetContainers($result)
@@ -133,7 +133,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::setContainers
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::setContainers
      * @depends testCreateWithMultipleEntries
      */
     public function testSetContainers($result)
@@ -152,7 +152,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::setPrefix
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::setPrefix
      */
     public function testSetPrefix()
     {
@@ -168,7 +168,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::getPrefix
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::getPrefix
      */
     public function testGetPrefix()
     {
@@ -185,7 +185,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::setNextMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::setNextMarker
      */
     public function testSetNextMarker()
     {
@@ -201,7 +201,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::getNextMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::getNextMarker
      */
     public function testGetNextMarker()
     {
@@ -218,7 +218,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::setMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::setMarker
      */
     public function testSetMarker()
     {
@@ -234,7 +234,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::getMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::getMarker
      */
     public function testGetMarker()
     {
@@ -251,7 +251,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::setMaxResults
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::setMaxResults
      */
     public function testSetMaxResults()
     {
@@ -267,7 +267,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::getMaxResults
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::getMaxResults
      */
     public function testGetMaxResults()
     {
@@ -284,7 +284,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::setAccountName
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::setAccountName
      */
     public function testSetAccountName()
     {
@@ -300,7 +300,7 @@ class ListContainersResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListContainersResult::getAccountName
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListContainersResult::getAccountName
      */
     public function testGetAccountName()
     {

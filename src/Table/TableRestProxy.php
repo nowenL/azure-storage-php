@@ -15,51 +15,51 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table
+ * @package   MicrosoftAzure\Storage\Table
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Table;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\Http\HttpCallContext;
-use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Common\Models\GetServicePropertiesResult;
-use WindowsAzure\Table\Internal\ITable;
-use WindowsAzure\Table\Models\TableServiceOptions;
-use WindowsAzure\Table\Models\EdmType;
-use WindowsAzure\Table\Models\Filters;
-use WindowsAzure\Table\Models\Filters\Filter;
-use WindowsAzure\Table\Models\Filters\PropertyNameFilter;
-use WindowsAzure\Table\Models\Filters\ConstantFilter;
-use WindowsAzure\Table\Models\Filters\UnaryFilter;
-use WindowsAzure\Table\Models\Filters\BinaryFilter;
-use WindowsAzure\Table\Models\Filters\QueryStringFilter;
-use WindowsAzure\Table\Models\GetTableResult;
-use WindowsAzure\Table\Models\QueryTablesOptions;
-use WindowsAzure\Table\Models\QueryTablesResult;
-use WindowsAzure\Table\Models\InsertEntityResult;
-use WindowsAzure\Table\Models\UpdateEntityResult;
-use WindowsAzure\Table\Models\QueryEntitiesOptions;
-use WindowsAzure\Table\Models\QueryEntitiesResult;
-use WindowsAzure\Table\Models\DeleteEntityOptions;
-use WindowsAzure\Table\Models\GetEntityResult;
-use WindowsAzure\Table\Models\BatchOperationType;
-use WindowsAzure\Table\Models\BatchOperationParameterName;
-use WindowsAzure\Table\Models\BatchResult;
-use WindowsAzure\Common\Internal\HttpFormatter;
+namespace MicrosoftAzure\Storage\Table;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
+use MicrosoftAzure\Storage\Common\Internal\Http\HttpCallContext;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Common\Internal\ServiceRestProxy;
+use MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult;
+use MicrosoftAzure\Storage\Table\Internal\ITable;
+use MicrosoftAzure\Storage\Table\Models\TableServiceOptions;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
+use MicrosoftAzure\Storage\Table\Models\Filters;
+use MicrosoftAzure\Storage\Table\Models\Filters\Filter;
+use MicrosoftAzure\Storage\Table\Models\Filters\PropertyNameFilter;
+use MicrosoftAzure\Storage\Table\Models\Filters\ConstantFilter;
+use MicrosoftAzure\Storage\Table\Models\Filters\UnaryFilter;
+use MicrosoftAzure\Storage\Table\Models\Filters\BinaryFilter;
+use MicrosoftAzure\Storage\Table\Models\Filters\QueryStringFilter;
+use MicrosoftAzure\Storage\Table\Models\GetTableResult;
+use MicrosoftAzure\Storage\Table\Models\QueryTablesOptions;
+use MicrosoftAzure\Storage\Table\Models\QueryTablesResult;
+use MicrosoftAzure\Storage\Table\Models\InsertEntityResult;
+use MicrosoftAzure\Storage\Table\Models\UpdateEntityResult;
+use MicrosoftAzure\Storage\Table\Models\QueryEntitiesOptions;
+use MicrosoftAzure\Storage\Table\Models\QueryEntitiesResult;
+use MicrosoftAzure\Storage\Table\Models\DeleteEntityOptions;
+use MicrosoftAzure\Storage\Table\Models\GetEntityResult;
+use MicrosoftAzure\Storage\Table\Models\BatchOperationType;
+use MicrosoftAzure\Storage\Table\Models\BatchOperationParameterName;
+use MicrosoftAzure\Storage\Table\Models\BatchResult;
+use MicrosoftAzure\Storage\Common\Internal\HttpFormatter;
 
 /**
  * This class constructs HTTP requests and receive HTTP responses for table
  * service layer.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table
+ * @package   MicrosoftAzure\Storage\Table
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -148,7 +148,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param Models\Entity $entity The entity object.
      * @param string        $type   The API type.
      * 
-     * @return WindowsAzure\Common\Internal\Http\HttpCallContext
+     * @return MicrosoftAzure\Storage\Common\Internal\Http\HttpCallContext
      * 
      * @throws \InvalidArgumentException 
      */
@@ -638,7 +638,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * 
      * @param Models\TableServiceOptions $options optional table service options.
      * 
-     * @return WindowsAzure\Common\Models\GetServicePropertiesResult
+     * @return MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult
      * 
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452238.aspx
      */

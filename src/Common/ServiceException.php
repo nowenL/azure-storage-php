@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common
+ * @package   MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common;
-use WindowsAzure\Common\Internal\Resources;
+namespace MicrosoftAzure\Storage\Common;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 
 /**
  * Fires when the response code is incorrect.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common
+ * @package   MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -48,7 +48,7 @@ class ServiceException extends \LogicException
      * @param string $error     string value of the error code.
      * @param string $reason    detailed message for the error.
      * 
-     * @return WindowsAzure\Common\ServiceException
+     * @return MicrosoftAzure\Storage\Common\ServiceException
      */
     public function __construct($errorCode, $error = null, $reason = null)
     {

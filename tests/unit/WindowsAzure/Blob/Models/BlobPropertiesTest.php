@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\BlobProperties;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\BlobProperties;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class BlobProperties
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,7 +40,7 @@ use WindowsAzure\Common\Internal\Utilities;
 class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::create
      */
     public function testCreate()
     {
@@ -67,8 +67,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setLastModified
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getLastModified
      */
     public function testSetLastModified()
     {
@@ -85,8 +85,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setETag
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getETag
      */
     public function testSetETag()
     {
@@ -103,8 +103,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setContentRange
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getContentRange
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setContentRange
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getContentRange
      */
     public function testSetContentRange()
     {
@@ -121,8 +121,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setContentType
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getContentType
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setContentType
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getContentType
      */
     public function testSetContentType()
     {
@@ -139,8 +139,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setContentLength
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getContentLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setContentLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getContentLength
      */
     public function testSetContentLength()
     {
@@ -157,8 +157,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setContentEncoding
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getContentEncoding
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setContentEncoding
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getContentEncoding
      */
     public function testSetContentEncoding()
     {
@@ -175,8 +175,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setContentLanguage
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getContentLanguage
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setContentLanguage
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getContentLanguage
      */
     public function testSetContentLanguage()
     {
@@ -193,8 +193,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setContentMD5
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getContentMD5
      */
     public function testSetContentMD5()
     {
@@ -211,8 +211,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setCacheControl
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getCacheControl
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setCacheControl
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getCacheControl
      */
     public function testSetCacheControl()
     {
@@ -229,8 +229,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setBlobType
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getBlobType
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setBlobType
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getBlobType
      */
     public function testSetBlobType()
     {
@@ -247,8 +247,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setLeaseStatus
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getLeaseStatus
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setLeaseStatus
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getLeaseStatus
      */
     public function testSetLeaseStatus()
     {
@@ -265,8 +265,8 @@ class BlobPropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlobProperties::setSequenceNumber
-     * @covers WindowsAzure\Blob\Models\BlobProperties::getSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::setSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlobProperties::getSequenceNumber
      */
     public function testSetSequenceNumber()
     {

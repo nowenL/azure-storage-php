@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Blob\Internal
+ * @package   MicrosoftAzure\Storage\Blob\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Blob\Internal;
-use WindowsAzure\Common\Internal\FilterableService;
+namespace MicrosoftAzure\Storage\Blob\Internal;
+use MicrosoftAzure\Storage\Common\Internal\FilterableService;
 
 /**
  * This interface has all REST APIs provided by Windows Azure for Blob service.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Blob\Internal
+ * @package   MicrosoftAzure\Storage\Blob\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -44,7 +44,7 @@ interface IBlob extends FilterableService
     * 
     * @param Models\BlobServiceOptions $options optional blob service options.
     * 
-    * @return WindowsAzure\Common\Models\GetServicePropertiesResult
+    * @return MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult
     * 
     * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452239.aspx
     */
@@ -67,7 +67,7 @@ interface IBlob extends FilterableService
     * 
     * @param Models\ListContainersOptions $options optional parameters
     * 
-    * @return WindowsAzure\Blob\Models\ListContainersResult
+    * @return MicrosoftAzure\Storage\Blob\Models\ListContainersResult
     * 
     * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179352.aspx
     */

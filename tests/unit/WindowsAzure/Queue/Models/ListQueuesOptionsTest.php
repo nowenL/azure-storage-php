@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Queue\Models;
-use WindowsAzure\Queue\Models\ListQueuesOptions;
+namespace Tests\Unit\MicrosoftAzure\Storage\Queue\Models;
+use MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions;
 use Tests\Framework\TestResources;
 
 /**
  * Unit tests for class ListQueuesOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,7 +40,7 @@ use Tests\Framework\TestResources;
 class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::setPrefix
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::setPrefix
      */
     public function testSetPrefix()
     {
@@ -56,7 +56,7 @@ class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::getPrefix
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::getPrefix
      */
     public function testGetPrefix()
     {
@@ -73,7 +73,7 @@ class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::setMarker
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::setMarker
      */
     public function testSetMarker()
     {
@@ -89,7 +89,7 @@ class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::getMarker
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::getMarker
      */
     public function testGetMarker()
     {
@@ -106,7 +106,7 @@ class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::setMaxResults
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::setMaxResults
      */
     public function testSetMaxResults()
     {
@@ -122,7 +122,7 @@ class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::getMaxResults
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::getMaxResults
      */
     public function testGetMaxResults()
     {
@@ -139,7 +139,7 @@ class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::setIncludeMetadata
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::setIncludeMetadata
      */
     public function testSetIncludeMetadata()
     {
@@ -155,7 +155,7 @@ class ListQueuesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListQueuesOptions::getIncludeMetadata
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions::getIncludeMetadata
      */
     public function testGetIncludeMetadata()
     {

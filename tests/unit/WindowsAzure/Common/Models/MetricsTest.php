@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Models;
-use WindowsAzure\Common\Models\Metrics;
-use WindowsAzure\Common\Internal\Utilities;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Models;
+use MicrosoftAzure\Storage\Common\Models\Metrics;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Models\RetentionPolicy;
+use MicrosoftAzure\Storage\Common\Models\RetentionPolicy;
 
 /**
  * Unit tests for class Metrics
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,7 +42,7 @@ use WindowsAzure\Common\Models\RetentionPolicy;
 class MetricsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::create
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::create
      */
     public function testCreate()
     {
@@ -60,7 +60,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::getRetentionPolicy
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::getRetentionPolicy
      */
     public function testGetRetentionPolicy()
     {
@@ -78,7 +78,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::setRetentionPolicy
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::setRetentionPolicy
      */
     public function testSetRetentionPolicy()
     {
@@ -96,7 +96,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::getVersion
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::getVersion
      */
     public function testGetVersion()
     {
@@ -114,7 +114,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::setVersion
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::setVersion
      */
     public function testSetVersion()
     {
@@ -132,7 +132,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::getEnabled
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::getEnabled
      */
     public function testGetEnabled()
     {
@@ -150,7 +150,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::setEnabled
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::setEnabled
      */
     public function testSetEnabled()
     {
@@ -168,7 +168,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::getIncludeAPIs
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::getIncludeAPIs
      */
     public function testGetIncludeAPIs()
     {
@@ -186,7 +186,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::setIncludeAPIs
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::setIncludeAPIs
      */
     public function testSetIncludeAPIs()
     {
@@ -204,7 +204,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::toArray
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::toArray
      */
     public function testToArray()
     {
@@ -226,7 +226,7 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\Metrics::toArray
+     * @covers MicrosoftAzure\Storage\Common\Models\Metrics::toArray
      */
     public function testToArrayWithNotEnabled()
     {

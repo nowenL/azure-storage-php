@@ -15,73 +15,73 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Blob
+ * @package   MicrosoftAzure\Storage\Blob
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Blob;
-use WindowsAzure\Common\Internal\HttpFormatter;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Blob\Internal\IBlob;
-use WindowsAzure\Blob\Models\BlobServiceOptions;
-use WindowsAzure\Common\Models\GetServicePropertiesResult;
-use WindowsAzure\Blob\Models\ListContainersOptions;
-use WindowsAzure\Blob\Models\ListContainersResult;
-use WindowsAzure\Blob\Models\CreateContainerOptions;
-use WindowsAzure\Blob\Models\GetContainerPropertiesResult;
-use WindowsAzure\Blob\Models\GetContainerACLResult;
-use WindowsAzure\Blob\Models\SetContainerMetadataOptions;
-use WindowsAzure\Blob\Models\DeleteContainerOptions;
-use WindowsAzure\Blob\Models\ListBlobsOptions;
-use WindowsAzure\Blob\Models\ListBlobsResult;
-use WindowsAzure\Blob\Models\BlobType;
-use WindowsAzure\Blob\Models\Block;
-use WindowsAzure\Blob\Models\CreateBlobOptions;
-use WindowsAzure\Blob\Models\BlobProperties;
-use WindowsAzure\Blob\Models\GetBlobPropertiesOptions;
-use WindowsAzure\Blob\Models\GetBlobPropertiesResult;
-use WindowsAzure\Blob\Models\SetBlobPropertiesOptions;
-use WindowsAzure\Blob\Models\SetBlobPropertiesResult;
-use WindowsAzure\Blob\Models\GetBlobMetadataOptions;
-use WindowsAzure\Blob\Models\GetBlobMetadataResult;
-use WindowsAzure\Blob\Models\SetBlobMetadataOptions;
-use WindowsAzure\Blob\Models\SetBlobMetadataResult;
-use WindowsAzure\Blob\Models\GetBlobOptions;
-use WindowsAzure\Blob\Models\GetBlobResult;
-use WindowsAzure\Blob\Models\DeleteBlobOptions;
-use WindowsAzure\Blob\Models\LeaseMode;
-use WindowsAzure\Blob\Models\AcquireLeaseOptions;
-use WindowsAzure\Blob\Models\AcquireLeaseResult;
-use WindowsAzure\Blob\Models\CreateBlobPagesOptions;
-use WindowsAzure\Blob\Models\CreateBlobPagesResult;
-use WindowsAzure\Blob\Models\PageWriteOption;
-use WindowsAzure\Blob\Models\ListPageBlobRangesOptions;
-use WindowsAzure\Blob\Models\ListPageBlobRangesResult;
-use WindowsAzure\Blob\Models\CreateBlobBlockOptions;
-use WindowsAzure\Blob\Models\CommitBlobBlocksOptions;
-use WindowsAzure\Blob\Models\BlockList;
-use WindowsAzure\Blob\Models\ListBlobBlocksOptions;
-use WindowsAzure\Blob\Models\ListBlobBlocksResult;
-use WindowsAzure\Blob\Models\CopyBlobOptions;
-use WindowsAzure\Blob\Models\CreateBlobSnapshotOptions;
-use WindowsAzure\Blob\Models\CreateBlobSnapshotResult;
-use WindowsAzure\Blob\Models\PageRange;
-use WindowsAzure\Blob\Models\CopyBlobResult;
-use WindowsAzure\Blob\Models\BreakLeaseResult;
+namespace MicrosoftAzure\Storage\Blob;
+use MicrosoftAzure\Storage\Common\Internal\HttpFormatter;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Common\Internal\ServiceRestProxy;
+use MicrosoftAzure\Storage\Blob\Internal\IBlob;
+use MicrosoftAzure\Storage\Blob\Models\BlobServiceOptions;
+use MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult;
+use MicrosoftAzure\Storage\Blob\Models\ListContainersOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListContainersResult;
+use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult;
+use MicrosoftAzure\Storage\Blob\Models\GetContainerACLResult;
+use MicrosoftAzure\Storage\Blob\Models\SetContainerMetadataOptions;
+use MicrosoftAzure\Storage\Blob\Models\DeleteContainerOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobsResult;
+use MicrosoftAzure\Storage\Blob\Models\BlobType;
+use MicrosoftAzure\Storage\Blob\Models\Block;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\BlobProperties;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesResult;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobMetadataOptions;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobMetadataResult;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobResult;
+use MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\LeaseMode;
+use MicrosoftAzure\Storage\Blob\Models\AcquireLeaseOptions;
+use MicrosoftAzure\Storage\Blob\Models\AcquireLeaseResult;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesOptions;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult;
+use MicrosoftAzure\Storage\Blob\Models\PageWriteOption;
+use MicrosoftAzure\Storage\Blob\Models\ListPageBlobRangesOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListPageBlobRangesResult;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobBlockOptions;
+use MicrosoftAzure\Storage\Blob\Models\CommitBlobBlocksOptions;
+use MicrosoftAzure\Storage\Blob\Models\BlockList;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult;
+use MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotOptions;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult;
+use MicrosoftAzure\Storage\Blob\Models\PageRange;
+use MicrosoftAzure\Storage\Blob\Models\CopyBlobResult;
+use MicrosoftAzure\Storage\Blob\Models\BreakLeaseResult;
 
 /**
  * This class constructs HTTP requests and receive HTTP responses for blob
  * service layer.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Blob
+ * @package   MicrosoftAzure\Storage\Blob
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -594,7 +594,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * 
      * @param Models\BlobServiceOptions $options The optional parameters.
      * 
-     * @return WindowsAzure\Common\Models\GetServicePropertiesResult
+     * @return MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult
      * 
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452239.aspx
      */
@@ -709,7 +709,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * 
      * @param Models\ListContainersOptions $options The optional parameters.
      * 
-     * @return WindowsAzure\Blob\Models\ListContainersResult
+     * @return MicrosoftAzure\Storage\Blob\Models\ListContainersResult
      * 
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179352.aspx
      */

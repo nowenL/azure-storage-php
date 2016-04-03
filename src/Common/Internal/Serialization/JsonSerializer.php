@@ -15,20 +15,20 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Serialization
+ * @package   MicrosoftAzure\Storage\Common\Internal\Serialization
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Serialization;
-use WindowsAzure\Common\Internal\Validate;
+namespace MicrosoftAzure\Storage\Common\Internal\Serialization;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
 /**
  * Perform JSON serialization / deserialization
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Serialization
+ * @package   MicrosoftAzure\Storage\Common\Internal\Serialization
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

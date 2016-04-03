@@ -15,28 +15,28 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Mock\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Mock\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace Tests\Mock\WindowsAzure\Common\Internal\Filters;
+namespace Tests\Mock\MicrosoftAzure\Storage\Common\Internal\Filters;
 use Tests\Framework\TestResources;
 
 /**
  * Alters request headers and response to mock real filter
  *
  * @category  Microsoft
- * @package   Tests\Mock\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Mock\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @version   Release: 0.4.1_2015-03
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-class SimpleFilterMock implements \WindowsAzure\Common\Internal\IServiceFilter
+class SimpleFilterMock implements \MicrosoftAzure\Storage\Common\Internal\IServiceFilter
 {
     private $_headerName;
     private $_data;

@@ -15,42 +15,42 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Queue
+ * @package   MicrosoftAzure\Storage\Queue
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Queue;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Http\Url;
-use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Common\Models\GetServicePropertiesResult;
-use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Queue\Internal\IQueue;
-use WindowsAzure\Queue\Models\ListQueuesOptions;
-use WindowsAzure\Queue\Models\ListQueuesResult;
-use WindowsAzure\Queue\Models\CreateQueueOptions;
-use WindowsAzure\Queue\Models\QueueServiceOptions;
-use WindowsAzure\Queue\Models\GetQueueMetadataResult;
-use WindowsAzure\Queue\Models\CreateMessageOptions;
-use WindowsAzure\Queue\Models\QueueMessage;
-use WindowsAzure\Queue\Models\ListMessagesOptions;
-use WindowsAzure\Queue\Models\ListMessagesResult;
-use WindowsAzure\Queue\Models\PeekMessagesOptions;
-use WindowsAzure\Queue\Models\PeekMessagesResult;
-use WindowsAzure\Queue\Models\UpdateMessageResult;
-use WindowsAzure\Common\Internal\HttpFormatter;
+namespace MicrosoftAzure\Storage\Queue;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Http\Url;
+use MicrosoftAzure\Storage\Common\Internal\ServiceRestProxy;
+use MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Queue\Internal\IQueue;
+use MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions;
+use MicrosoftAzure\Storage\Queue\Models\ListQueuesResult;
+use MicrosoftAzure\Storage\Queue\Models\CreateQueueOptions;
+use MicrosoftAzure\Storage\Queue\Models\QueueServiceOptions;
+use MicrosoftAzure\Storage\Queue\Models\GetQueueMetadataResult;
+use MicrosoftAzure\Storage\Queue\Models\CreateMessageOptions;
+use MicrosoftAzure\Storage\Queue\Models\QueueMessage;
+use MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions;
+use MicrosoftAzure\Storage\Queue\Models\ListMessagesResult;
+use MicrosoftAzure\Storage\Queue\Models\PeekMessagesOptions;
+use MicrosoftAzure\Storage\Queue\Models\PeekMessagesResult;
+use MicrosoftAzure\Storage\Queue\Models\UpdateMessageResult;
+use MicrosoftAzure\Storage\Common\Internal\HttpFormatter;
 
 /**
  * This class constructs HTTP requests and receive HTTP responses for queue 
  * service layer.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Queue
+ * @package   MicrosoftAzure\Storage\Queue
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -64,7 +64,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * 
      * @param ListQueuesOptions $options The optional list queue options.
      * 
-     * @return WindowsAzure\Queue\Models\ListQueuesResult
+     * @return MicrosoftAzure\Storage\Queue\Models\ListQueuesResult
      */
     public function listQueues($options = null)
     {
@@ -369,7 +369,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The queue name.
      * @param QueueServiceOptions $options   The optional parameters.
      * 
-     * @return WindowsAzure\Common\Models\GetQueueMetadataResult
+     * @return MicrosoftAzure\Storage\Common\Models\GetQueueMetadataResult
      */
     public function getQueueMetadata($queueName, $options = null)
     {
@@ -420,7 +420,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * 
      * @param QueueServiceOptions $options The optional parameters.
      * 
-     * @return WindowsAzure\Common\Models\GetServicePropertiesResult
+     * @return MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult
      */
     public function getServiceProperties($options = null)
     {
@@ -470,7 +470,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The queue name.
      * @param ListMessagesOptions $options   The optional parameters.
      * 
-     * @return WindowsAzure\Common\Models\ListMessagesResult
+     * @return MicrosoftAzure\Storage\Common\Models\ListMessagesResult
      */
     public function listMessages($queueName, $options = null)
     {
@@ -525,7 +525,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The queue name.
      * @param PeekMessagesOptions $options   The optional parameters.
      * 
-     * @return WindowsAzure\Common\Models\PeekMessagesResult
+     * @return MicrosoftAzure\Storage\Common\Models\PeekMessagesResult
      */
     public function peekMessages($queueName, $options = null)
     {
@@ -696,7 +696,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param QueueServiceOptions $options                    The optional 
      * parameters.
      * 
-     * @return WindowsAzure\Common\Models\UpdateMessageResult
+     * @return MicrosoftAzure\Storage\Common\Models\UpdateMessageResult
      */
     public function updateMessage($queueName, $messageId, $popReceipt, $messageText, 
         $visibilityTimeoutInSeconds, $options = null

@@ -15,34 +15,34 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Blob
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Blob
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Blob;
+namespace Tests\Functional\MicrosoftAzure\Storage\Blob;
 
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\AccessCondition;
-use WindowsAzure\Blob\Models\BlobBlockType;
-use WindowsAzure\Blob\Models\Block;
-use WindowsAzure\Blob\Models\BlockList;
-use WindowsAzure\Blob\Models\ContainerACL;
-use WindowsAzure\Blob\Models\CreateBlobOptions;
-use WindowsAzure\Blob\Models\CreateBlobSnapshotOptions;
-use WindowsAzure\Blob\Models\CreateContainerOptions;
-use WindowsAzure\Blob\Models\GetBlobOptions;
-use WindowsAzure\Blob\Models\GetBlobPropertiesOptions;
-use WindowsAzure\Blob\Models\ListBlobBlocksOptions;
-use WindowsAzure\Blob\Models\ListBlobsOptions;
-use WindowsAzure\Blob\Models\ListContainersOptions;
-use WindowsAzure\Blob\Models\PageRange;
-use WindowsAzure\Blob\Models\PublicAccessType;
-use WindowsAzure\Blob\Models\SetBlobPropertiesOptions;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Blob\Models\BlobBlockType;
+use MicrosoftAzure\Storage\Blob\Models\Block;
+use MicrosoftAzure\Storage\Blob\Models\BlockList;
+use MicrosoftAzure\Storage\Blob\Models\ContainerACL;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotOptions;
+use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListContainersOptions;
+use MicrosoftAzure\Storage\Blob\Models\PageRange;
+use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesOptions;
+use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 class BlobServiceIntegrationTest extends IntegrationTestBase
 {
@@ -117,7 +117,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
 	}
 	
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
      */
     public function testGetServicePropertiesWorks()
     {
@@ -149,8 +149,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setServiceProperties
      */
     public function testSetServicePropertiesWorks()
     {
@@ -188,8 +188,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testCreateContainerWorks()
     {
@@ -209,12 +209,12 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testCreateContainerWithMetadataWorks()
     {
@@ -271,9 +271,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     public function testSetContainerMetadataWorks()
     {
@@ -299,10 +299,10 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerACL
      */
     public function testSetContainerACLWorks()
     {
@@ -349,7 +349,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testListContainersWorks()
     {
@@ -370,7 +370,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testListContainersWithPaginationWorks()
     {
@@ -395,7 +395,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testListContainersWithPrefixWorks()
     {
@@ -431,13 +431,13 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testWorkingWithRootContainersWorks()
     {
@@ -486,9 +486,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testListBlobsWorks()
     {
@@ -511,9 +511,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testListBlobsWithPrefixWorks()
     {
@@ -550,9 +550,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testListBlobsWithOptionsWorks()
     {
@@ -578,9 +578,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testListBlobsWithDelimiterWorks()
     {
@@ -631,7 +631,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
      */
     public function testCreatePageBlobWorks()
     {
@@ -643,8 +643,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
      */
     public function testCreatePageBlobWithOptionsWorks()
     {
@@ -685,8 +685,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::clearBlobPages
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::clearBlobPages
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
      */
     public function testClearBlobPagesWorks()
     {
@@ -706,8 +706,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobPages
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobPages
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
      */
     public function testCreateBlobPagesWorks()
     {
@@ -728,9 +728,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobPages
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listPageBlobRanges
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobPages
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listPageBlobRanges
      */
     public function testListBlobRegionsWorks()
     {
@@ -767,8 +767,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobBlocks
      */
     public function testListBlobBlocksOnEmptyBlobWorks()
     {
@@ -792,9 +792,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobBlock
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobBlock
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobBlocks
      */
     public function testListBlobBlocksWorks()
     {
@@ -831,10 +831,10 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::commitBlobBlocks
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobBlock
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::commitBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobBlock
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobBlocks
      */
     public function testListBlobBlocksWithOptionsWorks()
     {
@@ -874,10 +874,10 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::commitBlobBlocks
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobBlock
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::commitBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobBlock
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobBlocks
      */
     public function testCommitBlobBlocksWorks()
     {
@@ -923,10 +923,10 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::commitBlobBlocks
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobBlock
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::commitBlobBlocks
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobBlock
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobBlocks
      */
     public function testCommitBlobBlocksWithArrayWorks()
     {
@@ -976,8 +976,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobBlock
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobBlock
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
      */
     public function testCreateBlobBlockWorks()
     {
@@ -994,7 +994,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
      */
     public function testCreateBlockBlobWorks()
     {
@@ -1006,8 +1006,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
      */
     public function testCreateBlockBlobWithOptionsWorks()
     {
@@ -1051,8 +1051,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
      */
     public function testCreateBlobSnapshotWorks()
     {
@@ -1070,9 +1070,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
      */
     public function testCreateBlobSnapshotWithOptionsWorks()
     {
@@ -1103,8 +1103,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
      */
     public function testGetBlockBlobWorks()
     {
@@ -1149,8 +1149,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
      */
     public function testGetPageBlobWorks()
     {
@@ -1191,8 +1191,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
      */
     public function testGetBlobWithIfMatchETagAccessConditionWorks()
     {
@@ -1209,9 +1209,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
      */
     public function testGetBlobWithIfNoneMatchETagAccessConditionWorks()
     {
@@ -1237,9 +1237,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
      */
     public function testGetBlobWithIfModifiedSinceAccessConditionWorks()
     {
@@ -1266,10 +1266,10 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobWithIfNotModifiedSinceAccessConditionWorks()
     {
@@ -1303,8 +1303,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
      */
     public function testGetBlobPropertiesWorks()
     {
@@ -1336,8 +1336,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
      */
     public function testGetBlobMetadataWorks()
     {
@@ -1365,9 +1365,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobProperties
      */
     public function testSetBlobPropertiesWorks()
     {
@@ -1414,9 +1414,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testSetBlobMetadataWorks()
     {
@@ -1446,8 +1446,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
      */
     public function testDeleteBlobWorks()
     {
@@ -1462,9 +1462,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::copyBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::copyBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
      */
     public function testCopyBlobWorks()
     {
@@ -1496,9 +1496,9 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::acquireLease
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::releaseLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::acquireLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::releaseLease
      */
     public function testAcquireLeaseWorks()
     {
@@ -1513,10 +1513,10 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::acquireLease
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::releaseLease
-     * @covers WindowsAzure\Blob\BlobRestProxy::renewLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::acquireLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::releaseLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::renewLease
      */
     public function testRenewLeaseWorks()
     {
@@ -1533,10 +1533,10 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::acquireLease
-     * @covers WindowsAzure\Blob\BlobRestProxy::breakLease
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::releaseLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::acquireLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::breakLease
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::releaseLease
      */
     public function testBreakLeaseWorks()
     {

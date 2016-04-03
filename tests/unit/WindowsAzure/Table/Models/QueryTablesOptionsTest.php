@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models;
-use WindowsAzure\Table\Models\QueryTablesOptions;
-use WindowsAzure\Table\Models\Query;
-use WindowsAzure\Table\Models\Filters\Filter;
-use WindowsAzure\Table\Models\EdmType;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Table\Models\QueryTablesOptions;
+use MicrosoftAzure\Storage\Table\Models\Query;
+use MicrosoftAzure\Storage\Table\Models\Filters\Filter;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
 
 /**
  * Unit tests for class QueryTablesOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,8 +42,8 @@ use WindowsAzure\Table\Models\EdmType;
 class QueryTablesOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::setNextTableName
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::getNextTableName
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::setNextTableName
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::getNextTableName
      */
     public function testSetNextTableName()
     {
@@ -59,8 +59,8 @@ class QueryTablesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::setPrefix
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::getPrefix
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::setPrefix
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::getPrefix
      */
     public function testSetPrefix()
     {
@@ -76,9 +76,9 @@ class QueryTablesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::setTop
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::getTop
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::__construct
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::setTop
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::getTop
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::__construct
      */
     public function testSetTop()
     {
@@ -94,7 +94,7 @@ class QueryTablesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::getQuery
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::getQuery
      */
     public function testGetQuery()
     {
@@ -110,8 +110,8 @@ class QueryTablesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::setFilter
-     * @covers WindowsAzure\Table\Models\QueryTablesOptions::getFilter
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::setFilter
+     * @covers MicrosoftAzure\Storage\Table\Models\QueryTablesOptions::getFilter
      */
     public function testSetFilter()
     {

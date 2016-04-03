@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models\Filters;
-use WindowsAzure\Table\Models\Filters\QueryStringFilter;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters;
+use MicrosoftAzure\Storage\Table\Models\Filters\QueryStringFilter;
 
 /**
  * Unit tests for class QueryStringFilter
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,8 +39,8 @@ use WindowsAzure\Table\Models\Filters\QueryStringFilter;
 class QueryStringFilterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\Filters\QueryStringFilter::__construct
-     * @covers WindowsAzure\Table\Models\Filters\QueryStringFilter::getQueryString
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\QueryStringFilter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\QueryStringFilter::getQueryString
      */
     public function testGetQueryString()
     {

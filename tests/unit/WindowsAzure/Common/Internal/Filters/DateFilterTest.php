@@ -15,16 +15,16 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
-use WindowsAzure\Common\Internal\Filters\DateFilter;
-use WindowsAzure\Common\Internal\Resources;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters;
+use MicrosoftAzure\Storage\Common\Internal\Filters\DateFilter;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Uri;
 
@@ -32,7 +32,7 @@ use GuzzleHttp\Psr7\Uri;
  * Unit tests for class DateFilter
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,7 +42,7 @@ use GuzzleHttp\Psr7\Uri;
 class DateFilterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\DateFilter::handleRequest
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\DateFilter::handleRequest
      */
     public function testHandleRequest()
     {
@@ -59,7 +59,7 @@ class DateFilterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\DateFilter::handleResponse
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\DateFilter::handleResponse
      */
     public function testHandleResponse()
     {

@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
-use WindowsAzure\Common\Internal\Resources;
+namespace MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 
 /**
  * Validates aganist a condition and throws an exception in case of failure.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -184,7 +184,7 @@ class Validate
      *
      * @param mix $date variable to check against.
      *
-     * @throws WindowsAzure\Common\Internal\InvalidArgumentTypeException
+     * @throws MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException
      *
      * @return none
      */

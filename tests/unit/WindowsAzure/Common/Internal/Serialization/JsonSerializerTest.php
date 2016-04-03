@@ -15,26 +15,26 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Serialization
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Serialization
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal\Serialization;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Serialization;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
-use WindowsAzure\Common\Internal\Serialization\JsonSerializer;
-use WindowsAzure\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
+use MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 
 
 /**
  * Unit tests for class XmlSerializer
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Serialization
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Serialization
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -44,7 +44,7 @@ use WindowsAzure\Common\Internal\Resources;
 class JsonSerializerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\JsonSerializer::objectSerialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer::objectSerialize
      */
     public function testObjectSerialize()
     {
@@ -61,7 +61,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeArray()
     {
@@ -78,7 +78,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeObject()
     {
@@ -95,7 +95,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeEmptyString()
     {
@@ -112,7 +112,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeInvalidString()
     {
@@ -129,7 +129,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\JsonSerializer::serialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer::serialize
      */
     public function testSerialize()
     {
@@ -146,7 +146,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\JsonSerializer::serialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\JsonSerializer::serialize
      */
     public function testSerializeNull()
     {
@@ -154,7 +154,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
         $jsonSerializer = new JsonSerializer();
         $testData = null;
         $expected = "";
-        $this->setExpectedException('WindowsAzure\Common\Internal\InvalidArgumentTypeException', sprintf(Resources::INVALID_PARAM_MSG, 'array', 'array'));
+        $this->setExpectedException('MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException', sprintf(Resources::INVALID_PARAM_MSG, 'array', 'array'));
 
         // Test
         $actual = $jsonSerializer->serialize($testData);

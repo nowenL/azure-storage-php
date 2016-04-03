@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\internal;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\internal;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Table\Internal\AtomReaderWriter;
-use WindowsAzure\Table\Models\EdmType;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
 
 /**
  * Unit tests for class AtomReaderWriter
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,10 +42,10 @@ use WindowsAzure\Table\Models\EdmType;
 class AtomReaderWriterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::getTable
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::__construct
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_serializeAtom
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_generateProperties
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::getTable
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_serializeAtom
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_generateProperties
      */
     public function testGetTable()
     {
@@ -76,10 +76,10 @@ class AtomReaderWriterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::getEntity
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::__construct
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_serializeAtom
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_generateProperties
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::getEntity
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_serializeAtom
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_generateProperties
      */
     public function testGetEntity()
     {
@@ -119,11 +119,11 @@ class AtomReaderWriterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::parseTable
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::__construct
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_serializeAtom
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_generateProperties
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_parseOneTable
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::parseTable
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_serializeAtom
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_generateProperties
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_parseOneTable
      * @depends testGetTable
      */
     public function testParseTable($tableAtom)
@@ -140,11 +140,11 @@ class AtomReaderWriterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::parseTableEntries
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::__construct
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_serializeAtom
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_generateProperties
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_parseOneTable
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::parseTableEntries
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_serializeAtom
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_generateProperties
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_parseOneTable
      */
     public function testParseTables()
     {
@@ -197,10 +197,10 @@ class AtomReaderWriterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::parseEntity
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::__construct
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_serializeAtom
-     * @covers WindowsAzure\Table\Internal\AtomReaderWriter::_generateProperties
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::parseEntity
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_serializeAtom
+     * @covers MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter::_generateProperties
      * @depends testGetEntity
      */
     public function testParseEntity($entityAtom)

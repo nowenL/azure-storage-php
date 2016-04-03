@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Authentication
+ * @package   MicrosoftAzure\Storage\Common\Internal\Authentication
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      http://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Internal\Authentication;
-use WindowsAzure\Common\Internal\Authentication\StorageAuthScheme;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
+namespace MicrosoftAzure\Storage\Common\Internal\Authentication;
+use MicrosoftAzure\Storage\Common\Internal\Authentication\StorageAuthScheme;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Provides shared key authentication scheme for blob and queue. For more info
  * check: http://msdn.microsoft.com/en-us/library/windowsazure/dd179428.aspx
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Authentication
+ * @package   MicrosoftAzure\Storage\Common\Internal\Authentication
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Blob\Models\GetBlobResult;
-use WindowsAzure\Blob\Models\BlobProperties;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobResult;
+use MicrosoftAzure\Storage\Blob\Models\BlobProperties;
 
 /**
  * Unit tests for class GetBlobResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,7 +40,7 @@ use WindowsAzure\Blob\Models\BlobProperties;
 class GetBlobResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobResult::setMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobResult::setMetadata
      */
     public function testSetMetadata()
     {
@@ -56,7 +56,7 @@ class GetBlobResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobResult::getMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobResult::getMetadata
      */
     public function testGetMetadata()
     {
@@ -73,7 +73,7 @@ class GetBlobResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobResult::setProperties
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobResult::setProperties
      */
     public function testSetProperties()
     {
@@ -89,7 +89,7 @@ class GetBlobResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobResult::getProperties
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobResult::getProperties
      */
     public function testGetProperties()
     {
@@ -106,8 +106,8 @@ class GetBlobResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobResult::setContentStream
-     * @covers WindowsAzure\Blob\Models\GetBlobResult::getContentStream
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobResult::setContentStream
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobResult::getContentStream
      */
     public function testSetContentStream()
     {

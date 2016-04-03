@@ -15,26 +15,26 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Queue
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Queue
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Queue;
+namespace Tests\Functional\MicrosoftAzure\Storage\Queue;
 
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Queue\Models\ListMessagesOptions;
-use WindowsAzure\Queue\Models\PeekMessagesOptions;
-use WindowsAzure\Queue\Models\QueueServiceOptions;
+use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions;
+use MicrosoftAzure\Storage\Queue\Models\PeekMessagesOptions;
+use MicrosoftAzure\Storage\Queue\Models\QueueServiceOptions;
 
 class QueueServiceFunctionalParameterTest extends FunctionalTestBase
 {
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::getServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::getServiceProperties
     */
     public function testGetServicePropertiesNullOptions()
     {
@@ -53,7 +53,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions1()
     {
@@ -73,7 +73,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions2()
     {
@@ -87,7 +87,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions3()
     {
@@ -101,7 +101,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesNullOptions4()
     {
@@ -121,7 +121,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listQueues
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listQueues
     */
     public function testListQueuesNullOptions()
     {
@@ -130,7 +130,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createQueue
     */
     public function testCreateQueueNullName()
     {
@@ -145,7 +145,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteQueue
     */
     public function testDeleteQueueNullName()
     {
@@ -160,7 +160,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::getQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::getQueueMetadata
     */
     public function testGetQueueMetadataNullName()
     {
@@ -175,7 +175,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setQueueMetadata
     */
     public function testSetQueueMetadataNullNameAndOptions()
     {
@@ -190,7 +190,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setQueueMetadata
     */
     public function testSetQueueMetadataNullName()
     {
@@ -205,7 +205,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setQueueMetadata
     */
     public function testSetQueueMetadataNullMetadata()
     {
@@ -215,7 +215,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setQueueMetadata
     */
     public function testSetQueueMetadataEmptyMetadata()
     {
@@ -225,7 +225,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::setQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setQueueMetadata
     */
     public function testSetQueueMetadataNullOptions()
     {
@@ -235,8 +235,8 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
     */
     public function testCreateMessageQueueNull()
     {
@@ -253,8 +253,8 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
     */
     public function testCreateMessageNull()
     {
@@ -265,8 +265,8 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
     */
     public function testCreateMessageBothMessageAndOptionsNull()
     {
@@ -277,8 +277,8 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
     */
     public function testCreateMessageMessageNull()
     {
@@ -289,8 +289,8 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
     */
     public function testCreateMessageOptionsNull()
     {
@@ -301,7 +301,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageQueueNull()
     {
@@ -321,7 +321,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageQueueEmpty()
     {
@@ -341,7 +341,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageMessageIdNull()
     {
@@ -361,7 +361,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageMessageIdEmpty()
     {
@@ -381,7 +381,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessagePopReceiptNull()
     {
@@ -401,7 +401,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessagePopReceiptEmpty()
     {
@@ -421,7 +421,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageMessageTextNull()
     {
@@ -441,7 +441,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageMessageTextEmpty()
     {
@@ -461,7 +461,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageOptionsNull()
     {
@@ -481,7 +481,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageVisibilityTimeout0()
     {
@@ -503,7 +503,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageVisibilityTimeoutNull()
     {
@@ -523,7 +523,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessageQueueNullNoOptions()
     {
@@ -540,7 +540,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessageQueueEmptyNoOptions()
     {
@@ -557,7 +557,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessageQueueNullWithOptions()
     {
@@ -575,7 +575,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessageMessageIdNull()
     {
@@ -593,7 +593,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessageMessageIdEmpty()
     {
@@ -611,7 +611,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessagePopReceiptNull()
     {
@@ -629,7 +629,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessagePopReceiptEmpty()
     {
@@ -647,7 +647,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
     */
     public function testDeleteMessageOptionsNull()
     {
@@ -665,7 +665,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
     */
     public function testListMessagesQueueNullNoOptions()
     {
@@ -680,7 +680,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
     */
     public function testListMessagesQueueNullWithOptions()
     {
@@ -695,7 +695,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
     */
     public function testListMessagesOptionsNull()
     {
@@ -708,7 +708,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
     */
     public function testListMessagesAllNull()
     {
@@ -723,7 +723,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testPeekMessagesQueueNullNoOptions()
     {
@@ -738,7 +738,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testPeekMessagesQueueEmptyNoOptions()
     {
@@ -753,7 +753,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testPeekMessagesQueueNullWithOptions()
     {
@@ -768,7 +768,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testPeekMessagesOptionsNull()
     {
@@ -781,7 +781,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testPeekMessagesAllNull()
     {
@@ -796,7 +796,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
     */
     public function testClearMessagesQueueNullNoOptions()
     {
@@ -811,7 +811,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
     */
     public function testClearMessagesQueueNullWithOptions()
     {
@@ -826,7 +826,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
     */
     public function testClearMessagesOptionsNull()
     {
@@ -839,7 +839,7 @@ class QueueServiceFunctionalParameterTest extends FunctionalTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
     */
     public function testClearMessagesAllNull()
     {

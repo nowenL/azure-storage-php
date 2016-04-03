@@ -15,20 +15,20 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\CreateBlobBlockOptions;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobBlockOptions;
 
 /**
  * Unit tests for class CreateBlobBlockOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -38,8 +38,8 @@ use WindowsAzure\Blob\Models\CreateBlobBlockOptions;
 class CreateBlobBlockOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobBlockOptions::setContentMD5
-     * @covers WindowsAzure\Blob\Models\CreateBlobBlockOptions::getContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobBlockOptions::setContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobBlockOptions::getContentMD5
      */
     public function testSetContentMD5()
     {
@@ -56,8 +56,8 @@ class CreateBlobBlockOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobBlockOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\CreateBlobBlockOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobBlockOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobBlockOptions::getLeaseId
      */
     public function testSetLeaseId()
     {

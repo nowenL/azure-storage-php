@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\GetContainerPropertiesResult;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult;
 
 /**
  * Unit tests for class GetContainerPropertiesResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Blob\Models\GetContainerPropertiesResult;
 class GetContainerPropertiesResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerPropertiesResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult::getETag
      */
     public function testGetETag()
     {
@@ -56,7 +56,7 @@ class GetContainerPropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerPropertiesResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult::setETag
      */
     public function testSetETag()
     {
@@ -73,7 +73,7 @@ class GetContainerPropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerPropertiesResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult::getLastModified
      */
     public function testGetLastModified()
     {
@@ -90,7 +90,7 @@ class GetContainerPropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerPropertiesResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult::setLastModified
      */
     public function testSetLastModified()
     {
@@ -107,7 +107,7 @@ class GetContainerPropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerPropertiesResult::setMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult::setMetadata
      */
     public function testSetMetadata()
     {
@@ -123,7 +123,7 @@ class GetContainerPropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerPropertiesResult::getMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerPropertiesResult::getMetadata
      */
     public function testGetMetadata()
     {

@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Queue\Models;
-use WindowsAzure\Queue\Models\PeekMessagesOptions;
+namespace Tests\Unit\MicrosoftAzure\Storage\Queue\Models;
+use MicrosoftAzure\Storage\Queue\Models\PeekMessagesOptions;
 
 /**
  * Unit tests for class PeekMessagesOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Queue\Models\PeekMessagesOptions;
 class PeekMessagesOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Queue\Models\PeekMessagesOptions::getNumberOfMessages
+     * @covers MicrosoftAzure\Storage\Queue\Models\PeekMessagesOptions::getNumberOfMessages
      */
     public function testGetNumberOfMessages()
     {
@@ -56,7 +56,7 @@ class PeekMessagesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\PeekMessagesOptions::setNumberOfMessages
+     * @covers MicrosoftAzure\Storage\Queue\Models\PeekMessagesOptions::setNumberOfMessages
      */
     public function testSetNumberOfMessages()
     {

@@ -15,27 +15,27 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Models\Logging;
-use WindowsAzure\Common\Models\Metrics;
-use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Common\Models\GetServicePropertiesResult;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Models\Logging;
+use MicrosoftAzure\Storage\Common\Models\Metrics;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult;
+use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
 
 /**
  * Unit tests for class ServiceProperties
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -45,7 +45,7 @@ use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
 class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Models\ServiceProperties::create
+     * @covers MicrosoftAzure\Storage\Common\Models\ServiceProperties::create
      */
     public function testCreate()
     {
@@ -63,7 +63,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\ServiceProperties::setLogging
+     * @covers MicrosoftAzure\Storage\Common\Models\ServiceProperties::setLogging
      */
     public function testSetLogging()
     {
@@ -80,7 +80,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\ServiceProperties::getLogging
+     * @covers MicrosoftAzure\Storage\Common\Models\ServiceProperties::getLogging
      */
     public function testGetLogging()
     {
@@ -98,7 +98,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\ServiceProperties::setMetrics
+     * @covers MicrosoftAzure\Storage\Common\Models\ServiceProperties::setMetrics
      */
     public function testSetMetrics()
     {
@@ -115,7 +115,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\ServiceProperties::getMetrics
+     * @covers MicrosoftAzure\Storage\Common\Models\ServiceProperties::getMetrics
      */
     public function testGetMetrics()
     {
@@ -133,7 +133,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\ServiceProperties::toArray
+     * @covers MicrosoftAzure\Storage\Common\Models\ServiceProperties::toArray
      */
     public function testToArray()
     {
@@ -152,7 +152,7 @@ class ServicePropertiesTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\ServiceProperties::toXml
+     * @covers MicrosoftAzure\Storage\Common\Models\ServiceProperties::toXml
      */
     public function testToXml()
     {

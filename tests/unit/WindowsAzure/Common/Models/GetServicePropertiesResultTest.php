@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Models;
-use WindowsAzure\Common\Models\GetServicePropertiesResult;
-use WindowsAzure\Common\Models\ServiceProperties;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Models;
+use MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
 use Tests\Framework\TestResources;
 
 /**
  * Unit tests for class GetServicePropertiesResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,7 +41,7 @@ use Tests\Framework\TestResources;
 class GetServicePropertiesResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Models\GetServicePropertiesResult::create
+     * @covers MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult::create
      */
     public function testCreate()
     {
@@ -54,7 +54,7 @@ class GetServicePropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\GetServicePropertiesResult::getValue
+     * @covers MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult::getValue
      */
     public function testGetValue()
     {
@@ -71,7 +71,7 @@ class GetServicePropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\GetServicePropertiesResult::setValue
+     * @covers MicrosoftAzure\Storage\Common\Models\GetServicePropertiesResult::setValue
      */
     public function testSetValue()
     {

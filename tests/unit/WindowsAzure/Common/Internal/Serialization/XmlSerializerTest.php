@@ -15,25 +15,25 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Serialization
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Serialization
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal\Serialization;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Serialization;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Models\ServiceProperties;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
+use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
 
 
 /**
  * Unit tests for class XmlSerializer
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Serialization
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Serialization
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -43,8 +43,8 @@ use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
 class XmlSerializerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::unserialize
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::_sxml2arr
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::unserialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::_sxml2arr
      */
     public function testUnserialize()
     {
@@ -62,8 +62,8 @@ class XmlSerializerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::serialize
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::_arr2xml
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::serialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::_arr2xml
      */
     public function testSerialize()
     {
@@ -82,8 +82,8 @@ class XmlSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::serialize
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::_arr2xml
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::serialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::_arr2xml
      */
     public function testSerializeNoArray()
     {
@@ -100,8 +100,8 @@ class XmlSerializerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::serialize
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::_arr2xml
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::serialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::_arr2xml
      */
     public function testSerializeAttribute()
     {
@@ -125,7 +125,7 @@ class XmlSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::objectSerialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::objectSerialize
      */
     public function testObjectSerializeSucceess()
     {
@@ -144,7 +144,7 @@ class XmlSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::objectSerialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::objectSerialize
      */
     public function testObjectSerializeSucceessWithAttributes()
     {
@@ -164,7 +164,7 @@ class XmlSerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Serialization\XmlSerializer::objectSerialize
+     * @covers MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer::objectSerialize
      */
     public function testObjectSerializeInvalidObject()
     {

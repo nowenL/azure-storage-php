@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
 
 /**
  * Unit tests for class InvalidArgumentTypeException
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
 class InvalidArgumentTypeExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\InvalidArgumentTypeException::__construct
+     * @covers MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException::__construct
      */
     public function test__construct()
     {

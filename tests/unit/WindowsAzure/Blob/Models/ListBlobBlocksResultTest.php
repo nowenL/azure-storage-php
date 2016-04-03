@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\ListBlobBlocksResult;
-use WindowsAzure\Common\Internal\Utilities;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class ListBlobBlocksResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,8 +39,8 @@ use WindowsAzure\Common\Internal\Utilities;
 class ListBlobBlocksResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::setLastModified
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::getLastModified
      */
     public function testSetLastModified()
     {
@@ -57,8 +57,8 @@ class ListBlobBlocksResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::setETag
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::getETag
      */
     public function testSetETag()
     {
@@ -75,8 +75,8 @@ class ListBlobBlocksResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::setContentType
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::getContentType
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::setContentType
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::getContentType
      */
     public function testSetContentType()
     {
@@ -93,8 +93,8 @@ class ListBlobBlocksResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::setContentLength
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::getContentLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::setContentLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::getContentLength
      */
     public function testSetContentLength()
     {
@@ -111,8 +111,8 @@ class ListBlobBlocksResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::setUncommittedBlocks
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::getUncommittedBlocks
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::setUncommittedBlocks
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::getUncommittedBlocks
      */
     public function testSetUncommittedBlocks()
     {
@@ -128,8 +128,8 @@ class ListBlobBlocksResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::setCommittedBlocks
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksResult::getCommittedBlocks
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::setCommittedBlocks
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksResult::getCommittedBlocks
      */
     public function testSetCommittedBlocks()
     {

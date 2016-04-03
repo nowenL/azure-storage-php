@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models\Filters;
-use WindowsAzure\Table\Models\Filters\UnaryFilter;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters;
+use MicrosoftAzure\Storage\Table\Models\Filters\UnaryFilter;
 
 /**
  * Unit tests for class UnaryFilter
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,8 +39,8 @@ use WindowsAzure\Table\Models\Filters\UnaryFilter;
 class UnaryFilterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\Filters\UnaryFilter::__construct
-     * @covers WindowsAzure\Table\Models\Filters\UnaryFilter::getOperator
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\UnaryFilter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\UnaryFilter::getOperator
      */
     public function testGetOperator()
     {
@@ -53,8 +53,8 @@ class UnaryFilterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\Filters\UnaryFilter::__construct
-     * @covers WindowsAzure\Table\Models\Filters\UnaryFilter::getOperand
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\UnaryFilter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\UnaryFilter::getOperand
      */
     public function testGetOperand()
     {

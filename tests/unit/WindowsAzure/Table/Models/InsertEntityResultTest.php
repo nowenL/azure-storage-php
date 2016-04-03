@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Table\Models;
-use WindowsAzure\Table\Models\InsertEntityResult;
-use WindowsAzure\Table\Models\Entity;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Table\Models\InsertEntityResult;
+use MicrosoftAzure\Storage\Table\Models\Entity;
 
 /**
  * Unit tests for class InsertEntityResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,8 +39,8 @@ use WindowsAzure\Table\Models\Entity;
 class InsertEntityResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\InsertEntityResult::setEntity
-     * @covers WindowsAzure\Table\Models\InsertEntityResult::getEntity
+     * @covers MicrosoftAzure\Storage\Table\Models\InsertEntityResult::setEntity
+     * @covers MicrosoftAzure\Storage\Table\Models\InsertEntityResult::getEntity
      */
     public function testSetEntity()
     {

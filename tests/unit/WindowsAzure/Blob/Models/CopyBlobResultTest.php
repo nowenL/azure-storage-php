@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Blob\Models\CopyBlobResult;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\CopyBlobResult;
 
 /**
  * Unit tests for class SnapshotBlobResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,8 +40,8 @@ use WindowsAzure\Blob\Models\CopyBlobResult;
 class CopyBlobResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\CopyBlobResult::getETag
-     * @covers WindowsAzure\Blob\Models\CopyBlobResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobResult::setETag
      */
     public function testSetETag()
     {
@@ -56,8 +56,8 @@ class CopyBlobResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CopyBlobResult::getLastModified
-     * @covers WindowsAzure\Blob\Models\CopyBlobResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobResult::setLastModified
      */
     public function testSetLastModified()
     {

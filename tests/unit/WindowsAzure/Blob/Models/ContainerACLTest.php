@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\ContainerAcl;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\ContainerAcl;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
 
 /**
  * Unit tests for class ContainerAcl
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,10 +42,10 @@ use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
 class ContainerAclTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::create
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getPublicAccess
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getSignedIdentifiers
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::addSignedIdentifier
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getSignedIdentifiers
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::addSignedIdentifier
      */
     public function testCreateEmpty()
     {
@@ -62,10 +62,10 @@ class ContainerAclTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::create
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getPublicAccess
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getSignedIdentifiers
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::addSignedIdentifier
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getSignedIdentifiers
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::addSignedIdentifier
      */
     public function testCreateOneEntry()
     {
@@ -82,10 +82,10 @@ class ContainerAclTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::create
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getPublicAccess
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getSignedIdentifiers
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::addSignedIdentifier
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getSignedIdentifiers
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::addSignedIdentifier
      */
     public function testCreateMultipleEntries()
     {
@@ -104,8 +104,8 @@ class ContainerAclTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::setSignedIdentifiers
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getSignedIdentifiers
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::setSignedIdentifiers
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getSignedIdentifiers
      */
     public function testSetSignedIdentifiers()
     {
@@ -125,8 +125,8 @@ class ContainerAclTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::setPublicAccess
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::getPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::setPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::getPublicAccess
      */
     public function testSetPublicAccess()
     {
@@ -143,8 +143,8 @@ class ContainerAclTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::toXml
-     * @covers WindowsAzure\Blob\Models\ContainerAcl::toArray
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::toXml
+     * @covers MicrosoftAzure\Storage\Blob\Models\ContainerAcl::toArray
      * @depends testCreateMultipleEntries
      */
     public function testToXml($acl)

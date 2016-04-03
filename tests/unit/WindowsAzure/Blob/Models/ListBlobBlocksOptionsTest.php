@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\ListBlobBlocksOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions;
 
 /**
  * Unit tests for class ListBlobBlocksOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,8 +39,8 @@ use WindowsAzure\Blob\Models\ListBlobBlocksOptions;
 class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
 {   
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::setSnapshot
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::__construct
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::setSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::__construct
      */
     public function testSetSnapshot()
     {
@@ -56,8 +56,8 @@ class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::getSnapshot
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::__construct
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::getSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::__construct
      */
     public function testGetSnapshot()
     {
@@ -74,9 +74,9 @@ class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::getLeaseId
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::__construct
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::__construct
      */
     public function testSetLeaseId()
     {
@@ -93,7 +93,7 @@ class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::setIncludeUncommittedBlobs
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::setIncludeUncommittedBlobs
      */
     public function testSetIncludeUncommittedBlobs()
     {
@@ -109,7 +109,7 @@ class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::getIncludeUncommittedBlobs
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::getIncludeUncommittedBlobs
      */
     public function testGetIncludeUncommittedBlobs()
     {
@@ -126,7 +126,7 @@ class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::setIncludeCommittedBlobs
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::setIncludeCommittedBlobs
      */
     public function testSetIncludeCommittedBlobs()
     {
@@ -142,7 +142,7 @@ class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::getIncludeCommittedBlobs
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::getIncludeCommittedBlobs
      */
     public function testGetIncludeCommittedBlobs()
     {
@@ -159,7 +159,7 @@ class ListBlobBlocksOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobBlocksOptions::getBlockListType
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobBlocksOptions::getBlockListType
      */
     public function testGetBlockListType()
     {

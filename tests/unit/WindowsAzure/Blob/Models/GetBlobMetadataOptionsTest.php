@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\AccessCondition;
-use WindowsAzure\Blob\Models\GetBlobMetadataOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions;
 
 /**
  * Unit tests for class GetBlobMetadataOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,8 +40,8 @@ use WindowsAzure\Blob\Models\GetBlobMetadataOptions;
 class GetBlobMetadataOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions::getLeaseId
      */
     public function testSetLeaseId()
     {
@@ -58,7 +58,7 @@ class GetBlobMetadataOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -75,7 +75,7 @@ class GetBlobMetadataOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {
@@ -91,7 +91,7 @@ class GetBlobMetadataOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataOptions::setSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions::setSnapshot
      */
     public function testSetSnapshot()
     {
@@ -107,7 +107,7 @@ class GetBlobMetadataOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataOptions::getSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions::getSnapshot
      */
     public function testGetSnapshot()
     {

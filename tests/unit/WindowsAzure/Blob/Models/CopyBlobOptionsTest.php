@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Blob\Models\AccessCondition;
-use WindowsAzure\Blob\Models\CopyBlobOptions;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions;
 
 /**
  * Unit tests for class CopyBlobBlobOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,8 +41,8 @@ use WindowsAzure\Blob\Models\CopyBlobOptions;
 class CopyBlobOptionsTest extends \PHPUnit_Framework_TestCase
 {  
     /** 
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::setMetadata
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::getMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::setMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::getMetadata
      */
     public function testSetMetadata()
     {
@@ -57,8 +57,8 @@ class CopyBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::setAccessCondition
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::getAccessCondition
      */
     public function testSetAccessCondition()
     {
@@ -73,8 +73,8 @@ class CopyBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::setSourceAccessCondition
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::getSourceAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::setSourceAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::getSourceAccessCondition
      */
     public function testSetSourceAccessCondition()
     {
@@ -89,8 +89,8 @@ class CopyBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /** 
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::getLeaseId
      */
     public function testSetLeaseId()
     {
@@ -102,8 +102,8 @@ class CopyBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /** 
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::setSourceLeaseId
-     * @covers WindowsAzure\Blob\Models\CopyBlobOptions::getSourceLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::setSourceLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions::getSourceLeaseId
      */
     public function testSetSourceLeaseId()
     {

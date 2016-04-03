@@ -15,18 +15,18 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Table
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Table
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Table;
+namespace Tests\Functional\MicrosoftAzure\Storage\Table;
 
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Table\Models\Entity;
-use WindowsAzure\Table\Models\Filters\Filter;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Table\Models\Entity;
+use MicrosoftAzure\Storage\Table\Models\Filters\Filter;
 
 class FunctionalTestBase extends IntegrationTestBase
 {
@@ -65,8 +65,8 @@ class FunctionalTestBase extends IntegrationTestBase
     }
 
     /**
-     * @covers WindowsAzure\ServiceBus\ServiceBusRestProxy::createTable
-     * @covers WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteTable
+     * @covers MicrosoftAzure\Storage\ServiceBus\ServiceBusRestProxy::createTable
+     * @covers MicrosoftAzure\Storage\ServiceBus\ServiceBusRestProxy::deleteTable
      */
     protected function clearTable($table)
     {

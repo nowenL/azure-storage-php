@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Blob\Models\CreateBlobPagesResult;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult;
 
 
 /**
  * Unit tests for class CreateBlobPagesResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,7 +41,7 @@ use WindowsAzure\Blob\Models\CreateBlobPagesResult;
 class CreateBlobPagesResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::create
      */
     public function testCreate()
     {
@@ -61,8 +61,8 @@ class CreateBlobPagesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::setLastModified
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::getLastModified
      */
     public function testSetLastModified()
     {
@@ -79,8 +79,8 @@ class CreateBlobPagesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::setETag
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::getETag
      */
     public function testSetETag()
     {
@@ -97,8 +97,8 @@ class CreateBlobPagesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::setContentMD5
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::getContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::setContentMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::getContentMD5
      */
     public function testSetContentMD5()
     {
@@ -115,8 +115,8 @@ class CreateBlobPagesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::setSequenceNumber
-     * @covers WindowsAzure\Blob\Models\CreateBlobPagesResult::getSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::setSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobPagesResult::getSequenceNumber
      */
     public function testSetSequenceNumber()
     {

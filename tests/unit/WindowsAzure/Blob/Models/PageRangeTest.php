@@ -15,20 +15,20 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\PageRange;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\PageRange;
 
 /**
  * Unit tests for class PageRange
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -38,9 +38,9 @@ use WindowsAzure\Blob\Models\PageRange;
 class PageRangeTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\PageRange::__construct
-     * @covers WindowsAzure\Blob\Models\PageRange::getStart
-     * @covers WindowsAzure\Blob\Models\PageRange::getEnd
+     * @covers MicrosoftAzure\Storage\Blob\Models\PageRange::__construct
+     * @covers MicrosoftAzure\Storage\Blob\Models\PageRange::getStart
+     * @covers MicrosoftAzure\Storage\Blob\Models\PageRange::getEnd
      */
     public function test__construct()
     {
@@ -59,7 +59,7 @@ class PageRangeTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\PageRange::setStart
+     * @covers MicrosoftAzure\Storage\Blob\Models\PageRange::setStart
      * @depends test__construct
      */
     public function testSetStart($obj)
@@ -75,7 +75,7 @@ class PageRangeTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\PageRange::setEnd
+     * @covers MicrosoftAzure\Storage\Blob\Models\PageRange::setEnd
      * @depends test__construct
      */
     public function testSetEnd($obj)
@@ -91,7 +91,7 @@ class PageRangeTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\PageRange::setLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\PageRange::setLength
      * @depends test__construct
      */
     public function testSetLength($obj)
@@ -108,7 +108,7 @@ class PageRangeTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\PageRange::getLength
+     * @covers MicrosoftAzure\Storage\Blob\Models\PageRange::getLength
      * @depends test__construct
      */
     public function testGetLength($obj)

@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models;
-use WindowsAzure\Table\Models\BatchError;
-use WindowsAzure\Common\ServiceException;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Table\Models\BatchError;
+use MicrosoftAzure\Storage\Common\ServiceException;
 
 /**
  * Unit tests for class BatchError
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,9 +40,9 @@ use WindowsAzure\Common\ServiceException;
 class BatchErrorTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\BatchError::create
-     * @covers WindowsAzure\Table\Models\BatchError::getError
-     * @covers WindowsAzure\Table\Models\BatchError::getContentId
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchError::create
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchError::getError
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchError::getContentId
      */
     public function testCreate()
     {
@@ -62,8 +62,8 @@ class BatchErrorTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\BatchError::setError
-     * @covers WindowsAzure\Table\Models\BatchError::getError
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchError::setError
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchError::getError
      * @depends testCreate
      */
     public function testSetError($batchError)
@@ -79,8 +79,8 @@ class BatchErrorTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\BatchError::setContentId
-     * @covers WindowsAzure\Table\Models\BatchError::getContentId
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchError::setContentId
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchError::getContentId
      * @depends testCreate
      */
     public function testSetContentId($batchError)

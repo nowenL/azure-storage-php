@@ -15,15 +15,15 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\Resources;
+namespace MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 
 /**
  * Base class for all REST services settings.
@@ -38,7 +38,7 @@ use WindowsAzure\Common\Internal\Resources;
  *    takes a connection string and returns the created settings object.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

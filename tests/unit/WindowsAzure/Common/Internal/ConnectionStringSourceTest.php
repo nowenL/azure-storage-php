@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\ConnectionStringSource;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\ConnectionStringSource;
 
 /**
  * Unit tests for class ConnectionStringSource
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,13 +40,13 @@ class ConnectionStringSourceTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $property = new \ReflectionProperty('WindowsAzure\Common\Internal\ConnectionStringSource', '_isInitialized');
+        $property = new \ReflectionProperty('MicrosoftAzure\Storage\Common\Internal\ConnectionStringSource', '_isInitialized');
         $property->setAccessible(true);
         $property->setValue(null);
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\ConnectionStringSource::environmentSource
+     * @covers MicrosoftAzure\Storage\Common\Internal\ConnectionStringSource::environmentSource
      */
     public function testEnvironmentSource()
     {
@@ -66,8 +66,8 @@ class ConnectionStringSourceTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\ConnectionStringSource::getDefaultSources
-     * @covers WindowsAzure\Common\Internal\ConnectionStringSource::_init
+     * @covers MicrosoftAzure\Storage\Common\Internal\ConnectionStringSource::getDefaultSources
+     * @covers MicrosoftAzure\Storage\Common\Internal\ConnectionStringSource::_init
      */
     public function testGetDefaultSources()
     {

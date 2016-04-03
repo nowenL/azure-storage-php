@@ -15,16 +15,16 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Queue
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Queue
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Queue;
+namespace Tests\Functional\MicrosoftAzure\Storage\Queue;
 
-use WindowsAzure\Common\Internal\StorageServiceSettings;
+use MicrosoftAzure\Storage\Common\Internal\StorageServiceSettings;
 
 class FunctionalTestBase extends IntegrationTestBase
 {

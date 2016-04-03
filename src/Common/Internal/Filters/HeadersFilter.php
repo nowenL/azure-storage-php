@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Filters
+ * @package   MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Internal\Filters;
-use WindowsAzure\Common\Internal\IServiceFilter;
+namespace MicrosoftAzure\Storage\Common\Internal\Filters;
+use MicrosoftAzure\Storage\Common\Internal\IServiceFilter;
 
 /**
  * Adds all passed headers to the HTTP request headers.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Filters
+ * @package   MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

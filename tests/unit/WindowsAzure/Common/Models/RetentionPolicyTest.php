@@ -15,17 +15,17 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Models;
-use WindowsAzure\Common\Models\RetentionPolicy;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Models;
+use MicrosoftAzure\Storage\Common\Models\RetentionPolicy;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class RetentionPolicy
@@ -41,7 +41,7 @@ use WindowsAzure\Common\Internal\Utilities;
 class RetentionPolicyTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Models\RetentionPolicy::create
+     * @covers MicrosoftAzure\Storage\Common\Models\RetentionPolicy::create
      */
     public function testCreate()
     {
@@ -59,7 +59,7 @@ class RetentionPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\RetentionPolicy::getEnabled
+     * @covers MicrosoftAzure\Storage\Common\Models\RetentionPolicy::getEnabled
      */
     public function testGetEnabled()
     {
@@ -77,7 +77,7 @@ class RetentionPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\RetentionPolicy::setEnabled
+     * @covers MicrosoftAzure\Storage\Common\Models\RetentionPolicy::setEnabled
      */
     public function testSetEnabled()
     {
@@ -95,7 +95,7 @@ class RetentionPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\RetentionPolicy::getDays
+     * @covers MicrosoftAzure\Storage\Common\Models\RetentionPolicy::getDays
      */
     public function testGetDays()
     {
@@ -113,7 +113,7 @@ class RetentionPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\RetentionPolicy::setDays
+     * @covers MicrosoftAzure\Storage\Common\Models\RetentionPolicy::setDays
      */
     public function testSetDays()
     {
@@ -131,7 +131,7 @@ class RetentionPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\RetentionPolicy::toArray
+     * @covers MicrosoftAzure\Storage\Common\Models\RetentionPolicy::toArray
      */
     public function testToArray()
     {
@@ -151,7 +151,7 @@ class RetentionPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Models\RetentionPolicy::toArray
+     * @covers MicrosoftAzure\Storage\Common\Models\RetentionPolicy::toArray
      */
     public function testToArrayWithoutDays()
     {

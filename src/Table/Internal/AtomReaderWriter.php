@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Internal
+ * @package   MicrosoftAzure\Storage\Table\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Table\Internal;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Table\Models\EdmType;
-use WindowsAzure\Table\Models\Entity;
+namespace MicrosoftAzure\Storage\Table\Internal;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
+use MicrosoftAzure\Storage\Table\Models\Entity;
 
 /**
  * Serializes and unserializes results from table wrapper calls
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Internal
+ * @package   MicrosoftAzure\Storage\Table\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -217,7 +217,7 @@ class AtomReaderWriter implements IAtomReaderWriter
      * 
      * @param \SimpleXML $result The SimpleXML object representing the entity.
      * 
-     * @return \WindowsAzure\Table\Models\Entity
+     * @return \MicrosoftAzure\Storage\Table\Models\Entity
      */
     private function _parseOneEntity($result)
     {

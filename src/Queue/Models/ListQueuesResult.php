@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Queue\Models
+ * @package   MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Queue\Models;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Queue\Models\Queue;
-use WindowsAzure\Common\Internal\Utilities;
+namespace MicrosoftAzure\Storage\Queue\Models;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Queue\Models\Queue;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Container to hold list queue response object.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Queue\Models
+ * @package   MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -52,7 +52,7 @@ class ListQueuesResult
      *
      * @param array $parsedResponse XML response parsed into array.
      * 
-     * @return WindowsAzure\Queue\Models\ListQueuesResult.
+     * @return MicrosoftAzure\Storage\Queue\Models\ListQueuesResult.
      */
     public static function create($parsedResponse)
     {

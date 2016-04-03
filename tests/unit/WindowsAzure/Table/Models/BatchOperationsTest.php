@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models;
-use WindowsAzure\Table\Models\BatchOperations;
-use WindowsAzure\Table\Models\BatchOperation;
-use WindowsAzure\Table\Models\Entity;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Table\Models\BatchOperations;
+use MicrosoftAzure\Storage\Table\Models\BatchOperation;
+use MicrosoftAzure\Storage\Table\Models\Entity;
 
 /**
  * Unit tests for class BatchOperations
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,8 +41,8 @@ use WindowsAzure\Table\Models\Entity;
 class BatchOperationsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\BatchOperations::__construct
-     * @covers WindowsAzure\Table\Models\BatchOperations::getOperations
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::__construct
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
      */
     public function test__construct()
     {
@@ -56,9 +56,9 @@ class BatchOperationsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\BatchOperations::setOperations
-     * @covers WindowsAzure\Table\Models\BatchOperations::getOperations
-     * @covers WindowsAzure\Table\Models\BatchOperations::addOperation
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::setOperations
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addOperation
      * @depends test__construct
      */
     public function testSetOperations($operations)
@@ -76,9 +76,9 @@ class BatchOperationsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addInsertEntity
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addOperation
-     *  @covers WindowsAzure\Table\Models\BatchOperations::getOperations
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addInsertEntity
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addOperation
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
      */
     public function testAddInsertEntity()
     {
@@ -95,9 +95,9 @@ class BatchOperationsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addUpdateEntity
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addOperation
-     *  @covers WindowsAzure\Table\Models\BatchOperations::getOperations
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addUpdateEntity
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addOperation
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
      */
     public function testAddUpdateEntity()
     {
@@ -114,9 +114,9 @@ class BatchOperationsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addMergeEntity
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addOperation
-     *  @covers WindowsAzure\Table\Models\BatchOperations::getOperations
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addMergeEntity
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addOperation
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
      */
     public function testAddMergeEntity()
     {
@@ -133,9 +133,9 @@ class BatchOperationsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addInsertOrReplaceEntity
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addOperation
-     *  @covers WindowsAzure\Table\Models\BatchOperations::getOperations
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addInsertOrReplaceEntity
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addOperation
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
      */
     public function testAddInsertOrReplaceEntity()
     {
@@ -152,9 +152,9 @@ class BatchOperationsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addInsertOrMergeEntity
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addOperation
-     *  @covers WindowsAzure\Table\Models\BatchOperations::getOperations
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addInsertOrMergeEntity
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addOperation
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
      */
     public function testAddInsertOrMergeEntity()
     {
@@ -171,9 +171,9 @@ class BatchOperationsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addDeleteEntity
-     *  @covers WindowsAzure\Table\Models\BatchOperations::addOperation
-     *  @covers WindowsAzure\Table\Models\BatchOperations::getOperations
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addDeleteEntity
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::addOperation
+     *  @covers MicrosoftAzure\Storage\Table\Models\BatchOperations::getOperations
      */
     public function testAddDeleteEntity()
     {

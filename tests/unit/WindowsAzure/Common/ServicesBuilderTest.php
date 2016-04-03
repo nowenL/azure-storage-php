@@ -15,26 +15,26 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\MediaServicesSettings;
-use WindowsAzure\Common\ServicesBuilder;
-use WindowsAzure\Common\Configuration;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\MediaServicesSettings;
+use MicrosoftAzure\Storage\Common\ServicesBuilder;
+use MicrosoftAzure\Storage\Common\Configuration;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
 
 /**
  * Unit tests for class ServicesBuilder
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -44,9 +44,9 @@ use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
 class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\ServicesBuilder::createQueueService
-     * @covers WindowsAzure\Common\ServicesBuilder::serializer
-     * @covers WindowsAzure\Common\ServicesBuilder::queueAuthenticationScheme
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::createQueueService
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::serializer
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::queueAuthenticationScheme
      */
     public function testBuildForQueue()
     {
@@ -57,13 +57,13 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
         $queueRestProxy = $builder->createQueueService(TestResources::getWindowsAzureStorageServicesConnectionString());
 
         // Assert
-        $this->assertInstanceOf('WindowsAzure\Queue\Internal\IQueue', $queueRestProxy);
+        $this->assertInstanceOf('MicrosoftAzure\Storage\Queue\Internal\IQueue', $queueRestProxy);
     }
 
     /**
-     * @covers WindowsAzure\Common\ServicesBuilder::createBlobService
-     * @covers WindowsAzure\Common\ServicesBuilder::serializer
-     * @covers WindowsAzure\Common\ServicesBuilder::blobAuthenticationScheme
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::createBlobService
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::serializer
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::blobAuthenticationScheme
      */
     public function testBuildForBlob()
     {
@@ -74,15 +74,15 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
         $blobRestProxy = $builder->createBlobService(TestResources::getWindowsAzureStorageServicesConnectionString());
 
         // Assert
-        $this->assertInstanceOf('WindowsAzure\Blob\Internal\IBlob', $blobRestProxy);
+        $this->assertInstanceOf('MicrosoftAzure\Storage\Blob\Internal\IBlob', $blobRestProxy);
     }
 
     /**
-     * @covers WindowsAzure\Common\ServicesBuilder::createTableService
-     * @covers WindowsAzure\Common\ServicesBuilder::serializer
-     * @covers WindowsAzure\Common\ServicesBuilder::mimeSerializer
-     * @covers WindowsAzure\Common\ServicesBuilder::atomSerializer
-     * @covers WindowsAzure\Common\ServicesBuilder::tableAuthenticationScheme
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::createTableService
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::serializer
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::mimeSerializer
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::atomSerializer
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::tableAuthenticationScheme
      */
     public function testBuildForTable()
     {
@@ -93,11 +93,11 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
         $tableRestProxy = $builder->createTableService(TestResources::getWindowsAzureStorageServicesConnectionString());
 
         // Assert
-        $this->assertInstanceOf('WindowsAzure\Table\Internal\ITable', $tableRestProxy);
+        $this->assertInstanceOf('MicrosoftAzure\Storage\Table\Internal\ITable', $tableRestProxy);
     }
 
     /**
-     * @covers WindowsAzure\Common\ServicesBuilder::getInstance
+     * @covers MicrosoftAzure\Storage\Common\ServicesBuilder::getInstance
      */
     public function testGetInstance()
     {
@@ -105,6 +105,6 @@ class ServicesBuilderTest extends \PHPUnit_Framework_TestCase
         $actual = ServicesBuilder::getInstance();
 
         // Assert
-        $this->assertInstanceOf('WindowsAzure\Common\ServicesBuilder', $actual);
+        $this->assertInstanceOf('MicrosoftAzure\Storage\Common\ServicesBuilder', $actual);
     }
 }

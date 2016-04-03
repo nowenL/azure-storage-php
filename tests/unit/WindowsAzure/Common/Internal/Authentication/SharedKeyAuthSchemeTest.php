@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Authentication
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Authentication
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal\Authentication;
-use Tests\Mock\WindowsAzure\Common\Internal\Authentication\SharedKeyAuthSchemeMock;
-use WindowsAzure\Common\Internal\Resources;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Authentication;
+use Tests\Mock\MicrosoftAzure\Storage\Common\Internal\Authentication\SharedKeyAuthSchemeMock;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 use Tests\Framework\TestResources;
 
 /**
  * Unit tests for SharedKeyAuthScheme class.
  *
- * @package    Tests\Unit\WindowsAzure\Common\Internal\Authentication
+ * @package    Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Authentication
  * @author     Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright  2012 Microsoft Corporation
  * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,7 +40,7 @@ use Tests\Framework\TestResources;
 class SharedKeyAuthSchemeTest extends \PHPUnit_Framework_TestCase
 {
     /**
-    * @covers WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme::__construct
+    * @covers MicrosoftAzure\Storage\Common\Internal\Authentication\SharedKeyAuthScheme::__construct
     */
     public function test__construct()
     {
@@ -63,7 +63,7 @@ class SharedKeyAuthSchemeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-    * @covers WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme::computeSignature
+    * @covers MicrosoftAzure\Storage\Common\Internal\Authentication\SharedKeyAuthScheme::computeSignature
     */
     public function testComputeSignatureSimple()
     {
@@ -84,7 +84,7 @@ class SharedKeyAuthSchemeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme::getAuthorizationHeader
+     * @covers MicrosoftAzure\Storage\Common\Internal\Authentication\SharedKeyAuthScheme::getAuthorizationHeader
      */
     public function testGetAuthorizationHeaderSimple()
     {

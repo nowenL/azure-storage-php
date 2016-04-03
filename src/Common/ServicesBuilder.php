@@ -15,37 +15,37 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common
+ * @package   MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common;
-use WindowsAzure\Blob\BlobRestProxy;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Filters\DateFilter;
-use WindowsAzure\Common\Internal\Filters\HeadersFilter;
-use WindowsAzure\Common\Internal\Filters\AuthenticationFilter;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
-use WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme;
-use WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
-use WindowsAzure\Common\Internal\StorageServiceSettings;
-use WindowsAzure\Queue\QueueRestProxy;
-use WindowsAzure\Table\TableRestProxy;
-use WindowsAzure\Table\Internal\AtomReaderWriter;
-use WindowsAzure\Table\Internal\MimeReaderWriter;
+namespace MicrosoftAzure\Storage\Common;
+use MicrosoftAzure\Storage\Blob\BlobRestProxy;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Filters\DateFilter;
+use MicrosoftAzure\Storage\Common\Internal\Filters\HeadersFilter;
+use MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
+use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
+use MicrosoftAzure\Storage\Common\Internal\Authentication\SharedKeyAuthScheme;
+use MicrosoftAzure\Storage\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
+use MicrosoftAzure\Storage\Common\Internal\StorageServiceSettings;
+use MicrosoftAzure\Storage\Queue\QueueRestProxy;
+use MicrosoftAzure\Storage\Table\TableRestProxy;
+use MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter;
+use MicrosoftAzure\Storage\Table\Internal\MimeReaderWriter;
 
 
 /**
  * Builds azure service objects.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common
+ * @package   MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -62,7 +62,7 @@ class ServicesBuilder
     /**
      * Gets the serializer used in the REST services construction.
      *
-     * @return WindowsAzure\Common\Internal\Serialization\ISerializer
+     * @return MicrosoftAzure\Storage\Common\Internal\Serialization\ISerializer
      */
     protected function serializer()
     {
@@ -72,7 +72,7 @@ class ServicesBuilder
     /**
      * Gets the MIME serializer used in the REST services construction.
      *
-     * @return \WindowsAzure\Table\Internal\IMimeReaderWriter
+     * @return \MicrosoftAzure\Storage\Table\Internal\IMimeReaderWriter
      */
     protected function mimeSerializer()
     {
@@ -82,7 +82,7 @@ class ServicesBuilder
     /**
      * Gets the Atom serializer used in the REST services construction.
      *
-     * @return \WindowsAzure\Table\Internal\IAtomReaderWriter
+     * @return \MicrosoftAzure\Storage\Table\Internal\IAtomReaderWriter
      */
     protected function atomSerializer()
     {
@@ -95,7 +95,7 @@ class ServicesBuilder
      * @param string $accountName The account name.
      * @param string $accountKey  The account key.
      *
-     * @return \WindowsAzure\Common\Internal\Authentication\StorageAuthScheme
+     * @return \MicrosoftAzure\Storage\Common\Internal\Authentication\StorageAuthScheme
      */
     protected function queueAuthenticationScheme($accountName, $accountKey)
     {
@@ -108,7 +108,7 @@ class ServicesBuilder
      * @param string $accountName The account name.
      * @param string $accountKey  The account key.
      *
-     * @return \WindowsAzure\Common\Internal\Authentication\StorageAuthScheme
+     * @return \MicrosoftAzure\Storage\Common\Internal\Authentication\StorageAuthScheme
      */
     protected function blobAuthenticationScheme($accountName, $accountKey)
     {
@@ -133,7 +133,7 @@ class ServicesBuilder
      *
      * @param string $connectionString The configuration connection string.
      *
-     * @return WindowsAzure\Queue\Internal\IQueue
+     * @return MicrosoftAzure\Storage\Queue\Internal\IQueue
      */
     public function createQueueService($connectionString)
     {
@@ -184,7 +184,7 @@ class ServicesBuilder
      *
      * @param string $connectionString The configuration connection string.
      *
-     * @return WindowsAzure\Blob\Internal\IBlob
+     * @return MicrosoftAzure\Storage\Blob\Internal\IBlob
      */
     public function createBlobService($connectionString)
     {
@@ -235,7 +235,7 @@ class ServicesBuilder
      *
      * @param string $connectionString The configuration connection string.
      *
-     * @return WindowsAzure\Table\Internal\ITable
+     * @return MicrosoftAzure\Storage\Table\Internal\ITable
      */
     public function createTableService($connectionString)
     {

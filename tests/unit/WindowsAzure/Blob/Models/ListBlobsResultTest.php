@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\ListBlobsResult;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobsResult;
 use Tests\Framework\TestResources;
 
 /**
  * Unit tests for class ListBlobsResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use Tests\Framework\TestResources;
 class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::create 
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::create 
      */
     public function testCreateWithEmpty()
     {
@@ -56,7 +56,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::create 
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::create 
      */
     public function testCreateWithOneEntry()
     {
@@ -77,7 +77,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::create 
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::create 
      */
     public function testCreateWithMultipleEntries()
     {
@@ -98,7 +98,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getBlobPrefixes
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getBlobPrefixes
      * @depends testCreateWithMultipleEntries
      */
     public function testGetBlobPrefixs($result)
@@ -111,7 +111,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setBlobPrefixes
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setBlobPrefixes
      * @depends testCreateWithMultipleEntries
      */
     public function testSetBlobPrefixs($result)
@@ -130,7 +130,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getBlobs
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getBlobs
      * @depends testCreateWithMultipleEntries
      */
     public function testGetBlobs($result)
@@ -143,7 +143,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setBlobs
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setBlobs
      * @depends testCreateWithMultipleEntries
      */
     public function testSetBlobs($result)
@@ -162,7 +162,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setPrefix
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setPrefix
      */
     public function testSetPrefix()
     {
@@ -178,7 +178,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getPrefix
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getPrefix
      */
     public function testGetPrefix()
     {
@@ -195,7 +195,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setNextMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setNextMarker
      */
     public function testSetNextMarker()
     {
@@ -211,7 +211,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getNextMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getNextMarker
      */
     public function testGetNextMarker()
     {
@@ -228,7 +228,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setMarker
      */
     public function testSetMarker()
     {
@@ -244,7 +244,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getMarker
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getMarker
      */
     public function testGetMarker()
     {
@@ -261,7 +261,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setMaxResults
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setMaxResults
      */
     public function testSetMaxResults()
     {
@@ -277,7 +277,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getMaxResults
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getMaxResults
      */
     public function testGetMaxResults()
     {
@@ -294,7 +294,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setContainerName
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setContainerName
      */
     public function testSetContainerName()
     {
@@ -310,7 +310,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getContainerName
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getContainerName
      */
     public function testGetContainerName()
     {
@@ -327,7 +327,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::setDelimiter
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::setDelimiter
      */
     public function testSetDelimiter()
     {
@@ -343,7 +343,7 @@ class ListBlobsResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\ListBlobsResult::getDelimiter
+     * @covers MicrosoftAzure\Storage\Blob\Models\ListBlobsResult::getDelimiter
      */
     public function testGetDelimiter()
     {

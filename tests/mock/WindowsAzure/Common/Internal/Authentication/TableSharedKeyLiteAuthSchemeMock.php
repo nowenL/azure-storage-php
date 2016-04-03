@@ -15,15 +15,15 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Mock\WindowsAzure\Common\Internal\Authentication
+ * @package   Tests\Mock\MicrosoftAzure\Storage\Common\Internal\Authentication
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace Tests\Mock\WindowsAzure\Common\Internal\Authentication;
-use WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
+namespace Tests\Mock\MicrosoftAzure\Storage\Common\Internal\Authentication;
+use MicrosoftAzure\Storage\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
 
 /**
  * Mock class to wrap SharedKeyAuthScheme class.

@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Queue\Models;
-use WindowsAzure\Queue\Models\UpdateMessageResult;
-use WindowsAzure\Common\Internal\Utilities;
+namespace Tests\Unit\MicrosoftAzure\Storage\Queue\Models;
+use MicrosoftAzure\Storage\Queue\Models\UpdateMessageResult;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class UpdateMessageResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,7 +40,7 @@ use WindowsAzure\Common\Internal\Utilities;
 class UpdateMessageResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Queue\Models\UpdateMessageResult::getPopReceipt
+     * @covers MicrosoftAzure\Storage\Queue\Models\UpdateMessageResult::getPopReceipt
      */
     public function testGetPopReceipt()
     {
@@ -57,7 +57,7 @@ class UpdateMessageResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\UpdateMessageResult::setPopReceipt
+     * @covers MicrosoftAzure\Storage\Queue\Models\UpdateMessageResult::setPopReceipt
      */
     public function testSetPopReceipt()
     {
@@ -74,7 +74,7 @@ class UpdateMessageResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\UpdateMessageResult::getTimeNextVisible
+     * @covers MicrosoftAzure\Storage\Queue\Models\UpdateMessageResult::getTimeNextVisible
      */
     public function testGetTimeNextVisible()
     {
@@ -91,7 +91,7 @@ class UpdateMessageResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\UpdateMessageResult::setTimeNextVisible
+     * @covers MicrosoftAzure\Storage\Queue\Models\UpdateMessageResult::setTimeNextVisible
      */
     public function testSetTimeNextVisible()
     {

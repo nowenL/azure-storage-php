@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Table\Models;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\ServiceException;
+namespace MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
+use MicrosoftAzure\Storage\Common\ServiceException;
 
 /**
  * Represents an error returned from call to batch API.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,7 +42,7 @@ use WindowsAzure\Common\ServiceException;
 class BatchError
 {
     /**
-     * @var WindowsAzure\Common\ServiceException 
+     * @var MicrosoftAzure\Storage\Common\ServiceException 
      */
     private $_error;
     
@@ -54,10 +54,10 @@ class BatchError
     /**
      * Creates BatchError object.
      * 
-     * @param WindowsAzure\Common\ServiceException $error   The error object.
+     * @param MicrosoftAzure\Storage\Common\ServiceException $error   The error object.
      * @param array                                $headers The response headers.
      * 
-     * @return \WindowsAzure\Table\Models\BatchError 
+     * @return \MicrosoftAzure\Storage\Table\Models\BatchError 
      */
     public static function create($error, $headers)
     {
@@ -80,7 +80,7 @@ class BatchError
     /**
      * Gets the error.
      * 
-     * @return WindowsAzure\Common\ServiceException
+     * @return MicrosoftAzure\Storage\Common\ServiceException
      */
     public function getError()
     {
@@ -90,7 +90,7 @@ class BatchError
     /**
      * Sets the error.
      * 
-     * @param WindowsAzure\Common\ServiceException $error The error object.
+     * @param MicrosoftAzure\Storage\Common\ServiceException $error The error object.
      * 
      * @return none
      */

@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
-use WindowsAzure\Common\Internal\Filters\ExponentialRetryPolicy;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters;
+use MicrosoftAzure\Storage\Common\Internal\Filters\ExponentialRetryPolicy;
 
 /**
  * Unit tests for class ExponentialRetryPolicy
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Common\Internal\Filters\ExponentialRetryPolicy;
 class ExponentialRetryPolicyTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\ExponentialRetryPolicy::__construct
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\ExponentialRetryPolicy::__construct
      */
     public function test__construct()
     {
@@ -56,7 +56,7 @@ class ExponentialRetryPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\ExponentialRetryPolicy::shouldRetry
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\ExponentialRetryPolicy::shouldRetry
      * @depends test__construct
      */
     public function testShouldRetryFalse($retryPolicy)
@@ -72,7 +72,7 @@ class ExponentialRetryPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\ExponentialRetryPolicy::calculateBackoff
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\ExponentialRetryPolicy::calculateBackoff
      * @depends test__construct
      */
     public function testCalculateBackoff($retryPolicy)

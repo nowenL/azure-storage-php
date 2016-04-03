@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\AccessCondition;
-use WindowsAzure\Blob\Models\DeleteBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions;
 
 /**
  * Unit tests for class DeleteBlobOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,8 +40,8 @@ use WindowsAzure\Blob\Models\DeleteBlobOptions;
 class DeleteBlobOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::getLeaseId
      */
     public function testSetLeaseId()
     {
@@ -58,7 +58,7 @@ class DeleteBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -75,7 +75,7 @@ class DeleteBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {
@@ -91,7 +91,7 @@ class DeleteBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::setSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::setSnapshot
      */
     public function testSetSnapshot()
     {
@@ -107,7 +107,7 @@ class DeleteBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::getSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::getSnapshot
      */
     public function testGetSnapshot()
     {
@@ -124,8 +124,8 @@ class DeleteBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::setDeleteSnaphotsOnly
-     * @covers WindowsAzure\Blob\Models\DeleteBlobOptions::getDeleteSnaphotsOnly
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::setDeleteSnaphotsOnly
+     * @covers MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions::getDeleteSnaphotsOnly
      */
     public function testSetDeleteSnaphotsOnly()
     {

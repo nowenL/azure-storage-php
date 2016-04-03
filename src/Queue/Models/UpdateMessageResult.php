@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Queue\Models
+ * @package   MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Queue\Models;
-use WindowsAzure\Common\Internal\Validate;
+namespace MicrosoftAzure\Storage\Queue\Models;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
 
 /**
  * Holds results of updateMessage wrapper.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Queue\Models
+ * @package   MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

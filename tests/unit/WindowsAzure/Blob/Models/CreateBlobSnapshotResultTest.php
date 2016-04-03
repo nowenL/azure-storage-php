@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Blob\Models\CreateBlobSnapshotResult;
-use WindowsAzure\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
 
 /**
  * Unit tests for class SnapshotBlobResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,8 +41,8 @@ use WindowsAzure\Blob\Models\AccessCondition;
 class CreateBlobSnapshotResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobSnapshotResult::getSnapshot
-     * @covers WindowsAzure\Blob\Models\CreateBlobSnapshotResult::setSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult::getSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult::setSnapshot
      */
     public function testSetSnapshot()
     {
@@ -57,8 +57,8 @@ class CreateBlobSnapshotResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobSnapshotResult::getETag
-     * @covers WindowsAzure\Blob\Models\CreateBlobSnapshotResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult::setETag
      */
     public function testSetETag()
     {
@@ -73,8 +73,8 @@ class CreateBlobSnapshotResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateBlobSnapshotResult::getLastModified
-     * @covers WindowsAzure\Blob\Models\CreateBlobSnapshotResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotResult::setLastModified
      */
     public function testSetLastModified()
     {

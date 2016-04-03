@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models\Filters;
-use WindowsAzure\Table\Models\Filters\ConstantFilter;
-use WindowsAzure\Table\Models\EdmType;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters;
+use MicrosoftAzure\Storage\Table\Models\Filters\ConstantFilter;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
 
 /**
  * Unit tests for class ConstantFilter
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,8 +40,8 @@ use WindowsAzure\Table\Models\EdmType;
 class ConstantFilterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\Filters\ConstantFilter::__construct
-     * @covers WindowsAzure\Table\Models\Filters\ConstantFilter::getValue
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\ConstantFilter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\ConstantFilter::getValue
      */
     public function testGetValue()
     {
@@ -54,8 +54,8 @@ class ConstantFilterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\Filters\ConstantFilter::__construct
-     * @covers WindowsAzure\Table\Models\Filters\ConstantFilter::getEdmType
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\ConstantFilter::__construct
+     * @covers MicrosoftAzure\Storage\Table\Models\Filters\ConstantFilter::getEdmType
      */
     public function testGetEdmType()
     {

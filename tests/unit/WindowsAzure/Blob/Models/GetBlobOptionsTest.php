@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\AccessCondition;
-use WindowsAzure\Blob\Models\GetBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobOptions;
 
 /**
  * Unit tests for class GetBlobOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,8 +40,8 @@ use WindowsAzure\Blob\Models\GetBlobOptions;
 class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::getLeaseId
      */
     public function testSetLeaseId()
     {
@@ -58,7 +58,7 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -75,7 +75,7 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {
@@ -91,7 +91,7 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::setSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::setSnapshot
      */
     public function testSetSnapshot()
     {
@@ -107,7 +107,7 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::getSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::getSnapshot
      */
     public function testGetSnapshot()
     {
@@ -124,8 +124,8 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::setRangeStart
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::getRangeStart
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::setRangeStart
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::getRangeStart
      */
     public function testSetRangeStart()
     {
@@ -142,8 +142,8 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::setRangeEnd
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::getRangeEnd
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::setRangeEnd
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::getRangeEnd
      */
     public function testSetRangeEnd()
     {
@@ -160,7 +160,7 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::setComputeRangeMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::setComputeRangeMD5
      */
     public function testSetComputeRangeMD5()
     {
@@ -176,7 +176,7 @@ class GetBlobOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobOptions::getComputeRangeMD5
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobOptions::getComputeRangeMD5
      */
     public function testGetComputeRangeMD5()
     {

@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\SetBlobPropertiesResult;
-use WindowsAzure\Common\Internal\Utilities;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class SetBlobPropertiesResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,8 +39,8 @@ use WindowsAzure\Common\Internal\Utilities;
 class SetBlobPropertiesResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesResult::setLastModified
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult::getLastModified
      */
     public function testSetLastModified()
     {
@@ -57,8 +57,8 @@ class SetBlobPropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesResult::setETag
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult::getETag
      */
     public function testSetETag()
     {
@@ -75,8 +75,8 @@ class SetBlobPropertiesResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesResult::setSequenceNumber
-     * @covers WindowsAzure\Blob\Models\SetBlobPropertiesResult::getSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult::setSequenceNumber
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetBlobPropertiesResult::getSequenceNumber
      */
     public function testSetSequenceNumber()
     {

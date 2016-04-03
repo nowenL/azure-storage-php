@@ -23,7 +23,7 @@
  */
 namespace Tests\Framework;
 use Tests\Framework\ServiceRestProxyTestBase;
-use WindowsAzure\Common\Models\ServiceProperties;
+use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
 
 /**
  * TestBase class for each unit test class.

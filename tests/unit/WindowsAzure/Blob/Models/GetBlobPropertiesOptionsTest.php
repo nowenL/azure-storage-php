@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\AccessCondition;
-use WindowsAzure\Blob\Models\GetBlobPropertiesOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions;
 
 /**
  * Unit tests for class GetBlobPropertiesOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,8 +40,8 @@ use WindowsAzure\Blob\Models\GetBlobPropertiesOptions;
 class GetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobPropertiesOptions::setLeaseId
-     * @covers WindowsAzure\Blob\Models\GetBlobPropertiesOptions::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions::getLeaseId
      */
     public function testSetLeaseId()
     {
@@ -58,7 +58,7 @@ class GetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobPropertiesOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -75,7 +75,7 @@ class GetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobPropertiesOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {
@@ -91,7 +91,7 @@ class GetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobPropertiesOptions::setSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions::setSnapshot
      */
     public function testSetSnapshot()
     {
@@ -107,7 +107,7 @@ class GetBlobPropertiesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobPropertiesOptions::getSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions::getSnapshot
      */
     public function testGetSnapshot()
     {

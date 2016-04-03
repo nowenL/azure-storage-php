@@ -15,16 +15,16 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\ConnectionStringParser;
-use WindowsAzure\Common\Internal\Resources;
+namespace MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\ConnectionStringParser;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 
 /**
  * Represents the settings used to sign and access a request against the storage 
@@ -32,7 +32,7 @@ use WindowsAzure\Common\Internal\Resources;
  * page: http://msdn.microsoft.com/en-us/library/ee758697
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -312,7 +312,7 @@ class StorageServiceSettings extends ServiceSettings
      * @param string $queueEndpointUri The queue endpoint uri.
      * @param string $tableEndpointUri The table endpoint uri.
      * 
-     * @return \WindowsAzure\Common\Internal\StorageServiceSettings
+     * @return \MicrosoftAzure\Storage\Common\Internal\StorageServiceSettings
      */
     private static function _createStorageServiceSettings(
         $settings,

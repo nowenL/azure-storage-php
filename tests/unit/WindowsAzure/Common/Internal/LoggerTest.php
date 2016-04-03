@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\Logger;
-use WindowsAzure\Common\Internal\Resources;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\Logger;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
 use Tests\Framework\VirtualFileSystem;
 
 /**
  * Unit tests for class Logger
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,8 +41,8 @@ use Tests\Framework\VirtualFileSystem;
 class LoggerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\Logger::log
-     * @covers WindowsAzure\Common\Internal\Logger::setLogFile
+     * @covers MicrosoftAzure\Storage\Common\Internal\Logger::log
+     * @covers MicrosoftAzure\Storage\Common\Internal\Logger::setLogFile
      */
     public function testLogWithArray()
     {
@@ -61,8 +61,8 @@ class LoggerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Logger::log
-     * @covers WindowsAzure\Common\Internal\Logger::setLogFile
+     * @covers MicrosoftAzure\Storage\Common\Internal\Logger::log
+     * @covers MicrosoftAzure\Storage\Common\Internal\Logger::setLogFile
      */
     public function testLogWithString()
     {

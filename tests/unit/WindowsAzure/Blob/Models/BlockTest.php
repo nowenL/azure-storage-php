@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\Block;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\Block;
 
 /**
  * Unit tests for class Block.
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,8 +39,8 @@ use WindowsAzure\Blob\Models\Block;
 class BlockTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\Block::setBlockId
-     * @covers WindowsAzure\Blob\Models\Block::getBlockId
+     * @covers MicrosoftAzure\Storage\Blob\Models\Block::setBlockId
+     * @covers MicrosoftAzure\Storage\Blob\Models\Block::getBlockId
      */
     public function testSetBlockId()
     {
@@ -56,8 +56,8 @@ class BlockTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\Block::setType
-     * @covers WindowsAzure\Blob\Models\Block::getType
+     * @covers MicrosoftAzure\Storage\Blob\Models\Block::setType
+     * @covers MicrosoftAzure\Storage\Blob\Models\Block::getType
      */
     public function testSetType()
     {

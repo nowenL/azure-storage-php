@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Filters
+ * @package   MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Internal\Filters;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\IServiceFilter;
-use WindowsAzure\Common\Internal\HttpFormatter;
+namespace MicrosoftAzure\Storage\Common\Internal\Filters;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\IServiceFilter;
+use MicrosoftAzure\Storage\Common\Internal\HttpFormatter;
 use GuzzleHttp\Psr7;
 
 /**
  * Adds authentication header to the http request object.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Filters
+ * @package   MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,7 +42,7 @@ use GuzzleHttp\Psr7;
 class AuthenticationFilter implements IServiceFilter
 {
     /**
-     * @var WindowsAzure\Common\Internal\Authentication\StorageAuthScheme
+     * @var MicrosoftAzure\Storage\Common\Internal\Authentication\StorageAuthScheme
      */
     private $_authenticationScheme;
 

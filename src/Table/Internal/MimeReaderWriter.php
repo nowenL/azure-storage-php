@@ -15,25 +15,25 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Internal
+ * @package   MicrosoftAzure\Storage\Table\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Table\Internal;
+namespace MicrosoftAzure\Storage\Table\Internal;
 require_once 'PEAR.php';
 require_once 'Mail/mimePart.php';
 require_once 'Mail/mimeDecode.php';
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Reads and writes MIME for batch API.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Internal
+ * @package   MicrosoftAzure\Storage\Table\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

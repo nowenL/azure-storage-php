@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common;
-use WindowsAzure\Common\ServiceException;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common;
+use MicrosoftAzure\Storage\Common\ServiceException;
 
 /**
  * Unit tests for class ServiceException
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Common\ServiceException;
 class ServiceExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\ServiceException::__construct
+     * @covers MicrosoftAzure\Storage\Common\ServiceException::__construct
      */
     public function test__construct()
     {
@@ -58,7 +58,7 @@ class ServiceExceptionTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\ServiceException::getErrorText
+     * @covers MicrosoftAzure\Storage\Common\ServiceException::getErrorText
      */
     public function testGetErrorText()
     {
@@ -75,7 +75,7 @@ class ServiceExceptionTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\ServiceException::getErrorReason
+     * @covers MicrosoftAzure\Storage\Common\ServiceException::getErrorReason
      */
     public function testGetErrorReason()
     {

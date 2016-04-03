@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\CreateContainerOptions;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
 
 /**
  * Unit tests for class CreateContainerOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -40,7 +40,7 @@ use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
 class CreateContainerOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\CreateContainerOptions::getPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions::getPublicAccess
      */
     public function testGetPublicAccess()
     {
@@ -57,7 +57,7 @@ class CreateContainerOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateContainerOptions::setPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions::setPublicAccess
      */
     public function testSetPublicAccess()
     {
@@ -74,7 +74,7 @@ class CreateContainerOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateContainerOptions::setPublicAccess
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions::setPublicAccess
      */
     public function testSetPublicAccessInvalidValueFail()
     {
@@ -88,7 +88,7 @@ class CreateContainerOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateContainerOptions::setMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions::setMetadata
      */
     public function testSetMetadata()
     {
@@ -104,7 +104,7 @@ class CreateContainerOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateContainerOptions::getMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions::getMetadata
      */
     public function testGetMetadata()
     {
@@ -121,7 +121,7 @@ class CreateContainerOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\CreateContainerOptions::addMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions::addMetadata
      */
     public function testAddMetadata()
     {

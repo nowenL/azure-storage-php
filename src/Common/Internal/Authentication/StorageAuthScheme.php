@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Authentication
+ * @package   MicrosoftAzure\Storage\Common\Internal\Authentication
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Authentication;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Authentication\IAuthScheme;
+namespace MicrosoftAzure\Storage\Common\Internal\Authentication;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Authentication\IAuthScheme;
 
 
 /**
  * Base class for azure authentication schemes.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal\Authentication
+ * @package   MicrosoftAzure\Storage\Common\Internal\Authentication
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -51,7 +51,7 @@ abstract class StorageAuthScheme implements IAuthScheme
      * @param string $accountKey  storage account primary or secondary key.
      *
      * @return
-     * WindowsAzure\Common\Internal\Authentication\StorageAuthScheme
+     * MicrosoftAzure\Storage\Common\Internal\Authentication\StorageAuthScheme
      */
     public function __construct($accountName, $accountKey)
     {

@@ -15,22 +15,22 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Table\Models;
-use WindowsAzure\Table\Models\EdmType;
-use WindowsAzure\Common\Internal\Validate;
+namespace MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
 
 /**
  * Represents entity property.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -68,8 +68,7 @@ class Property
      */
     public function setEdmType($edmType)
     {
-        EdmType::isValid($edmType);
-        $this->_edmType = $edmType;
+        $this->_edmType = EdmType::processType($edmType);
     }
     
     /**

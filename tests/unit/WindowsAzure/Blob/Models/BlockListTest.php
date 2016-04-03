@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
-use WindowsAzure\Blob\Models\BlockList;
-use WindowsAzure\Blob\Models\BlobBlockType;
-use WindowsAzure\Blob\Models\Block;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
+use MicrosoftAzure\Storage\Blob\Models\BlockList;
+use MicrosoftAzure\Storage\Blob\Models\BlobBlockType;
+use MicrosoftAzure\Storage\Blob\Models\Block;
 
 /**
  * Unit tests for class BlockList
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,8 +41,8 @@ use WindowsAzure\Blob\Models\Block;
 class BlockListTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\BlockList::addEntry
-     * @covers WindowsAzure\Blob\Models\BlockList::getEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::addEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::getEntry
      */
     public function testAddEntry()
     {
@@ -60,7 +60,7 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlockList::getEntries
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::getEntries
      */
     public function testGetEntries()
     {
@@ -78,8 +78,8 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlockList::addCommittedEntry
-     * @covers WindowsAzure\Blob\Models\BlockList::getEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::addCommittedEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::getEntry
      */
     public function testAddCommittedEntry()
     {
@@ -98,8 +98,8 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlockList::addUncommittedEntry
-     * @covers WindowsAzure\Blob\Models\BlockList::getEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::addUncommittedEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::getEntry
      */
     public function testAddUncommittedEntry()
     {
@@ -118,8 +118,8 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlockList::addLatestEntry
-     * @covers WindowsAzure\Blob\Models\BlockList::getEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::addLatestEntry
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::getEntry
      */
     public function testAddLatestEntry()
     {
@@ -138,7 +138,7 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlockList::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::create
      */
     public function testCreate()
     {
@@ -167,7 +167,7 @@ class BlockListTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\BlockList::toXml
+     * @covers MicrosoftAzure\Storage\Blob\Models\BlockList::toXml
      */
     public function testToXml()
     {

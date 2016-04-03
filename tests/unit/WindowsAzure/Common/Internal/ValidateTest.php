@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
+use MicrosoftAzure\Storage\Common\Internal\InvalidArgumentTypeException;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class ValidateTest
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,7 +42,7 @@ use WindowsAzure\Common\Internal\Utilities;
 class ValidateTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isArray
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isArray
      */
     public function testIsArrayWithArray()
     {
@@ -52,7 +52,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isArray
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isArray
      */
     public function testIsArrayWithNonArray()
     {
@@ -61,7 +61,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isString
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isString
      */
     public function testIsStringWithString()
     {
@@ -71,7 +71,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isString
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isString
      */
     public function testIsStringWithNonString()
     {
@@ -80,7 +80,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isBoolean
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isBoolean
      */
     public function testIsBooleanWithBoolean()
     {
@@ -90,7 +90,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInteger
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInteger
      */
     public function testIsIntegerWithInteger()
     {
@@ -100,7 +100,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInteger
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInteger
      */
     public function testIsIntegerWithNonInteger()
     {
@@ -109,7 +109,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isTrue
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isTrue
      */
     public function testIsTrueWithTrue()
     {
@@ -119,7 +119,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isTrue
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isTrue
      */
     public function testIsTrueWithFalse()
     {
@@ -128,7 +128,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isDate
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isDate
      */
     public function testIsDateWithDate()
     {
@@ -139,7 +139,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isDate
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isDate
      */
     public function testIsDateWithNonDate()
     {
@@ -148,7 +148,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::notNullOrEmpty
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::notNullOrEmpty
      */
     public function testNotNullOrEmptyWithNonEmpty()
     {
@@ -158,7 +158,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::notNullOrEmpty
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::notNullOrEmpty
      */
     public function testNotNullOrEmptyWithEmpty()
     {
@@ -167,7 +167,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::notNull
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::notNull
      */
     public function testNotNullWithNull()
     {
@@ -176,7 +176,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInstanceOf
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInstanceOf
      */
     public function testIsInstanceOfStringPasses()
     {
@@ -192,7 +192,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInstanceOf
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInstanceOf
      */
     public function testIsInstanceOfStringFail()
     {
@@ -208,7 +208,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInstanceOf
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInstanceOf
      */
     public function testIsInstanceOfArrayPasses()
     {
@@ -224,7 +224,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInstanceOf
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInstanceOf
      */
     public function testIsInstanceOfArrayFail()
     {
@@ -240,7 +240,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInstanceOf
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInstanceOf
      */
     public function testIsInstanceOfIntPasses()
     {
@@ -256,7 +256,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInstanceOf
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInstanceOf
      */
     public function testIsInstanceOfIntFail()
     {
@@ -273,7 +273,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isInstanceOf
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isInstanceOf
      */
     public function testIsInstanceOfNullValue()
     {
@@ -289,7 +289,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isDouble
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isDouble
      */
     public function testIsDoubleSuccess()
     {
@@ -304,7 +304,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isDouble
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isDouble
      */
     public function testIsDoubleFail()
     {
@@ -319,7 +319,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isDouble
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isDouble
      */
     public function testGetValidateUri()
     {
@@ -331,7 +331,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isValidUri
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isValidUri
      */
     public function testIsValidUriPass()
     {
@@ -346,7 +346,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isValidUri
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isValidUri
      */
     public function testIsValidUriNull()
     {
@@ -361,7 +361,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isValidUri
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isValidUri
      */
     public function testIsValidUriNotUri()
     {
@@ -376,7 +376,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isObject
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isObject
      */
     public function testIsObjectPass()
     {
@@ -391,7 +391,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isObject
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isObject
      */
     public function testIsObjectNull()
     {
@@ -406,7 +406,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isObject
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isObject
      */
     public function testIsObjectNotObject()
     {
@@ -421,13 +421,13 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isA
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isA
      */
     public function testIsAResourcesPasses()
     {
         // Setup
         $value = new Resources();
-        $type = 'WindowsAzure\Common\Internal\Resources';
+        $type = 'MicrosoftAzure\Storage\Common\Internal\Resources';
 
         // Test
         $result = Validate::isA($value, $type, 'value');
@@ -437,14 +437,14 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isA
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isA
      */
     public function testIsANull()
     {
         // Setup
         $this->setExpectedException('\InvalidArgumentException');
         $value = null;
-        $type = 'WindowsAzure\Common\Internal\Resources';
+        $type = 'MicrosoftAzure\Storage\Common\Internal\Resources';
 
         // Test
         $result = Validate::isA($value, $type, 'value');
@@ -453,7 +453,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isA
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isA
      */
     public function testIsAInvalidClass()
     {
@@ -469,14 +469,14 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isA
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isA
      */
     public function testIsANotAClass()
     {
         // Setup
         $this->setExpectedException(get_class(new InvalidArgumentTypeException('')));
         $value = 'test string';
-        $type = 'WindowsAzure\Common\Internal\Resources';
+        $type = 'MicrosoftAzure\Storage\Common\Internal\Resources';
 
         // Test
         $result = Validate::isA($value, $type, 'value');
@@ -485,7 +485,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
 //     /**
-//      * @covers WindowsAzure\Common\Internal\Validate::methodExists
+//      * @covers MicrosoftAzure\Storage\Common\Internal\Validate::methodExists
 //      */
 //     public function testMethodExistsIfExists(){
 
@@ -494,14 +494,14 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
 //         $method = 'getState';
 
 //         // Test
-//         $result = Validate::methodExists($asset, $method, 'WindowsAzure\MediaServices\Models\Asset');
+//         $result = Validate::methodExists($asset, $method, 'MicrosoftAzure\Storage\MediaServices\Models\Asset');
 
 //         // Assert
 //         $this->assertTrue($result);
 //     }
 
 //     /**
-//      * @covers WindowsAzure\Common\Internal\Validate::methodExists
+//      * @covers MicrosoftAzure\Storage\Common\Internal\Validate::methodExists
 //      */
 //     public function testMethodExistsIfNotExists(){
 
@@ -511,13 +511,13 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
 //         $method = 'setCreated';
 
 //         // Test
-//         $result = Validate::methodExists($asset, $method, 'WindowsAzure\MediaServices\Models\Asset');
+//         $result = Validate::methodExists($asset, $method, 'MicrosoftAzure\Storage\MediaServices\Models\Asset');
 
 //         // Assert
 //     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isDateString
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isDateString
      */
     public function testIsDateStringValid(){
 
@@ -532,7 +532,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers WindowsAzure\Common\Internal\Validate::isDateString
+     * @covers MicrosoftAzure\Storage\Common\Internal\Validate::isDateString
      */
     public function testIsDateStringNotValid(){
 

@@ -15,39 +15,39 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Blob
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Blob
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Blob;
+namespace Tests\Functional\MicrosoftAzure\Storage\Blob;
 
 use Tests\Framework\TestResources;
-use WindowsAzure\Blob\Models\BlobServiceOptions;
-use WindowsAzure\Blob\Models\CopyBlobOptions;
-use WindowsAzure\Blob\Models\CreateBlobSnapshotOptions;
-use WindowsAzure\Blob\Models\CreateContainerOptions;
-use WindowsAzure\Blob\Models\DeleteBlobOptions;
-use WindowsAzure\Blob\Models\DeleteContainerOptions;
-use WindowsAzure\Blob\Models\GetBlobMetadataOptions;
-use WindowsAzure\Blob\Models\GetBlobOptions;
-use WindowsAzure\Blob\Models\GetBlobPropertiesOptions;
-use WindowsAzure\Blob\Models\ListBlobsOptions;
-use WindowsAzure\Blob\Models\ListContainersOptions;
-use WindowsAzure\Blob\Models\PublicAccessType;
-use WindowsAzure\Blob\Models\SetBlobMetadataOptions;
-use WindowsAzure\Blob\Models\SetContainerMetadataOptions;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\StorageServiceSettings;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\BlobServiceOptions;
+use MicrosoftAzure\Storage\Blob\Models\CopyBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobSnapshotOptions;
+use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
+use MicrosoftAzure\Storage\Blob\Models\DeleteBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\DeleteContainerOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobPropertiesOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListContainersOptions;
+use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
+use MicrosoftAzure\Storage\Blob\Models\SetBlobMetadataOptions;
+use MicrosoftAzure\Storage\Blob\Models\SetContainerMetadataOptions;
+use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\StorageServiceSettings;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 class BlobServiceFunctionalTest extends FunctionalTestBase
 {
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
      */
     public function testGetServicePropertiesNoOptions()
     {
@@ -73,7 +73,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
      */
     public function testGetServiceProperties()
     {
@@ -106,7 +106,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
     
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
      */
     private function getServicePropertiesWorker($options)
     {
@@ -170,8 +170,8 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setServiceProperties
      */
     public function testSetServicePropertiesNoOptions()
     {
@@ -180,8 +180,8 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setServiceProperties
      */
     public function testSetServiceProperties()
     {
@@ -201,8 +201,8 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::getServiceProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setServiceProperties
      */
     private function setServicePropertiesWorker($serviceProperties, $options)
     {
@@ -247,7 +247,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testListContainersNoOptions()
     {
@@ -255,7 +255,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testListContainers()
     {
@@ -266,7 +266,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     private function listContainersWorker($options)
     {
@@ -350,10 +350,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testCreateContainerNoOptions()
     {
@@ -361,10 +361,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testCreateContainer()
     {
@@ -375,10 +375,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     private function createContainerWorker($options)
     {
@@ -450,9 +450,9 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testDeleteContainerNoOptions()
     {
@@ -460,9 +460,9 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     public function testDeleteContainer()
     {
@@ -473,9 +473,9 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::listContainers
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listContainers
      */
     private function deleteContainerWorker($options)
     {
@@ -546,10 +546,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     public function testGetContainerMetadataNoOptions()
     {
@@ -558,10 +558,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     public function testGetContainerMetadata()
     {
@@ -576,10 +576,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     private function getContainerMetadataWorker($options, $metadata)
     {
@@ -633,10 +633,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     public function testSetContainerMetadataNoOptions()
     {
@@ -647,10 +647,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
 //     /**
-//      * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-//      * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-//      * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-//      * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+//      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+//      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+//      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+//      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
 //      */
 //     public function testSetContainerMetadata()
 //     {
@@ -665,10 +665,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
 //     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     private function setContainerMetadataWorker($options, $metadata)
     {
@@ -729,10 +729,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-      * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-      * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-      * @covers WindowsAzure\Blob\BlobRestProxy::getContainerProperties
-      * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerProperties
+      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
       */
     public function testGetContainerPropertiesNoOptions()
     {
@@ -741,10 +741,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     public function testGetContainerProperties()
     {
@@ -759,10 +759,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerMetadata
      */
     private function getContainerPropertiesWorker($options, $metadata)
     {
@@ -797,9 +797,9 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
      */
     public function testGetContainerACLNoOptions()
     {
@@ -807,9 +807,9 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
      */
     public function testGetContainerACL()
     {
@@ -823,9 +823,9 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
      */
     private function getContainerACLWorker($options)
     {
@@ -876,11 +876,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerACL
      */
     public function testSetContainerACLNoOptions()
     {
@@ -891,11 +891,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerACL
      */
     public function testSetContainerACL()
     {
@@ -911,11 +911,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::createContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteContainer
-     * @covers WindowsAzure\Blob\BlobRestProxy::getContainerACL
-     * @covers WindowsAzure\Blob\BlobRestProxy::setContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteContainer
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getContainerACL
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setContainerACL
      */
     private function setContainerACLWorker($options, $acl)
     {
@@ -1040,7 +1040,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testListBlobsNoOptions()
     {
@@ -1057,7 +1057,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     //     /?comp=list
 
 //    /**
-//     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+//     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
 //     */
 //    public function testListBlobsNoOptionsRoot()
 //    {
@@ -1066,7 +1066,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
 //    }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testListBlobsNoOptionsExplicitRoot()
     {
@@ -1075,7 +1075,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testListBlobs()
     {
@@ -1087,7 +1087,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     private function listBlobsWorker($container, $options)
     {
@@ -1167,11 +1167,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobMetadataNoOptions()
     {
@@ -1180,11 +1180,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobMetadataNoOptionsRoot()
     {
@@ -1193,11 +1193,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobMetadataNoOptionsExplicitRoot()
     {
@@ -1206,11 +1206,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobMetadata()
     {
@@ -1225,11 +1225,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     private function getBlobMetadataWorker($container, $options)
     {
@@ -1301,11 +1301,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
      }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testSetBlobMetadataNoOptions()
     {
@@ -1317,11 +1317,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testSetBlobMetadataNoOptionsRoot()
     {
@@ -1333,11 +1333,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testSetBlobMetadataNoOptionsExplicitRoot()
     {
@@ -1349,11 +1349,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testSetBlobMetadata()
     {
@@ -1369,11 +1369,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlockBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobMetadata
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlockBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     private function setBlobMetadataWorker($container, $options, $metadata)
     {
@@ -1448,10 +1448,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobPropertiesNoOptions()
     {
@@ -1460,10 +1460,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobPropertiesNoOptionsRoot()
     {
@@ -1472,10 +1472,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobPropertiesNoOptionsExplicitRoot()
     {
@@ -1484,10 +1484,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlobProperties()
     {
@@ -1500,10 +1500,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     private function getBlobPropertiesWorker($container, $options)
     {
@@ -1644,10 +1644,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobProperties
      */
     public function testSetBlobProperties()
     {
@@ -1660,10 +1660,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobProperties
      */
     public function testSetBlobPropertiesRoot()
     {
@@ -1673,10 +1673,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobProperties
      */
     public function testSetBlobPropertiesExplicitRoot()
     {
@@ -1686,10 +1686,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlobProperties
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlobProperties
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobProperties
      */
     private function setBlobPropertiesWorker($container, $properties)
     {
@@ -1749,10 +1749,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlob_NoOptions()
     {
@@ -1761,10 +1761,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlob_NoOptionsExplicitRoot()
     {
@@ -1772,10 +1772,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlob_NoOptionsRoot()
     {
@@ -1783,10 +1783,10 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testGetBlob_AllOptions()
     {
@@ -1798,11 +1798,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     private function getBlobWorker($options, $container)
     {
@@ -1913,11 +1913,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testDeleteBlobNoOptions()
     {
@@ -1926,11 +1926,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testDeleteBlobNoOptionsExplicitRoot()
     {
@@ -1938,11 +1938,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testDeleteBlobNoOptionsRoot()
     {
@@ -1950,11 +1950,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testDeleteBlob()
     {
@@ -1966,11 +1966,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     private function deleteBlobWorker($options, $container)
     {
@@ -2049,11 +2049,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
 
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testCreateBlobSnapshotNoOptionsContainer()
     {
@@ -2062,11 +2062,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testCreateBlobSnapshotNoOptionsExplicitRoot()
     {
@@ -2074,11 +2074,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testCreateBlobSnapshotNoOptionsRoot()
     {
@@ -2086,11 +2086,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     public function testCreateBlobSnapshotAllOptions()
     {
@@ -2102,11 +2102,11 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
      */
     private function createBlobSnapshotWorker($options, $container)
     {
@@ -2198,13 +2198,13 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
 
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::copyBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::copyBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testCopyBlobNoOptions()
     {
@@ -2226,13 +2226,13 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::copyBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::copyBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     public function testCopyBlobAllOptions()
     {
@@ -2246,13 +2246,13 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     }
 
     /**
-     * @covers WindowsAzure\Blob\BlobRestProxy::copyBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::createBlobSnapshot
-     * @covers WindowsAzure\Blob\BlobRestProxy::createPageBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::deleteBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::getBlob
-     * @covers WindowsAzure\Blob\BlobRestProxy::listBlobs
-     * @covers WindowsAzure\Blob\BlobRestProxy::setBlobMetadata
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::copyBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobSnapshot
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::createPageBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::deleteBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getBlob
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::listBlobs
+     * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::setBlobMetadata
      */
     private function copyBlobWorker($options, $sourceContainer, $destContainer)
     {

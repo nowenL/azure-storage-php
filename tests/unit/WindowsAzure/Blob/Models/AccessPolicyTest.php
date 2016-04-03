@@ -15,20 +15,20 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\AccessPolicy;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\AccessPolicy;
 
 /**
  * Unit tests for class AccessPolicy
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -38,7 +38,7 @@ use WindowsAzure\Blob\Models\AccessPolicy;
 class AccessPolicyTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\AccessPolicy::getStart 
+     * @covers MicrosoftAzure\Storage\Blob\Models\AccessPolicy::getStart 
      */
     public function testGetStart()
     {
@@ -55,7 +55,7 @@ class AccessPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AccessPolicy::setStart 
+     * @covers MicrosoftAzure\Storage\Blob\Models\AccessPolicy::setStart 
      */
     public function testSetStart()
     {
@@ -71,7 +71,7 @@ class AccessPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AccessPolicy::getExpiry 
+     * @covers MicrosoftAzure\Storage\Blob\Models\AccessPolicy::getExpiry 
      */
     public function testGetExpiry()
     {
@@ -88,7 +88,7 @@ class AccessPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AccessPolicy::setExpiry 
+     * @covers MicrosoftAzure\Storage\Blob\Models\AccessPolicy::setExpiry 
      */
     public function testSetExpiry()
     {
@@ -104,7 +104,7 @@ class AccessPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AccessPolicy::getPermission 
+     * @covers MicrosoftAzure\Storage\Blob\Models\AccessPolicy::getPermission 
      */
     public function testGetPermission()
     {
@@ -121,7 +121,7 @@ class AccessPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AccessPolicy::setPermission 
+     * @covers MicrosoftAzure\Storage\Blob\Models\AccessPolicy::setPermission 
      */
     public function testSetPermission()
     {
@@ -137,7 +137,7 @@ class AccessPolicyTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AccessPolicy::toArray
+     * @covers MicrosoftAzure\Storage\Blob\Models\AccessPolicy::toArray
      */
     public function testToArray()
     {

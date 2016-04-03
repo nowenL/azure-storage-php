@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Queue\Models;
-use WindowsAzure\Queue\Models\CreateMessageOptions;
+namespace Tests\Unit\MicrosoftAzure\Storage\Queue\Models;
+use MicrosoftAzure\Storage\Queue\Models\CreateMessageOptions;
 
 /**
  * Unit tests for class CreateMessageOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Queue\Models\CreateMessageOptions;
 class CreateMessageOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Queue\Models\CreateMessageOptions::getVisibilityTimeoutInSeconds
+     * @covers MicrosoftAzure\Storage\Queue\Models\CreateMessageOptions::getVisibilityTimeoutInSeconds
      */
     public function testGetVisibilityTimeoutInSeconds()
     {
@@ -56,7 +56,7 @@ class CreateMessageOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\CreateMessageOptions::setVisibilityTimeoutInSeconds
+     * @covers MicrosoftAzure\Storage\Queue\Models\CreateMessageOptions::setVisibilityTimeoutInSeconds
      */
     public function testSetVisibilityTimeoutInSeconds()
     {
@@ -73,7 +73,7 @@ class CreateMessageOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\CreateMessageOptions::getTimeToLiveInSeconds
+     * @covers MicrosoftAzure\Storage\Queue\Models\CreateMessageOptions::getTimeToLiveInSeconds
      */
     public function testGetTimeToLiveInSeconds()
     {
@@ -90,7 +90,7 @@ class CreateMessageOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\CreateMessageOptions::setTimeToLiveInSeconds
+     * @covers MicrosoftAzure\Storage\Queue\Models\CreateMessageOptions::setTimeToLiveInSeconds
      */
     public function testSetTimeToLiveInSeconds()
     {

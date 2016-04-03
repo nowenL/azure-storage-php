@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Models
+ * @package   MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Models;
-use WindowsAzure\Common\Internal\Utilities;
+namespace MicrosoftAzure\Storage\Common\Models;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Holds elements of queue properties metrics field.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Models
+ * @package   MicrosoftAzure\Storage\Common\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -60,7 +60,7 @@ class Metrics
     private $_includeAPIs;
     
     /**
-     * @var WindowsAzure\Common\Models\RetentionPolicy
+     * @var MicrosoftAzure\Storage\Common\Models\RetentionPolicy
      */
     private $_retentionPolicy;
     
@@ -69,7 +69,7 @@ class Metrics
      * 
      * @param array $parsedResponse XML response parsed into array.
      * 
-     * @return WindowsAzure\Common\Models\Metrics
+     * @return MicrosoftAzure\Storage\Common\Models\Metrics
      */
     public static function create($parsedResponse)
     {
@@ -91,7 +91,7 @@ class Metrics
     /**
      * Gets retention policy
      * 
-     * @return WindowsAzure\Common\Models\RetentionPolicy
+     * @return MicrosoftAzure\Storage\Common\Models\RetentionPolicy
      *  
      */
     public function getRetentionPolicy()

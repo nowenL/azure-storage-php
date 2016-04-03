@@ -15,28 +15,28 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Table\Models;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\HttpFormatter;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Table\Models\BatchError;
-use WindowsAzure\Table\Models\InsertEntityResult;
-use WindowsAzure\Table\Models\UpdateEntityResult;
+namespace MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\HttpFormatter;
+use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Common\Internal\ServiceRestProxy;
+use MicrosoftAzure\Storage\Table\Models\BatchError;
+use MicrosoftAzure\Storage\Table\Models\InsertEntityResult;
+use MicrosoftAzure\Storage\Table\Models\UpdateEntityResult;
 
 /**
  * Holds results from batch API.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -124,7 +124,7 @@ class BatchResult
      * @param IAtomReaderWriter $atomSerializer The Atom reader and writer.
      * @param IMimeReaderWriter $mimeSerializer The MIME reader and writer.
      * 
-     * @return \WindowsAzure\Table\Models\BatchResult
+     * @return \MicrosoftAzure\Storage\Table\Models\BatchResult
      * 
      * @throws \InvalidArgumentException 
      */

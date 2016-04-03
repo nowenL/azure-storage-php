@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models;
-use WindowsAzure\Table\Models\Query;
-use WindowsAzure\Table\Models\Filters\Filter;
-use WindowsAzure\Table\Models\EdmType;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Table\Models\Query;
+use MicrosoftAzure\Storage\Table\Models\Filters\Filter;
+use MicrosoftAzure\Storage\Table\Models\EdmType;
 
 /**
  * Unit tests for class Query
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,8 +41,8 @@ use WindowsAzure\Table\Models\EdmType;
 class QueryTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\Query::setSelectFields
-     * @covers WindowsAzure\Table\Models\Query::getSelectFields
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::setSelectFields
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::getSelectFields
      */
     public function testSetSelectFields()
     {
@@ -58,8 +58,8 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\Query::setTop
-     * @covers WindowsAzure\Table\Models\Query::getTop
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::setTop
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::getTop
      */
     public function testSetTop()
     {
@@ -75,8 +75,8 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\Query::setFilter
-     * @covers WindowsAzure\Table\Models\Query::getFilter
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::setFilter
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::getFilter
      */
     public function testSetFilter()
     {
@@ -92,8 +92,8 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\Query::addSelectField
-     * @covers WindowsAzure\Table\Models\Query::getSelectFields
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::addSelectField
+     * @covers MicrosoftAzure\Storage\Table\Models\Query::getSelectFields
      */
     public function testAddSelectField()
     {

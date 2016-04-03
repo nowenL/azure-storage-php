@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Blob\Models\GetBlobMetadataResult;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult;
 
 /**
  * Unit tests for class GetBlobMetadataResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Blob\Models\GetBlobMetadataResult;
 class GetBlobMetadataResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult::getETag
      */
     public function testGetETag()
     {
@@ -56,7 +56,7 @@ class GetBlobMetadataResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult::setETag
      */
     public function testSetETag()
     {
@@ -73,7 +73,7 @@ class GetBlobMetadataResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult::getLastModified
      */
     public function testGetLastModified()
     {
@@ -90,7 +90,7 @@ class GetBlobMetadataResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult::setLastModified
      */
     public function testSetLastModified()
     {
@@ -107,7 +107,7 @@ class GetBlobMetadataResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataResult::setMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult::setMetadata
      */
     public function testSetMetadata()
     {
@@ -123,7 +123,7 @@ class GetBlobMetadataResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetBlobMetadataResult::getMetadata
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetBlobMetadataResult::getMetadata
      */
     public function testGetMetadata()
     {

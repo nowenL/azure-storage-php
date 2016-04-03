@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\SetContainerMetadataOptions;
-use WindowsAzure\Blob\Models\AccessCondition;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\SetContainerMetadataOptions;
+use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
 
 /**
  * Unit tests for class SetContainerMetadataOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Blob\Models\AccessCondition;
 class SetContainerMetadataOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\SetContainerMetadataOptions::__construct
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetContainerMetadataOptions::__construct
      */
     public function test__construct()
     {
@@ -51,7 +51,7 @@ class SetContainerMetadataOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetContainerMetadataOptions::getAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetContainerMetadataOptions::getAccessCondition
      */
     public function testGetAccessCondition()
     {
@@ -68,7 +68,7 @@ class SetContainerMetadataOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\SetContainerMetadataOptions::setAccessCondition
+     * @covers MicrosoftAzure\Storage\Blob\Models\SetContainerMetadataOptions::setAccessCondition
      */
     public function testSetAccessCondition()
     {

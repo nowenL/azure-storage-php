@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Table\Models;
-use WindowsAzure\Table\Models\BatchOperation;
-use WindowsAzure\Table\Models\BatchOperationType;
-use WindowsAzure\Table\Models\BatchOperationParameterName;
+namespace Tests\Unit\MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Table\Models\BatchOperation;
+use MicrosoftAzure\Storage\Table\Models\BatchOperationType;
+use MicrosoftAzure\Storage\Table\Models\BatchOperationParameterName;
 
 /**
  * Unit tests for class BatchOperation
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Table\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -41,8 +41,8 @@ use WindowsAzure\Table\Models\BatchOperationParameterName;
 class BatchOperationTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Table\Models\BatchOperation::setType
-     * @covers WindowsAzure\Table\Models\BatchOperation::getType
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperation::setType
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperation::getType
      */
     public function testSetType()
     {
@@ -58,8 +58,8 @@ class BatchOperationTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Table\Models\BatchOperation::addParameter
-     * @covers WindowsAzure\Table\Models\BatchOperation::getParameter
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperation::addParameter
+     * @covers MicrosoftAzure\Storage\Table\Models\BatchOperation::getParameter
      */
     public function testAddParameter()
     {

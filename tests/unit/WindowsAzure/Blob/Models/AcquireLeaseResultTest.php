@@ -15,20 +15,20 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\AcquireLeaseResult;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\AcquireLeaseResult;
 
 /**
  * Unit tests for class AcquireLeaseResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -38,7 +38,7 @@ use WindowsAzure\Blob\Models\AcquireLeaseResult;
 class AcquireLeaseResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\AcquireLeaseResult::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\AcquireLeaseResult::create
      */
     public function testCreate()
     {
@@ -54,8 +54,8 @@ class AcquireLeaseResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\AcquireLeaseResult::setLeaseId
-     * @covers WindowsAzure\Blob\Models\AcquireLeaseResult::getLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\AcquireLeaseResult::setLeaseId
+     * @covers MicrosoftAzure\Storage\Blob\Models\AcquireLeaseResult::getLeaseId
      */
     public function testSetLeaseId()
     {

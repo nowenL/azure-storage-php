@@ -15,23 +15,23 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Common\Internal;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\Http\Url;
+namespace MicrosoftAzure\Storage\Common\Internal;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Validate;
+use MicrosoftAzure\Storage\Common\Internal\Http\Url;
 
 /**
  * Base class for all REST proxies.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Common\Internal
+ * @package   MicrosoftAzure\Storage\Common\Internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -46,7 +46,7 @@ class RestProxy
     private $_filters;
     
     /**
-     * @var WindowsAzure\Common\Internal\Serialization\ISerializer
+     * @var MicrosoftAzure\Storage\Common\Internal\Serialization\ISerializer
      */
     protected $dataSerializer;
     
@@ -103,7 +103,7 @@ class RestProxy
     /**
      * Sends HTTP request with the specified HTTP call context.
      * 
-     * @param WindowsAzure\Common\Internal\Http\HttpCallContext $context The HTTP 
+     * @param MicrosoftAzure\Storage\Common\Internal\Http\HttpCallContext $context The HTTP 
      * call context.
      * 
      * @return \HTTP_Request2_Response
@@ -139,7 +139,7 @@ class RestProxy
     /**
      * Adds new filter to new service rest proxy object and returns that object back.
      *
-     * @param WindowsAzure\Common\Internal\IServiceFilter $filter Filter to add for 
+     * @param MicrosoftAzure\Storage\Common\Internal\IServiceFilter $filter Filter to add for 
      * the pipeline.
      * 
      * @return RestProxy.

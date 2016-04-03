@@ -15,24 +15,24 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Unit\WindowsAzure\Blob\Models;
-use WindowsAzure\Blob\Models\GetContainerAclResult;
-use WindowsAzure\Blob\Models\ContainerAcl;
+namespace Tests\Unit\MicrosoftAzure\Storage\Blob\Models;
+use MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult;
+use MicrosoftAzure\Storage\Blob\Models\ContainerAcl;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Unit tests for class GetContainerAclResult
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Blob\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Blob\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -42,7 +42,7 @@ use WindowsAzure\Common\Internal\Utilities;
 class GetContainerAclResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerAclResult::create
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult::create
      */
     public function testCreate()
     {
@@ -63,7 +63,7 @@ class GetContainerAclResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerAclResult::getContainerAcl
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult::getContainerAcl
      */
     public function testGetContainerAcl()
     {
@@ -79,7 +79,7 @@ class GetContainerAclResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerAclResult::setContainerAcl
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult::setContainerAcl
      */
     public function testSetContainerAcl()
     {
@@ -96,8 +96,8 @@ class GetContainerAclResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerAclResult::setLastModified
-     * @covers WindowsAzure\Blob\Models\GetContainerAclResult::getLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult::setLastModified
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult::getLastModified
      */
     public function testSetLastModified()
     {
@@ -114,8 +114,8 @@ class GetContainerAclResultTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Blob\Models\GetContainerAclResult::setETag
-     * @covers WindowsAzure\Blob\Models\GetContainerAclResult::getETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult::setETag
+     * @covers MicrosoftAzure\Storage\Blob\Models\GetContainerAclResult::getETag
      */
     public function testSetETag()
     {

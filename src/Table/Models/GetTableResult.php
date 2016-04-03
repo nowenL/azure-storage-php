@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace WindowsAzure\Table\Models;
-use WindowsAzure\Common\Internal\Utilities;
+namespace MicrosoftAzure\Storage\Table\Models;
+use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
  * Holds result of getTable API.
  *
  * @category  Microsoft
- * @package   WindowsAzure\Table\Models
+ * @package   MicrosoftAzure\Storage\Table\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -49,7 +49,7 @@ class GetTableResult
      * @param string           $body           The HTTP response body.
      * @param AtomReaderWriter $atomSerializer The Atom reader and writer.
      * 
-     * @return \WindowsAzure\Table\Models\GetTableResult
+     * @return \MicrosoftAzure\Storage\Table\Models\GetTableResult
      */
     public static function create($body, $atomSerializer)
     {

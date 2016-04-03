@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Queue\Models;
-use WindowsAzure\Queue\Models\ListMessagesOptions;
+namespace Tests\Unit\MicrosoftAzure\Storage\Queue\Models;
+use MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions;
 
 /**
  * Unit tests for class ListMessagesOptions
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Queue\Models
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -39,7 +39,7 @@ use WindowsAzure\Queue\Models\ListMessagesOptions;
 class ListMessagesOptionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Queue\Models\ListMessagesOptions::getVisibilityTimeoutInSeconds
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions::getVisibilityTimeoutInSeconds
      */
     public function testGetVisibilityTimeoutInSeconds()
     {
@@ -56,7 +56,7 @@ class ListMessagesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListMessagesOptions::setVisibilityTimeoutInSeconds
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions::setVisibilityTimeoutInSeconds
      */
     public function testSetVisibilityTimeoutInSeconds()
     {
@@ -73,7 +73,7 @@ class ListMessagesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListMessagesOptions::getNumberOfMessages
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions::getNumberOfMessages
      */
     public function testGetNumberOfMessages()
     {
@@ -90,7 +90,7 @@ class ListMessagesOptionsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Queue\Models\ListMessagesOptions::setNumberOfMessages
+     * @covers MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions::setNumberOfMessages
      */
     public function testSetNumberOfMessages()
     {

@@ -15,18 +15,18 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\Common\Internal\Filters;
-use WindowsAzure\Common\Internal\Filters\AuthenticationFilter;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme;
-use WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
+namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters;
+use MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter;
+use MicrosoftAzure\Storage\Common\Internal\Resources;
+use MicrosoftAzure\Storage\Common\Internal\Authentication\SharedKeyAuthScheme;
+use MicrosoftAzure\Storage\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Uri;
 
@@ -34,7 +34,7 @@ use GuzzleHttp\Psr7\Uri;
  * Unit tests for class AuthenticationFilterTest
  *
  * @category  Microsoft
- * @package   Tests\Unit\WindowsAzure\Common\Internal\Filters
+ * @package   Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Filters
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -44,8 +44,8 @@ use GuzzleHttp\Psr7\Uri;
 class AuthenticationFilterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::handleRequest
-     * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::__construct
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter::handleRequest
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter::__construct
      */
     public function testHandleRequest()
     {
@@ -63,8 +63,8 @@ class AuthenticationFilterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::handleRequest
-     * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::__construct
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter::handleRequest
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter::__construct
      */
     public function testHandleRequestWithTable()
     {
@@ -82,8 +82,8 @@ class AuthenticationFilterTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::handleResponse
-     * @covers WindowsAzure\Common\Internal\Filters\AuthenticationFilter::__construct
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter::handleResponse
+     * @covers MicrosoftAzure\Storage\Common\Internal\Filters\AuthenticationFilter::__construct
      */
     public function testHandleResponse()
     {

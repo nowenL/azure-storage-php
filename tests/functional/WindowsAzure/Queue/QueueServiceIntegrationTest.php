@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Functional\WindowsAzure\Queue
+ * @package   Tests\Functional\MicrosoftAzure\Storage\Queue
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\Queue;
+namespace Tests\Functional\MicrosoftAzure\Storage\Queue;
 
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Queue\Models\CreateQueueOptions;
-use WindowsAzure\Queue\Models\ListMessagesOptions;
-use WindowsAzure\Queue\Models\ListQueuesOptions;
-use WindowsAzure\Queue\Models\PeekMessagesOptions;
+use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Queue\Models\CreateQueueOptions;
+use MicrosoftAzure\Storage\Queue\Models\ListMessagesOptions;
+use MicrosoftAzure\Storage\Queue\Models\ListQueuesOptions;
+use MicrosoftAzure\Storage\Queue\Models\PeekMessagesOptions;
 
 class QueueServiceIntegrationTest extends IntegrationTestBase
 {
@@ -91,7 +91,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createQueue
     */
     private function createQueues($prefix, $list)
     {
@@ -104,7 +104,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteQueue
     */
     private function deleteQueues($prefix, $list)
     {
@@ -117,7 +117,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listQueues
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listQueues
     */
     private function listQueues($prefix)
     {
@@ -132,7 +132,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::getServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::getServiceProperties
     */
     public function testGetServicePropertiesWorks()
     {
@@ -164,8 +164,8 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::getServiceProperties
-    * @covers WindowsAzure\Queue\QueueRestProxy::setServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::getServiceProperties
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setServiceProperties
     */
     public function testSetServicePropertiesWorks()
     {
@@ -203,9 +203,9 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createQueue
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteQueue
-    * @covers WindowsAzure\Queue\QueueRestProxy::getQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::getQueueMetadata
     */
     public function testCreateQueueWorks()
     {
@@ -224,9 +224,9 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createQueue
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteQueue
-    * @covers WindowsAzure\Queue\QueueRestProxy::getQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::getQueueMetadata
     */
     public function testCreateQueueWithOptionsWorks()
     {
@@ -251,7 +251,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listQueues
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listQueues
     */
     public function testListQueuesWorks()
     {
@@ -273,7 +273,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::listQueues
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listQueues
     */
     public function testListQueuesWithOptionsWorks()
     {
@@ -329,10 +329,10 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createQueue
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteQueue
-    * @covers WindowsAzure\Queue\QueueRestProxy::getQueueMetadata
-    * @covers WindowsAzure\Queue\QueueRestProxy::setQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteQueue
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::getQueueMetadata
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::setQueueMetadata
     */
     public function testSetQueueMetadataWorks()
     {
@@ -362,7 +362,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
     */
     public function testCreateMessageWorks()
     {
@@ -379,8 +379,8 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
     */
     public function testListMessagesWorks()
     {
@@ -418,8 +418,8 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
     */
     public function testListMessagesWithOptionsWorks()
     {
@@ -461,8 +461,8 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testPeekMessagesWorks()
     {
@@ -497,8 +497,8 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testPeekMessagesWithOptionsWorks()
     {
@@ -535,9 +535,9 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::clearMessages
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::peekMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::clearMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::peekMessages
     */
     public function testClearMessagesWorks()
     {
@@ -558,9 +558,9 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::deleteMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::deleteMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
     */
     public function testDeleteMessageWorks()
     {
@@ -587,9 +587,9 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
     }
 
     /**
-    * @covers WindowsAzure\Queue\QueueRestProxy::createMessage
-    * @covers WindowsAzure\Queue\QueueRestProxy::listMessages
-    * @covers WindowsAzure\Queue\QueueRestProxy::updateMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::createMessage
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::listMessages
+    * @covers MicrosoftAzure\Storage\Queue\QueueRestProxy::updateMessage
     */
     public function testUpdateMessageWorks()
     {
