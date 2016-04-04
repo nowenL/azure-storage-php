@@ -25,6 +25,7 @@
 namespace MicrosoftAzure\Storage\Table\Models;
 use MicrosoftAzure\Storage\Table\Models\EdmType;
 use MicrosoftAzure\Storage\Common\Internal\Validate;
+use Tests\Unit\MicrosoftAzure\Storage\Table\Models\EdmTypeTest;
 
 /**
  * Represents entity property.
@@ -68,7 +69,8 @@ class Property
      */
     public function setEdmType($edmType)
     {
-        $this->_edmType = EdmType::processType($edmType);
+        EdmType::isValid($edmType);
+    	$this->_edmType = $edmType;
     }
     
     /**
