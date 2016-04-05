@@ -430,6 +430,11 @@ class HttpCallContext
         $headers = Resources::EMPTY_STRING;
         $uri     = $this->_uri;
         
+        if ($uri[strlen($uri)-1] != '/')
+        {
+        	$uri = $uri.'/';
+        }
+        
         foreach ($this->_headers as $key => $value) {
             $headers .= "$key: $value\n";
         }
