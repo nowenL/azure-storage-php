@@ -26,7 +26,6 @@ namespace MicrosoftAzure\Storage\Common\Internal\Http;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Validate;
-use MicrosoftAzure\Storage\Common\Internal\Http\Url;
 
 /**
  * Holds basic elements for making HTTP call.
@@ -429,8 +428,7 @@ class HttpCallContext
     public function __toString()
     {
         $headers = Resources::EMPTY_STRING;
-        $uri     = new Url($this->_uri);
-        $uri     = $uri->getUrl();
+        $uri     = $this->_uri;
         
         foreach ($this->_headers as $key => $value) {
             $headers .= "$key: $value\n";

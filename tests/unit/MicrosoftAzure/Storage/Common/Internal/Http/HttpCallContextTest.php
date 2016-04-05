@@ -24,7 +24,6 @@
 
 namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal\Http;
 use MicrosoftAzure\Storage\Common\Internal\Http\HttpCallContext;
-use MicrosoftAzure\Storage\Common\Internal\Http\Url;
 
 /**
  * Unit tests for class HttpCallContext
@@ -118,7 +117,7 @@ class HttpCallContextTest extends \PHPUnit_Framework_TestCase
     public function testSetUri($context)
     {
         // Setup
-        $expected = new Url('http://www.microsoft.com');
+        $expected = 'http://www.microsoft.com';
 
         // Test
         $context->setUri($expected);

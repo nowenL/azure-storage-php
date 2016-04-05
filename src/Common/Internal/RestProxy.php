@@ -25,7 +25,6 @@
 namespace MicrosoftAzure\Storage\Common\Internal;
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Validate;
-use MicrosoftAzure\Storage\Common\Internal\Http\Url;
 
 /**
  * Base class for all REST proxies.
@@ -98,42 +97,6 @@ class RestProxy
     public function setUri($uri)
     {
         $this->_uri = $uri;
-    }
-    
-    /**
-     * Sends HTTP request with the specified HTTP call context.
-     * 
-     * @param MicrosoftAzure\Storage\Common\Internal\Http\HttpCallContext $context The HTTP 
-     * call context.
-     * 
-     * @return \HTTP_Request2_Response
-     */
-    protected function sendContext($context)
-    {
-        $channel        = clone $this->_channel;
-        $contextUrl     = $context->getUri();
-        $url            = new Url(empty($contextUrl) ? $this->_uri : $contextUrl);
-        $headers        = $context->getHeaders();
-        $statusCodes    = $context->getStatusCodes();
-        $body           = $context->getBody();
-        $queryParams    = $context->getQueryParameters();
-        $postParameters = $context->getPostParameters();
-        $path           = $context->getPath();
-
-        $channel->setMethod($context->getMethod());
-        $channel->setExpectedStatusCode($statusCodes);
-        $channel->setBody($body);
-        $channel->setHeaders($headers);
-
-        if (count($postParameters) > 0) {
-            $channel->setPostParameters($postParameters);
-        }
-        $url->setQueryVariables($queryParams);
-        $url->appendUrlPath($path);
-        
-        $channel->send($this->_filters, $url);
-        
-        return $channel->getResponse();
     }
 
     /**

@@ -25,7 +25,6 @@
 namespace Tests\Unit\MicrosoftAzure\Storage\Common\Internal;
 use MicrosoftAzure\Storage\Common\Internal\ServiceRestProxy;
 use MicrosoftAzure\Storage\Common\Internal\Resources;
-use MicrosoftAzure\Storage\Common\Internal\Http\Url;
 use Tests\Mock\MicrosoftAzure\Storage\Common\Internal\Filters\SimpleFilterMock;
 use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
 use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
