@@ -23,9 +23,6 @@
  */
  
 namespace MicrosoftAzure\Storage\Table\Internal;
-require_once 'PEAR.php';
-require_once 'Mail/mimePart.php';
-require_once 'Mail/mimeDecode.php';
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
@@ -93,30 +90,7 @@ class MimeReaderWriter implements IMimeReaderWriter
         $batchBody .= "--" . $changeSetId . "--" . $eof;
         $batchBody .= $eof;
         $batchBody .= "--" . $batchId . "--" . $eof;
-        
-        /*
-        // Create changeset MIME part
-        $changeSet = new \Mail_mimePart();
-        
-        for ($i = 0; $i < $count; $i++) {
-            $changeSet->addSubpart($bodyPartContents[$i], $options);
-        }
-        
-        // Encode the changeset MIME part
-        $changeSetEncoded = $changeSet->encode($changeSetId);
-        
-        // Create the batch MIME part
-        $batch = new \Mail_mimePart(Resources::EMPTY_STRING, $contentType1);
-        
-        // Add changeset encoded to batch MIME part
-        $batch->addSubpart($changeSetEncoded['body'], $contentType2);
-        
-        // Encode batch MIME part
-        $batchEncoded = $batch->encode($batchId);
-        */
-        
-//    		var_dump($result['headers']);
-//         echo $result['body'];
+
         return $result;
     }
     
@@ -151,23 +125,6 @@ class MimeReaderWriter implements IMimeReaderWriter
 		}
     	
     	return $result;
-    	
-    	/*
-    	$params['include_bodies'] = true;
-        $params['input']          = $mimeBody;
-        $mimeDecoder              = new \Mail_mimeDecode($mimeBody);
-        $structure                = $mimeDecoder->decode($params);
-        $parts                    = $structure->parts;
-        $bodies                   = array();
-        
-        foreach ($parts as $part) {
-            $bodies[] = $part->body;
-        }
-        echo $mimeBody;
-        
-        var_dump($bodies);
-        return $bodies;
-        */
     }
 }
 
