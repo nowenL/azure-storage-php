@@ -15,14 +15,14 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Framework
+ * @package   MicrosoftAzure\Storage\Tests\Framework
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace Tests\Framework;
+namespace MicrosoftAzure\Storage\Tests\Framework;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
 use org\bovigo\vfs\vfsStreamWrapper;
@@ -31,7 +31,7 @@ use org\bovigo\vfs\vfsStreamWrapper;
  * Represents virtual file system for testing purpose.
  *
  * @category  Microsoft
- * @package   Tests\Framework
+ * @package   MicrosoftAzure\Storage\Tests\Framework
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

@@ -15,14 +15,14 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Framework
+ * @package   MicrosoftAzure\Storage\Tests\Framework
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
  
-namespace Tests\Framework;
+namespace MicrosoftAzure\Storage\Tests\Framework;
 use MicrosoftAzure\Storage\Common\Internal\Logger;
 use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
 use MicrosoftAzure\Storage\Common\ServicesBuilder;
@@ -31,7 +31,7 @@ use MicrosoftAzure\Storage\Common\ServicesBuilder;
  * Testbase for all REST proxy tests.
  *
  * @category  Microsoft
- * @package   Tests\Framework
+ * @package   MicrosoftAzure\Storage\Tests\Framework
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
@@ -67,7 +67,7 @@ class RestProxyTestBase extends \PHPUnit_Framework_TestCase
         assert_options(ASSERT_ACTIVE, 1);
         assert_options(ASSERT_WARNING, 0);
         assert_options(ASSERT_QUIET_EVAL, 1);
-        assert_options(ASSERT_CALLBACK, 'Tests\Framework\RestProxyTestBase::assertHandler');
+        assert_options(ASSERT_CALLBACK, 'MicrosoftAzure\Storage\Tests\Framework\RestProxyTestBase::assertHandler');
     }
     
     public function setProxy($serviceRestProxy)

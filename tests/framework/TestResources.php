@@ -15,14 +15,14 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Framework
+ * @package   MicrosoftAzure\Storage\Tests\Framework
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Framework;
+namespace MicrosoftAzure\Storage\Tests\Framework;
 use MicrosoftAzure\Storage\Table\Models\EdmType;
 use MicrosoftAzure\Storage\Table\Models\Entity;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
@@ -31,7 +31,7 @@ use MicrosoftAzure\Storage\Common\Internal\Resources;
 /**
  * Resources for testing framework.
  *
- * @package    Tests\Framework
+ * @package    MicrosoftAzure\Storage\Tests\Framework
  * @author     Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright  2012 Microsoft Corporation
  * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0

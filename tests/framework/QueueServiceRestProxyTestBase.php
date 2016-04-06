@@ -15,21 +15,21 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Framework
+ * @package   MicrosoftAzure\Storage\Tests\Framework
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-namespace Tests\Framework;
-use Tests\Framework\ServiceRestProxyTestBase;
+namespace MicrosoftAzure\Storage\Tests\Framework;
+use MicrosoftAzure\Storage\Tests\Framework\ServiceRestProxyTestBase;
 use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
 
 /**
  * TestBase class for each unit test class.
  *
  * @category  Microsoft
- * @package   Tests\Framework
+ * @package   MicrosoftAzure\Storage\Tests\Framework
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
