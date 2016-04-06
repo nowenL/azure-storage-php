@@ -15,15 +15,15 @@
  * PHP version 5
  *
  * @category  Microsoft
- * @package   Tests\Unit\MicrosoftAzure\Storage\Table\internal
+ * @package   MicrosoftAzure\Storage\Tests\Unit\Table\internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\MicrosoftAzure\Storage\Table\internal;
-use Tests\Framework\TestResources;
+namespace MicrosoftAzure\Storage\Tests\Unit\Table\internal;
+use MicrosoftAzure\Storage\Tests\Framework\TestResources;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 use MicrosoftAzure\Storage\Table\Internal\AtomReaderWriter;
 use MicrosoftAzure\Storage\Table\Models\EdmType;
@@ -32,7 +32,7 @@ use MicrosoftAzure\Storage\Table\Models\EdmType;
  * Unit tests for class AtomReaderWriter
  *
  * @category  Microsoft
- * @package   Tests\Unit\MicrosoftAzure\Storage\Table\internal
+ * @package   MicrosoftAzure\Storage\Tests\Unit\Table\internal
  * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
  * @copyright 2012 Microsoft Corporation
  * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
