@@ -23,12 +23,12 @@
  */
 
 namespace Tests\Unit\MicrosoftAzure\Storage\Queue\Models;
-use MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage;
+use MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage;
 use Tests\Framework\TestResources;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
- * Unit tests for class WindowsAzureQueueMessageTest
+ * Unit tests for class MicrosoftAzureQueueMessageTest
  *
  * @category  Microsoft
  * @package   Tests\Unit\MicrosoftAzure\Storage\Queue\Models
@@ -38,10 +38,10 @@ use MicrosoftAzure\Storage\Common\Internal\Utilities;
  * @version   Release: 0.4.1_2015-03
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
+class MicrosoftAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
 {
     /**
-    * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::createFromListMessages
+    * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::createFromListMessages
     */
     public function testCreateListMessages()
     {
@@ -50,7 +50,7 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
         $sample = $sample['QueueMessage'];
         
         // Test
-        $actual = WindowsAzureQueueMessage::createFromListMessages($sample);
+        $actual = MicrosoftAzureQueueMessage::createFromListMessages($sample);
         
         // Assert
         $this->assertEquals($sample['MessageId'] , $actual->getMessageId());
@@ -63,7 +63,7 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-    * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::createFromPeekMessages
+    * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::createFromPeekMessages
     */
     public function testCreateFromPeekMessages()
     {
@@ -72,7 +72,7 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
         $sample = $sample['QueueMessage'];
         
         // Test
-        $actual = WindowsAzureQueueMessage::createFromPeekMessages($sample);
+        $actual = MicrosoftAzureQueueMessage::createFromPeekMessages($sample);
         
         // Assert
         $this->assertEquals($sample['MessageId'] , $actual->getMessageId());
@@ -83,12 +83,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::getMessageText
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::getMessageText
      */
     public function testGetMessageText()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'PHRlc3Q+dGhpcyBpcyBhIHRlc3QgbWVzc2FnZTwvdGVzdD4=' ;
         $azureQueueMessage->setMessageText($expected);
         
@@ -100,12 +100,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::setMessageText
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::setMessageText
      */
     public function testSetMessageText()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'PHRlc3Q+dGhpcyBpcyBhIHRlc3QgbWVzc2FnZTwvdGVzdD4=';
         
         // Test
@@ -117,12 +117,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::getMessageId
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::getMessageId
      */
     public function testGetMessageId()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = '5974b586-0df3-4e2d-ad0c-18e3892bfca2';
         $azureQueueMessage->setMessageId($expected);
         
@@ -134,12 +134,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::setMessageId
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::setMessageId
      */
     public function testSetMessageId()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = '5974b586-0df3-4e2d-ad0c-18e3892bfca2';
         
         // Test
@@ -151,12 +151,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::getInsertionDate
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::getInsertionDate
      */
     public function testGetInsertionDate()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'Fri, 09 Oct 2009 21:04:30 GMT';
         $azureQueueMessage->setInsertionDate($expected);
         
@@ -168,12 +168,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::setInsertionDate
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::setInsertionDate
      */
     public function testSetInsertionDate()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'Fri, 09 Oct 2009 21:04:30 GMT';
         
         // Test
@@ -185,12 +185,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::getExpirationDate
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::getExpirationDate
      */
     public function testGetExpirationDate()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'Fri, 16 Oct 2009 21:04:30 GMT';
         $azureQueueMessage->setExpirationDate($expected);
         
@@ -202,12 +202,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::setExpirationDate
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::setExpirationDate
      */
     public function testSetExpirationDate()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'Fri, 16 Oct 2009 21:04:30 GMT';
         
         // Test
@@ -219,12 +219,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::getPopReceipt
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::getPopReceipt
      */
     public function testGetPopReceipt()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'YzQ4Yzg1MDItYTc0Ny00OWNjLTkxYTUtZGM0MDFiZDAwYzEw';
         $azureQueueMessage->setPopReceipt($expected);
         
@@ -236,12 +236,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::setPopReceipt
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::setPopReceipt
      */
     public function testSetPopReceipt()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'YzQ4Yzg1MDItYTc0Ny00OWNjLTkxYTUtZGM0MDFiZDAwYzEw';
         
         // Test
@@ -253,12 +253,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::getTimeNextVisible
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::getTimeNextVisible
      */
     public function testGetTimeNextVisible()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'Fri, 09 Oct 2009 23:29:20 GMT';
         $azureQueueMessage->setTimeNextVisible($expected);
         
@@ -270,12 +270,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::setTimeNextVisible
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::setTimeNextVisible
      */
     public function testSetTimeNextVisible()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 'Fri, 09 Oct 2009 23:29:20 GMT';
         
         // Test
@@ -287,12 +287,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::getDequeueCount
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::getDequeueCount
      */
     public function testGetDequeueCount()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 1;
         $azureQueueMessage->setDequeueCount($expected);
         
@@ -304,12 +304,12 @@ class WindowsAzureQueueMessageTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage::setDequeueCount
+     * @covers MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage::setDequeueCount
      */
     public function testSetDequeueCount()
     {
         // Setup
-        $azureQueueMessage = new WindowsAzureQueueMessage();
+        $azureQueueMessage = new MicrosoftAzureQueueMessage();
         $expected = 1;
         
         // Test

@@ -126,8 +126,6 @@ class SharedKeyAuthScheme extends StorageAuthScheme
         $signature = $this->computeSignature(
             $headers, $url, $queryParams, $httpMethod
         );
-		
-        // echo 'signature to sign' . $signature;
         
         return 'SharedKey ' . $this->accountName . ':' . base64_encode(
             hash_hmac('sha256', $signature, base64_decode($this->accountKey), true)

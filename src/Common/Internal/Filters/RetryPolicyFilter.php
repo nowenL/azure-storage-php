@@ -24,6 +24,7 @@
  
 namespace MicrosoftAzure\Storage\Common\Internal\Filters;
 use MicrosoftAzure\Storage\Common\Internal\IServiceFilter;
+use GuzzleHttp\Client;
 
 /**
  * Short description
@@ -42,23 +43,30 @@ class RetryPolicyFilter implements IServiceFilter
      * @var RetryPolicy
      */
     private $_retryPolicy;
-
+	
+    /**
+     * @var \GuzzleHttp\Client
+     */
+    private $_client;
+    
     /**
      * Initializes new object from RetryPolicyFilter.
      * 
-     * @param RetryPolicy $retryPolicy The retry policy object.
+     * @param \GuzzleHttp\Client $client      The http client to send request.
+     * @param RetryPolicy        $retryPolicy The retry policy object.
      */
-    public function __construct($retryPolicy)
+    public function __construct($client, $retryPolicy)
     {
-        $this->_retryPolicy = $retryPolicy;
+        $this->_client = $client;
+    	$this->_retryPolicy = $retryPolicy;
     }
 
     /**
      * Handles the request before sending.
      * 
-     * @param \HTTP_Request2 $request The HTTP request.
+     * @param \GuzzleHttp\Psr7\Request $request The HTTP request.
      * 
-     * @return \HTTP_Request2
+     * @return \GuzzleHttp\Psr7\Request
      */
     public function handleRequest($request)
     {
@@ -68,10 +76,10 @@ class RetryPolicyFilter implements IServiceFilter
     /**
      * Handles the response after sending.
      * 
-     * @param \HTTP_Request2          $request  The HTTP request.
-     * @param \HTTP_Request2_Response $response The HTTP response.
+     * @param \GuzzleHttp\Psr7\Request  $request  The HTTP request.
+     * @param \GuzzleHttp\Psr7\Response $response The HTTP response.
      * 
-     * @return \HTTP_Request2_Response
+     * @return \GuzzleHttp\Psr7\Response
      */
     public function handleResponse($request, $response)
     {
@@ -91,7 +99,7 @@ class RetryPolicyFilter implements IServiceFilter
                 $response
             );
             sleep($backoffTime * 0.001);
-            $response = $request->send(array());
+            $response = $this->_client->send($request);
         }
     }
 }

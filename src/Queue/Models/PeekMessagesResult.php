@@ -23,7 +23,7 @@
  */
 
 namespace MicrosoftAzure\Storage\Queue\Models;
-use MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage;
+use MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
@@ -61,7 +61,7 @@ class PeekMessagesResult
         if (!empty($parsedResponse)) {
             $rawMessages = Utilities::getArray($parsedResponse['QueueMessage']);
             foreach ($rawMessages as $value) {
-                $message = WindowsAzureQueueMessage::createFromPeekMessages($value);
+                $message = MicrosoftAzureQueueMessage::createFromPeekMessages($value);
                 
                 $queueMessages[] = $message;
             }

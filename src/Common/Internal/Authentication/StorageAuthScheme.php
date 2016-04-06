@@ -89,7 +89,6 @@ abstract class StorageAuthScheme implements IAuthScheme
                 // Unfold the string by replacing any breaking white space
                 // (meaning what splits the headers, which is \r\n) with a single
                 // space.
-                $value = $value;
                 $value = str_replace("\r\n", ' ', $value);
 
                 // Trim any white space around the colon in the header.

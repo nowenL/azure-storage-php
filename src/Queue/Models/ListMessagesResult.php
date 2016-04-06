@@ -23,7 +23,7 @@
  */
 
 namespace MicrosoftAzure\Storage\Queue\Models;
-use MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage;
+use MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
@@ -61,7 +61,7 @@ class ListMessagesResult
         if (!empty($parsedResponse)) {
             $rawMessages = Utilities::getArray($parsedResponse['QueueMessage']);
             foreach ($rawMessages as $value) {
-                $message = WindowsAzureQueueMessage::createFromListMessages($value);
+                $message = MicrosoftAzureQueueMessage::createFromListMessages($value);
                 
                 $queueMessages[] = $message;
             }

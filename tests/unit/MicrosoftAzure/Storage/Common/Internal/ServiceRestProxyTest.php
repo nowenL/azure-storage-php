@@ -59,8 +59,8 @@ class ServiceRestProxyTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($proxy);
         $this->assertEquals($accountName, $proxy->getAccountName());
         
-        // FIXME: Auto append an '/' at the end of uri. Not equals here.
-        // $this->assertEquals($uri, $proxy->getUri());
+        // Auto append an '/' at the end of uri.
+        $this->assertEquals($uri . '/', $proxy->getUri());
         
         return $proxy;
     }

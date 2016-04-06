@@ -68,7 +68,7 @@ class ServiceRestProxy extends RestProxy
     {   		
     	if ($uri[strlen($uri)-1] != '/')
     	{
-    		$uri = $uri.'/';
+    		$uri = $uri . '/';
     	}
     	
     	parent::__construct($dataSerializer, $uri);
@@ -387,8 +387,7 @@ class ServiceRestProxy extends RestProxy
                     throw new \InvalidArgumentException(Resources::INVALID_META_MSG);
                 }
                 
-                // $headerName                  .= strtolower($key);
-                // FIXME: Metadata name is case-presrved and case insensitive
+                // Metadata name is case-presrved and case insensitive
                 $headerName					 .= $key;
                 $metadataHeaders[$headerName] = $value;
             }
@@ -414,12 +413,7 @@ class ServiceRestProxy extends RestProxy
             );
             
             if ($isMetadataHeader) {
-            	// FIXME: Metadata name is case-presrved and case insensitive
-//                 $MetadataName = str_replace(
-//                     Resources::X_MS_META_HEADER_PREFIX,
-//                     Resources::EMPTY_STRING,
-//                     strtolower($key)
-//                 );
+            	// Metadata name is case-presrved and case insensitive
                 $MetadataName = str_ireplace(
                     Resources::X_MS_META_HEADER_PREFIX,
                     Resources::EMPTY_STRING,

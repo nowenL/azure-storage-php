@@ -57,15 +57,9 @@ class Resources
     const DEV_STORE_CONNECTION_STRING = 'BlobEndpoint=127.0.0.1:10000;QueueEndpoint=127.0.0.1:10001;TableEndpoint=127.0.0.1:10002;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==';
     const SUBSCRIPTION_ID_NAME = 'SubscriptionID';
     const CERTIFICATE_PATH_NAME = 'CertificatePath';
-    const SERVICE_MANAGEMENT_ENDPOINT_NAME = 'ServiceManagementEndpoint';
-    const SERVICE_BUS_ENDPOINT_NAME = 'Endpoint';
     const SHARED_SECRET_ISSUER_NAME = 'SharedSecretIssuer';
     const SHARED_SECRET_VALUE_NAME = 'SharedSecretValue';
     const STS_ENDPOINT_NAME = 'StsEndpoint';
-    const MEDIA_SERVICES_ENDPOINT_URI_NAME = 'MediaServicesEndpoint';
-    const MEDIA_SERVICES_ACCOUNT_NAME = 'AccountName';
-    const MEDIA_SERVICES_ACCESS_KEY = 'AccessKey';
-    const MEDIA_SERVICES_OAUTH_ENDPOINT_URI_NAME = 'OAuthEndpoint';
 
     // Messages
     const INVALID_TYPE_MSG = 'The provided variable should be of type: ';
@@ -394,33 +388,6 @@ class Resources
     const XTAG_CONTAINER_NAME = 'ContainerName';
     const XTAG_ACCOUNT_NAME = 'AccountName';
 
-    // Service Bus
-    const LIST_TOPICS_PATH        = '$Resources/Topics';
-    const LIST_QUEUES_PATH        = '$Resources/Queues';
-    const LIST_RULES_PATH         = '%s/subscriptions/%s/rules';
-    const LIST_SUBSCRIPTIONS_PATH = '%s/subscriptions';
-    const RECEIVE_MESSAGE_PATH    = '%s/messages/head';
-    const RECEIVE_SUBSCRIPTION_MESSAGE_PATH = '%s/subscriptions/%s/messages/head';
-    const SEND_MESSAGE_PATH       = '%s/messages';
-    const RULE_PATH               = '%s/subscriptions/%s/rules/%s';
-    const SUBSCRIPTION_PATH       = '%s/subscriptions/%s';
-    const DEFAULT_RULE_NAME       = '$Default';
-    const UNIQUE_ID_PREFIX        = 'urn:uuid:';
-    const SERVICE_BUS_NAMESPACE   = 'http://schemas.microsoft.com/netservices/2010/10/servicebus/connect';
-    const BROKER_PROPERTIES       = 'BrokerProperties';
-    const XMLNS_ATOM              = 'xmlns:atom';
-    const XMLNS                   = 'xmlns';
-    const ATOM_NAMESPACE          = 'http://www.w3.org/2005/Atom';
-
-    // ATOM string
-    const AUTHOR      = 'author';
-    const CATEGORY    = 'category';
-    const CONTRIBUTOR = 'contributor';
-    const ENTRY       = 'entry';
-    const LINK        = 'link';
-    const PROPERTIES  = 'properties';
-    const ELEMENT     = 'element';
-
     // PHP URL Keys
     const PHP_URL_SCHEME   = 'scheme';
     const PHP_URL_HOST     = 'host';
@@ -438,23 +405,6 @@ class Resources
     const STATUS_NO_CONTENT        = 204;
     const STATUS_PARTIAL_CONTENT   = 206;
     const STATUS_MOVED_PERMANENTLY = 301;
-
-    // HTTP_Request2 config parameter names
-    const USE_BRACKETS    = 'use_brackets';
-    const SSL_VERIFY_PEER = 'ssl_verify_peer';
-    const SSL_VERIFY_HOST = 'ssl_verify_host';
-    const SSL_LOCAL_CERT  = 'ssl_local_cert';
-    const SSL_CAFILE      = 'ssl_cafile';
-    const CONNECT_TIMEOUT = 'connect_timeout';
-
-    // Media services
-    const MEDIA_SERVICES_URL = 'https://media.windows.net/API/';
-    const MEDIA_SERVICES_OAUTH_URL = 'https://wamsprodglobal001acs.accesscontrol.windows.net/v2/OAuth2-13';
-    const MEDIA_SERVICES_OAUTH_SCOPE = 'urn:WindowsAzureMediaServices';
-    const MEDIA_SERVICES_INPUT_ASSETS_REL  = 'http://schemas.microsoft.com/ado/2007/08/dataservices/related/InputMediaAssets';
-    const MEDIA_SERVICES_ASSET_REL  = 'http://schemas.microsoft.com/ado/2007/08/dataservices/related/Asset';
-    const MEDIA_SERVICES_ENCRYPTION_VERSION = '1.0';
-
 
     // @codingStandardsIgnoreEnd
 }

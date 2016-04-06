@@ -195,7 +195,6 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
             $encodedBlob = $container . '/' . $encodedBlob;
         }
         
-        // FIXME: REMOVED '/'
         return $this->getUri() . $encodedBlob;
     }
     

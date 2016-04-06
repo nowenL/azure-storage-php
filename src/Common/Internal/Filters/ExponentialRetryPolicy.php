@@ -84,15 +84,15 @@ class ExponentialRetryPolicy extends RetryPolicy
     /**
      * Indicates if there should be a retry or not.
      * 
-     * @param integer                 $retryCount The retry count.
-     * @param \HTTP_Request2_Response $response   The HTTP response object.
+     * @param integer                   $retryCount The retry count.
+     * @param \GuzzleHttp\Psr7\Response $response   The HTTP response object.
      * 
      * @return boolean
      */
     public function shouldRetry($retryCount, $response)
     {
         if (  $retryCount >= $this->_maximumAttempts
-            || array_search($response->getStatus(), $this->_retryableStatusCodes)
+            || array_search($response->getStatusCode(), $this->_retryableStatusCodes)
             || is_null($response)     
         ) {
             return false;
@@ -104,8 +104,8 @@ class ExponentialRetryPolicy extends RetryPolicy
     /**
      * Calculates the backoff for the retry policy.
      * 
-     * @param integer                 $retryCount The retry count.
-     * @param \HTTP_Request2_Response $response   The HTTP response object.
+     * @param integer                   $retryCount The retry count.
+     * @param \GuzzleHttp\Psr7\Response $response   The HTTP response object.
      * 
      * @return integer
      */

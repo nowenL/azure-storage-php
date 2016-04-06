@@ -64,14 +64,7 @@ class AuthenticationFilter implements IServiceFilter
      * @return \GuzzleHttp\Psr7\Request
      */
     public function handleRequest($request)
-    {
-    	//echo 'start dump' . PHP_EOL;
-    	//echo $request->getUri();
-    	//echo var_dump($request->getHeaders());
-    	//echo var_dump(\GuzzleHttp\Psr7\parse_query($request->getUri()->getQuery()));
-    	// echo var_dump($request->getMethod());
-    	//echo 'end dump' . PHP_EOL;
-    	
+    {	
     	$requestHeaders = HttpFormatter::formatHeaders($request->getHeaders());
     	
     	$signedKey = $this->_authenticationScheme->getAuthorizationHeader(

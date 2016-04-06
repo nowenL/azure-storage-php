@@ -23,7 +23,6 @@
  */
  
 namespace MicrosoftAzure\Storage\Queue\Models;
-use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
@@ -37,7 +36,7 @@ use MicrosoftAzure\Storage\Common\Internal\Utilities;
  * @version   Release: 0.4.1_2015-03
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
-class WindowsAzureQueueMessage
+class MicrosoftAzureQueueMessage
 {
     /**
      * GUID value that identifies the message in the queue
@@ -92,12 +91,12 @@ class WindowsAzureQueueMessage
     private $_messageText;
     
     /**
-     * Creates WindowsAzureQueueMessage object from parsed XML response of 
+     * Creates MicrosoftAzureQueueMessage object from parsed XML response of 
      * ListMessages.
      *
      * @param array $parsedResponse XML response parsed into array.
      * 
-     * @return MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage.
+     * @return MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage.
      */
     public static function createFromListMessages($parsedResponse)
     {
@@ -112,16 +111,16 @@ class WindowsAzureQueueMessage
     }
     
     /**
-     * Creates WindowsAzureQueueMessage object from parsed XML response of
+     * Creates MicrosoftAzureQueueMessage object from parsed XML response of
      * PeekMessages.
      *
      * @param array $parsedResponse XML response parsed into array.
      * 
-     * @return MicrosoftAzure\Storage\Queue\Models\WindowsAzureQueueMessage.
+     * @return MicrosoftAzure\Storage\Queue\Models\MicrosoftAzureQueueMessage.
      */
     public static function createFromPeekMessages($parsedResponse)
     {
-        $msg            = new WindowsAzureQueueMessage();
+        $msg            = new MicrosoftAzureQueueMessage();
         $expirationDate = $parsedResponse['ExpirationTime'];
         $insertionDate  = $parsedResponse['InsertionTime'];
         

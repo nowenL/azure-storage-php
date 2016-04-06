@@ -197,7 +197,6 @@ class ServicesBuilder
             $settings->getBlobEndpointUri()
         );
 	
-        // FIXME: hehe
         $blobWrapper = new BlobRestProxy(
             $uri,
             $settings->getName(),
@@ -301,7 +300,7 @@ class ServicesBuilder
      */
     public static function getInstance()
     {
-        if (!isset(self::$instance)) {
+        if (!isset(self::$_instance)) {
             self::$_instance = new ServicesBuilder();
         }
 
