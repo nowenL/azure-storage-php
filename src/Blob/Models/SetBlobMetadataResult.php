@@ -60,7 +60,7 @@ class SetBlobMetadataResult
      */
     public static function create($headers)
     {
-    	$result = new SetBlobMetadataResult();
+        $result = new SetBlobMetadataResult();
         $date   = $headers[Resources::LAST_MODIFIED];
         $result->setLastModified(Utilities::rfc1123ToDateTime($date));
         $result->setETag($headers[Resources::ETAG]);

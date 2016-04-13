@@ -430,7 +430,7 @@ class TableServiceFunctionalTestData
     {
         $index = mt_rand(0, count($binaries));
         if ($index < count($binaries)) {
-        	$e->addProperty($name, $edmType, $binaries[$index]);
+            $e->addProperty($name, $edmType, $binaries[$index]);
         }
     }
 

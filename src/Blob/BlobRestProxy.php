@@ -169,8 +169,8 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
             return $container . '/' . $encodedBlob;
         }
     }
-	
-	/**
+    
+    /**
      * Creates full URI to the given blob.
      * 
      * @param string $container The container name.
@@ -293,7 +293,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
             $path, 
             $statusCode
         );
-		
+        
         $responseHeaders = HttpFormatter::formatHeaders($response->getHeaders());
         
         $result   = new GetContainerPropertiesResult();
@@ -784,7 +784,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      */
     public function createContainer($container, $options = null)
     {
-    	Validate::isString($container, 'container');
+        Validate::isString($container, 'container');
         Validate::notNullOrEmpty($container, 'container');
         
         $method      = Resources::HTTP_PUT;

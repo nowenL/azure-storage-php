@@ -43,7 +43,7 @@ class RetryPolicyFilter implements IServiceFilter
      * @var RetryPolicy
      */
     private $_retryPolicy;
-	
+    
     /**
      * @var \GuzzleHttp\Client
      */
@@ -58,7 +58,7 @@ class RetryPolicyFilter implements IServiceFilter
     public function __construct($client, $retryPolicy)
     {
         $this->_client = $client;
-    	$this->_retryPolicy = $retryPolicy;
+        $this->_retryPolicy = $retryPolicy;
     }
 
     /**

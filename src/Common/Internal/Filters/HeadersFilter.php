@@ -64,16 +64,16 @@ class HeadersFilter implements IServiceFilter
      */
     public function handleRequest($request)
     {
-    	$result = $request;
-    	
-    	foreach ($this->_headers as $key => $value) {
-    		$headers = $request->getHeaders();
-    		if (!array_key_exists($key, $headers)) {
-    			$result = $result->withHeader($key, $value);
-    		}
-    	}
-    	
-    	return $result;
+        $result = $request;
+        
+        foreach ($this->_headers as $key => $value) {
+            $headers = $request->getHeaders();
+            if (!array_key_exists($key, $headers)) {
+                $result = $result->withHeader($key, $value);
+            }
+        }
+        
+        return $result;
     }
     
     /**
@@ -86,8 +86,8 @@ class HeadersFilter implements IServiceFilter
      */
     public function handleResponse($request, $response)
     {
-    	// Do nothing with the response.
-    	return $response;
+        // Do nothing with the response.
+        return $response;
     }
 }
 

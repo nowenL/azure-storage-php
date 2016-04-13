@@ -88,8 +88,8 @@ class AuthenticationFilterTest extends \PHPUnit_Framework_TestCase
     public function testHandleResponse()
     {
         // Setup
-    	$uri = new Uri('http://microsoft.com');
-    	$request = new Request('Get', $uri, array(), NULL);
+        $uri = new Uri('http://microsoft.com');
+        $request = new Request('Get', $uri, array(), NULL);
         $response = null;
         $scheme = new SharedKeyAuthScheme('acount', 'key');
         $filter = new AuthenticationFilter($scheme);

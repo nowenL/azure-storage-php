@@ -76,7 +76,7 @@ class Utilities
 
         return $url;
     }
-	
+    
     /**
      * Parse storage account name from an endpoint url.
      * 
@@ -88,10 +88,10 @@ class Utilities
      */
     public static function tryParseAccountNameFromUrl($url)
     {
-    	$host = parse_url($url, PHP_URL_HOST);
-    	
-    	// first token of the url host is account name
-    	return explode('.', $host)[0];
+        $host = parse_url($url, PHP_URL_HOST);
+        
+        // first token of the url host is account name
+        return explode('.', $host)[0];
     }
     
     /**

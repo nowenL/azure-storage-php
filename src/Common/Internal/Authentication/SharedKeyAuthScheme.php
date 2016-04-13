@@ -93,7 +93,7 @@ class SharedKeyAuthScheme extends StorageAuthScheme
 
         $stringToSign   = array();
         $stringToSign[] = strtoupper($httpMethod);
-		
+        
         foreach ($this->includedHeaders as $header) {
             $stringToSign[] = Utilities::tryGetValue($headers, $header);
         }
@@ -104,7 +104,7 @@ class SharedKeyAuthScheme extends StorageAuthScheme
 
         $stringToSign[] = $canonicalizedResource;
         $stringToSign   = implode("\n", $stringToSign);
-		
+        
         return $stringToSign;
     }
     

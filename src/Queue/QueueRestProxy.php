@@ -408,7 +408,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
         
         $metadata = $this->getMetadataArray($responseHeaders);
         $maxCount = intval(
-        	HttpFormatter::getHeader($responseHeaders, Resources::X_MS_APPROXIMATE_MESSAGES_COUNT)
+            HttpFormatter::getHeader($responseHeaders, Resources::X_MS_APPROXIMATE_MESSAGES_COUNT)
         );
         
         return new GetQueueMetadataResult($maxCount, $metadata);

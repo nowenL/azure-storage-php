@@ -64,10 +64,10 @@ class AuthenticationFilter implements IServiceFilter
      * @return \GuzzleHttp\Psr7\Request
      */
     public function handleRequest($request)
-    {	
-    	$requestHeaders = HttpFormatter::formatHeaders($request->getHeaders());
-    	
-    	$signedKey = $this->_authenticationScheme->getAuthorizationHeader(
+    {    
+        $requestHeaders = HttpFormatter::formatHeaders($request->getHeaders());
+        
+        $signedKey = $this->_authenticationScheme->getAuthorizationHeader(
             $requestHeaders, $request->getUri(),
             \GuzzleHttp\Psr7\parse_query($request->getUri()->getQuery()), $request->getMethod()
         );
@@ -84,8 +84,8 @@ class AuthenticationFilter implements IServiceFilter
      */
     public function handleResponse($request, $response)
     {
-    	// Do nothing with the response.
-    	return $response;
+        // Do nothing with the response.
+        return $response;
     }
 }
 

@@ -70,7 +70,7 @@ class Property
     public function setEdmType($edmType)
     {
         EdmType::isValid($edmType);
-    	$this->_edmType = $edmType;
+        $this->_edmType = $edmType;
     }
     
     /**

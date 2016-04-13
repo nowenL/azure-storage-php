@@ -74,7 +74,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
     {
         // Setup container names array (list of container names used by
         // integration tests)
-		$rint = mt_rand(0, 1000000);
+        $rint = mt_rand(0, 1000000);
         self::$_testContainers = array();
         for ($i = 0; $i < 10; $i++) {
             self::$_testContainers[$i] = self::$_testContainersPrefix . ($rint + $i);
@@ -100,7 +100,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
 
     public static function tearDownAfterClass()
     {
-		if (self::$isOneTimeSetup) {
+        if (self::$isOneTimeSetup) {
             $inst = new IntegrationTestBase();
             $inst->setUp();
             $inst->deleteContainers(self::$_testContainers, self::$_testContainersPrefix);
@@ -109,13 +109,13 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         }
         parent::tearDownAfterClass();
     }
-	
-	protected function tearDown()
-	{
-		// tearDown of parent will delete the container created in setUp
-		// Do nothing here
-	}
-	
+    
+    protected function tearDown()
+    {
+        // tearDown of parent will delete the container created in setUp
+        // Do nothing here
+    }
+    
     /**
      * @covers MicrosoftAzure\Storage\Blob\BlobRestProxy::getServiceProperties
      */
@@ -495,7 +495,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         // Arrange
         $blobNames = array( 'myblob1', 'myblob2', 'other-blob1', 'other-blob2' );
         foreach($blobNames as $blob)  {
-			$this->restProxy->createPageBlob(self::$_test_container_for_listing, $blob, 512);
+            $this->restProxy->createPageBlob(self::$_test_container_for_listing, $blob, 512);
         }
 
         // Act
@@ -1029,7 +1029,7 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
 
         // Assert
         $expectedMD5 = base64_encode(md5($content, true));
-		
+        
         $this->assertNotNull($result, '$result');
 
         $this->assertNotNull($result->getMetadata(), '$result->getMetadata()');
@@ -1125,8 +1125,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         $result = $this->restProxy->getBlob(self::$_test_container_for_blobs, 'test2');
 
         // Assert
-		$expectedMD5 = base64_encode(md5($content, true));
-		
+        $expectedMD5 = base64_encode(md5($content, true));
+        
         $this->assertNotNull($result, '$result');
 
         $this->assertNotNull($result->getMetadata(), '$result->getMetadata()');
@@ -1476,8 +1476,8 @@ class BlobServiceIntegrationTest extends IntegrationTestBase
         $result = $this->restProxy->getBlob(self::$_test_container_for_blobs_2, 'test5');
 
         // Assert
-		$expectedMD5 = base64_encode(md5($content, true));
-		
+        $expectedMD5 = base64_encode(md5($content, true));
+        
         $this->assertNotNull($result, '$result');
 
         $this->assertNotNull($result->getMetadata(), '$result->getMetadata()');

@@ -507,20 +507,6 @@ class TestResources
         return $entity;
     }
 
-    public static function getTestOAuthAccessToken()
-    {
-        $token = array(
-            Resources::OAUTH_ACCESS_TOKEN => 'http%3a%2f%2fschemas.xmlsoap.org%2fws%2f2005%2f05%2fidentity%2fclaims%2fnameidentifier=client_id&http%3a%2f%2fschemas.microsoft.com%2f'
-                . 'accesscontrolservice%2f2010%2f07%2fclaims%2fidentityprovider=https%3a%2f%2fwamsprodglobal001acs.accesscontrol.windows.net%2f&Audience=urn%3aWindows'
-                . 'AzureMediaServices&ExpiresOn=1326498007&Issuer=https%3a%2f%2f wamsprodglobal001acs.accesscontrol.windows.net%2f&HMACSHA256=hV1WF7sTe%2ffoHqzK%2ftm'
-                . 'nwQY22NRPaDytcOOpC9Nv4DA%3d","token_type":"http://schemas.xmlsoap.org/ws/2009/11/swt-token-profile-1.0',
-            Resources::OAUTH_EXPIRES_IN => '3599',
-            Resources::OAUTH_SCOPE => 'urn:WindowsAzureMediaServices'
-        );
-
-        return $token;
-    }
-
     public static function getSimpleJson()
     {
         $data['dataArray'] = array('test1','test2','test3');
@@ -530,28 +516,6 @@ class TestResources
         $data['jsonObject'] = '{"k1":"test1","k2":"test2","k3":"test3"}';
 
         return $data;
-    }
-
-    public static function getMediaServicesTask($outputAssetName) {
-        return '<?xml version="1.0" encoding="utf-8"?><taskBody><inputAsset>JobInputAsset(0)</inputAsset><outputAsset assetCreationOptions="0" assetName="' . $outputAssetName . '">JobOutputAsset(0)</outputAsset></taskBody>';
-    }
-
-    public static function getMediaServicesJobTemplate($taskTemplateId, $outputAssetName) {
-        return '<?xml version="1.0" encoding="utf-8"?><jobTemplate><taskBody taskTemplateId="' . $taskTemplateId . '"><inputAsset>JobInputAsset(0)</inputAsset><outputAsset assetCreationOptions="0" assetName="' . $outputAssetName . '">JobOutputAsset(0)</outputAsset></taskBody></jobTemplate>';
-    }
-
-    public static function getSmallIsm(){
-        return '<?xml version="1.0" encoding="utf-8"?><smil xmlns="http://www.w3.org/2001/SMIL20/Language"><head><meta name="clientManifestRelativePath" content="small.ismc"/></head><body><switch><video src="small.ismv" systemBitrate="952962"><param name="trackID" value="1" valuetype="data" /></video></switch></body></smil>';
-    }
-
-    public static function getSmallIsmc(){
-        return '<?xml version="1.0" encoding="UTF-8"?>
-                <SmoothStreamingMedia MajorVersion="2" MinorVersion="1" Duration="20429600">
-                <StreamIndex Type="video" Url="QualityLevels({bitrate})/Fragments(video={start time})" Name="video" Chunks="1" QualityLevels="1">
-                <QualityLevel Index="0" Bitrate="952962" FourCC="AVC1" MaxWidth="512" MaxHeight="288" CodecPrivateData="0000000167640015ac2ca5020096ffc1000100148303032000000300200000064c08001fe40000ff20fe31c604000ff200007f907f18e1da1225160000000168e9093525"/>
-                <c t="0" d="20429600"/>
-                </StreamIndex>
-                </SmoothStreamingMedia>';
     }
 }
 

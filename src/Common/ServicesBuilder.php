@@ -154,7 +154,7 @@ class ServicesBuilder
 
         // Adding headers filter
         $headers = array(
-            Resources::USER_AGENT => Resources::SDK_USER_AGENT,
+            Resources::USER_AGENT => self::getUserAgent(),
         );
 
         $headers[Resources::X_MS_VERSION] = Resources::STORAGE_API_LATEST_VERSION;
@@ -196,7 +196,7 @@ class ServicesBuilder
         $uri        = Utilities::tryAddUrlScheme(
             $settings->getBlobEndpointUri()
         );
-	
+    
         $blobWrapper = new BlobRestProxy(
             $uri,
             $settings->getName(),
@@ -205,7 +205,7 @@ class ServicesBuilder
 
         // Adding headers filter
         $headers = array(
-            Resources::USER_AGENT => Resources::SDK_USER_AGENT,
+            Resources::USER_AGENT => self::getUserAgent(),
         );
 
         $headers[Resources::X_MS_VERSION] = Resources::STORAGE_API_LATEST_VERSION;
@@ -263,7 +263,7 @@ class ServicesBuilder
         $maxVersion            = Resources::MAX_DATA_SERVICE_VERSION_VALUE;
         $accept                = Resources::ACCEPT_HEADER_VALUE;
         $acceptCharset         = Resources::ACCEPT_CHARSET_VALUE;
-        $userAgent             = Resources::SDK_USER_AGENT;
+        $userAgent             = self::getUserAgent();
 
         $headers[Resources::X_MS_VERSION]             = $latestServicesVersion;
         $headers[Resources::DATA_SERVICE_VERSION]     = $currentVersion;
@@ -292,7 +292,18 @@ class ServicesBuilder
 
         return $tableWrapper;
     }
-
+    
+    /**
+     * Gets the user agent string used in request header.
+     * 
+     * @return string
+     */
+    private static function getUserAgent()
+    {
+        // e.g. User-Agent: Azure-Storage/0.10.0 (PHP 5.5.32)
+        return 'Azure-Storage/0.10.0 (PHP ' . PHP_VERSION . ')'; 
+    }
+    
     /**
      * Gets the static instance of this class.
      *

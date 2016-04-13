@@ -92,9 +92,9 @@ class ListBlobsResult
     {
         $result                 = new ListBlobsResult();
         $serviceEndpoint        = Utilities::tryGetKeysChainValue(
-        	$parsed,
-        	Resources::XTAG_ATTRIBUTES,
-        	Resources::XTAG_SERVICE_ENDPOINT
+            $parsed,
+            Resources::XTAG_ATTRIBUTES,
+            Resources::XTAG_SERVICE_ENDPOINT
         );
         $containerName          = Utilities::tryGetKeysChainValue(
             $parsed,

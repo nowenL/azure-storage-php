@@ -48,7 +48,7 @@ class DateFilter implements IServiceFilter
      */
     public function handleRequest($request)
     {
-    	$date = gmdate(Resources::AZURE_DATE_FORMAT, time());
+        $date = gmdate(Resources::AZURE_DATE_FORMAT, time());
         return $request->withHeader(Resources::DATE, $date);
     }
     
@@ -62,8 +62,8 @@ class DateFilter implements IServiceFilter
      */
     public function handleResponse($request, $response)
     {
-    	// Do nothing with the response.
-    	return $response;
+        // Do nothing with the response.
+        return $response;
     }
 }
 

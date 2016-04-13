@@ -57,9 +57,6 @@ class Resources
     const DEV_STORE_CONNECTION_STRING = 'BlobEndpoint=127.0.0.1:10000;QueueEndpoint=127.0.0.1:10001;TableEndpoint=127.0.0.1:10002;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==';
     const SUBSCRIPTION_ID_NAME = 'SubscriptionID';
     const CERTIFICATE_PATH_NAME = 'CertificatePath';
-    const SHARED_SECRET_ISSUER_NAME = 'SharedSecretIssuer';
-    const SHARED_SECRET_VALUE_NAME = 'SharedSecretValue';
-    const STS_ENDPOINT_NAME = 'StsEndpoint';
 
     // Messages
     const INVALID_TYPE_MSG = 'The provided variable should be of type: ';
@@ -183,9 +180,6 @@ class Resources
     const QUEUE_TYPE_NAME              = 'IQueue';
     const BLOB_TYPE_NAME               = 'IBlob';
     const TABLE_TYPE_NAME              = 'ITable';
-    const SERVICE_MANAGEMENT_TYPE_NAME = 'IServiceManagement';
-    const SERVICE_BUS_TYPE_NAME        = 'IServiceBus';
-    const WRAP_TYPE_NAME               = 'IWrap';
 
     // WRAP
     const WRAP_ACCESS_TOKEN            = 'wrap_access_token';
@@ -193,16 +187,6 @@ class Resources
     const WRAP_NAME                    = 'wrap_name';
     const WRAP_PASSWORD                = 'wrap_password';
     const WRAP_SCOPE                   = 'wrap_scope';
-
-    // OAuth
-    const OAUTH_GRANT_TYPE              = 'grant_type';
-    const OAUTH_CLIENT_ID               = 'client_id';
-    const OAUTH_CLIENT_SECRET           = 'client_secret';
-    const OAUTH_SCOPE                   = 'scope';
-    const OAUTH_GT_CLIENT_CREDENTIALS   = 'client_credentials';
-    const OAUTH_ACCESS_TOKEN            = 'access_token';
-    const OAUTH_EXPIRES_IN              = 'expires_in';
-    const OAUTH_ACCESS_TOKEN_PREFIX     = 'Bearer ';
 
     // HTTP Methods
     const HTTP_GET    = 'GET';
@@ -240,9 +224,7 @@ class Resources
 
 
     // Header values
-    const SDK_USER_AGENT                                = 'Azure-SDK-For-PHP/0.4.1';
     const STORAGE_API_LATEST_VERSION                    = '2015-04-05';
-    const SM_API_LATEST_VERSION                         = '2011-10-01';
     const DATA_SERVICE_VERSION_VALUE                    = '1.0;NetFx';
     const MAX_DATA_SERVICE_VERSION_VALUE                = '2.0;NetFx';
     const ACCEPT_HEADER_VALUE                           = 'application/atom+xml,application/xml';
@@ -250,9 +232,6 @@ class Resources
     const ATOM_FEED_CONTENT_TYPE                        = 'application/atom+xml;type=feed;charset=utf-8';
     const ACCEPT_CHARSET_VALUE                          = 'utf-8';
     const INT32_MAX                                     = 2147483647;
-    const MEDIA_SERVICES_API_LATEST_VERSION             = '2.11';
-    const MEDIA_SERVICES_DATA_SERVICE_VERSION_VALUE     = '3.0;NetFx';
-    const MEDIA_SERVICES_MAX_DATA_SERVICE_VERSION_VALUE = '3.0;NetFx';
 
     // Query parameter names
     const QP_PREFIX             = 'Prefix';

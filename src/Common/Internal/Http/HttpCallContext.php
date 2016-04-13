@@ -432,7 +432,7 @@ class HttpCallContext
         
         if ($uri[strlen($uri)-1] != '/')
         {
-        	$uri = $uri.'/';
+            $uri = $uri.'/';
         }
         
         foreach ($this->_headers as $key => $value) {

@@ -114,8 +114,8 @@ class TableServiceIntegrationTest extends IntegrationTestBase
     
     protected function tearDown()
     {
-    	// tearDown of parent will delete the container created in setUp
-    	// Do nothing here
+        // tearDown of parent will delete the container created in setUp
+        // Do nothing here
     }
 
     private function createTables($prefix, $list)

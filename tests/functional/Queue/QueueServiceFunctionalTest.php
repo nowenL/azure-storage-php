@@ -710,14 +710,14 @@ class QueueServiceFunctionalTest extends FunctionalTestBase
             $res = $this->restProxy->getQueueMetadata($queue);
             $this->verifyGetSetQueueMetadataWorker($res, $metadata);
         } catch (ServiceException $e) {
-        	if (!is_null($metadata) && count($metadata) > 0) {
-        		$keypart = array_keys($metadata);
-        		$keypart = $keypart[0];
-        		if (substr($keypart, 0, 1) == '<')
-        		{
-        			$this->assertEquals(TestResources::STATUS_BAD_REQUEST, $e->getCode(), 'getCode');
-        		}
-        	} else if (!is_null($options->getTimeout()) && $options->getTimeout() < 1) {
+            if (!is_null($metadata) && count($metadata) > 0) {
+                $keypart = array_keys($metadata);
+                $keypart = $keypart[0];
+                if (substr($keypart, 0, 1) == '<')
+                {
+                    $this->assertEquals(TestResources::STATUS_BAD_REQUEST, $e->getCode(), 'getCode');
+                }
+            } else if (!is_null($options->getTimeout()) && $options->getTimeout() < 1) {
                 $this->assertEquals(TestResources::STATUS_INTERNAL_SERVER_ERROR, $e->getCode(), 'getCode');
             } else {
                 throw $e;
@@ -996,7 +996,7 @@ class QueueServiceFunctionalTest extends FunctionalTestBase
                 if ($visibilityTimeoutInSeconds >= QueueServiceFunctionalTestData::INTERESTING_TTL) {
                     $this->assertEquals(0, count($lmr->getQueueMessages()), 'getQueueMessages() count');
                 } else {
-                	$this->assertEquals(1, count($lmr->getQueueMessages()), 'getQueueMessages() count');
+                    $this->assertEquals(1, count($lmr->getQueueMessages()), 'getQueueMessages() count');
                     $qm = $lmr->getQueueMessages();
                     $qm = $qm[0];
                     $this->assertEquals($messageText, $qm->getMessageText(), '$qm->getMessageText');

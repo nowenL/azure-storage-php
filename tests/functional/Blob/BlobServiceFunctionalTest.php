@@ -642,7 +642,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
     {
         $interestingMetadata = BlobServiceFunctionalTestData::getInterestingMetadata();
         foreach($interestingMetadata as $metadata) {
-        	$this->setContainerMetadataWorker(null, $metadata);
+            $this->setContainerMetadataWorker(null, $metadata);
         }
     }
 
@@ -684,34 +684,34 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
         }
 
         try {
-			// And put in some metadata
-			if (is_null ( $options )) {
-				$this->restProxy->setContainerMetadata ( $container, $metadata );
-			} else {
-				$this->restProxy->setContainerMetadata ( $container, $metadata, $options );
-			}
-			
-			if (is_null ( $options )) {
-				$options = new SetContainerMetadataOptions ();
-			}
-			
-			$this->assertFalse ( Utilities::startsWith ( $firstkey, '<' ), 'Should get HTTP request error if the metadata is invalid' );
-			
-			if (! is_null ( $options->getTimeout () ) && $options->getTimeout () < 1) {
-				$this->assertTrue ( false, 'Expect negative timeouts in $options to throw' );
-			}
-			
-			// setMetadata only honors If-Modified-Since
-			if (! $this->isEmulated () && ! BlobServiceFunctionalTestData::passTemporalAccessCondition ( $options->getAccessCondition () ) && (! is_null ( $options->getAccessCondition () ) && $options->getAccessCondition ()->getHeader () != Resources::IF_UNMODIFIED_SINCE)) {
-				$this->assertTrue ( false, 'Expect failing access condition to throw' );
-			}
-			
-			$res = $this->restProxy->getContainerMetadata ( $container );
-			$this->verifyGetContainerMetadataWorker ( $res, $metadata );
+            // And put in some metadata
+            if (is_null ( $options )) {
+                $this->restProxy->setContainerMetadata ( $container, $metadata );
+            } else {
+                $this->restProxy->setContainerMetadata ( $container, $metadata, $options );
+            }
+            
+            if (is_null ( $options )) {
+                $options = new SetContainerMetadataOptions ();
+            }
+            
+            $this->assertFalse ( Utilities::startsWith ( $firstkey, '<' ), 'Should get HTTP request error if the metadata is invalid' );
+            
+            if (! is_null ( $options->getTimeout () ) && $options->getTimeout () < 1) {
+                $this->assertTrue ( false, 'Expect negative timeouts in $options to throw' );
+            }
+            
+            // setMetadata only honors If-Modified-Since
+            if (! $this->isEmulated () && ! BlobServiceFunctionalTestData::passTemporalAccessCondition ( $options->getAccessCondition () ) && (! is_null ( $options->getAccessCondition () ) && $options->getAccessCondition ()->getHeader () != Resources::IF_UNMODIFIED_SINCE)) {
+                $this->assertTrue ( false, 'Expect failing access condition to throw' );
+            }
+            
+            $res = $this->restProxy->getContainerMetadata ( $container );
+            $this->verifyGetContainerMetadataWorker ( $res, $metadata );
         } catch (ServiceException $e) {
-        	if (Utilities::startsWith($firstkey, '<')) {
-        		$this->assertEquals(TestResources::STATUS_BAD_REQUEST, $e->getCode(), 'getCode');
-        	} else if (!$this->isEmulated() &&
+            if (Utilities::startsWith($firstkey, '<')) {
+                $this->assertEquals(TestResources::STATUS_BAD_REQUEST, $e->getCode(), 'getCode');
+            } else if (!$this->isEmulated() &&
                     !BlobServiceFunctionalTestData::passTemporalAccessCondition($options->getAccessCondition()) &&
                     (!is_null($options->getAccessCondition()) &&
                     $options->getAccessCondition()->getHeader() != Resources::IF_UNMODIFIED_SINCE)) {
@@ -1416,9 +1416,9 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
                 $res2 = $this->restProxy->getBlobMetadata($container, $blob);
                 $this->verifyGetBlobMetadataWorker($res2, $metadata);
         } catch (ServiceException $e) {
-			if (Utilities::startsWith($firstkey, '<')) {
-        		$this->assertEquals(TestResources::STATUS_BAD_REQUEST, $e->getCode(), 'getCode');
-			} else if (!is_null($options->getTimeout()) && $options->getTimeout() < 1) {
+            if (Utilities::startsWith($firstkey, '<')) {
+                $this->assertEquals(TestResources::STATUS_BAD_REQUEST, $e->getCode(), 'getCode');
+            } else if (!is_null($options->getTimeout()) && $options->getTimeout() < 1) {
                 $this->assertEquals(TestResources::STATUS_INTERNAL_SERVER_ERROR, $e->getCode(), 'bad timeout: getCode');
             } else if (!BlobServiceFunctionalTestData::passTemporalAccessCondition($options->getAccessCondition())) {
                 $this->assertEquals(TestResources::STATUS_PRECONDITION_FAILED, $e->getCode(), 'bad temporal access condition: getCode');
@@ -1845,7 +1845,7 @@ class BlobServiceFunctionalTest extends FunctionalTestBase
 
             $this->verifyGetBlobWorker($res, $options, $dataSize, $metadata);
         } catch (ServiceException $e) {
-        	if (!is_null($options->getAccessCondition()) &&
+            if (!is_null($options->getAccessCondition()) &&
                     !$this->hasSecureEndpoint() &&
                     $e->getCode() == TestResources::STATUS_FORBIDDEN) {
                 // Proxies can eat the access condition headers of

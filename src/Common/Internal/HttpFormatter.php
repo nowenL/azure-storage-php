@@ -25,31 +25,43 @@ namespace MicrosoftAzure\Storage\Common\Internal;
 
 class HttpFormatter
 {
-	public static function formatHeaders($headers)
-	{
-		$result = array();
-		foreach ($headers as $key => $value)
-		{
-			if (is_array($value) && count($value) == 1)
-			{
-				$result[strtolower($key)] = $value[0];
-			}
-			else 
-			{
-				$result[strtolower($key)] = $value;
-			}
-		}
-		
-		return $result;
-	}
-	
-	public static function getHeader($headers, $key)
-	{
-		if (array_key_exists($key, $headers))
-		{
-			return $headers[$key];
-		}
-		
-		return NULL;
-	}
+    /**
+     * Convert a http headers array into an uniformed format for further process
+     * 
+     * @param array $headers headers for format
+     * 
+     * @return array
+     */
+    public static function formatHeaders($headers)
+    {
+        $result = array();
+        foreach ($headers as $key => $value)
+        {
+            if (is_array($value) && count($value) == 1)
+            {
+                $result[strtolower($key)] = $value[0];
+            }
+            else 
+            {
+                $result[strtolower($key)] = $value;
+            }
+        }
+        
+        return $result;
+    }
+    
+    /**
+     * 
+     * @param array  $headers
+     * @param string $key
+     */
+    public static function getHeader($headers, $key)
+    {
+        if (array_key_exists($key, $headers))
+        {
+            return $headers[$key];
+        }
+        
+        return NULL;
+    }
 }

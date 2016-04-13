@@ -63,7 +63,7 @@ class ListQueuesResult
             Resources::XTAG_SERVICE_ENDPOINT
         );
         $result->_accountName = Utilities::tryParseAccountNameFromUrl(
-        		$serviceEndpoint
+            $serviceEndpoint
         );
         $result->_prefix      = Utilities::tryGetValue(
             $parsedResponse, Resources::QP_PREFIX

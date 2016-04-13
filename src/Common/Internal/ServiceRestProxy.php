@@ -50,12 +50,12 @@ class ServiceRestProxy extends RestProxy
      * @var string
      */
     private $_accountName;
-	
+    
     /**
      * 
      * @var \Uri
      */
-   	private $_psrUri;
+       private $_psrUri;
     
     /**
      * Initializes new ServiceRestProxy object.
@@ -65,15 +65,15 @@ class ServiceRestProxy extends RestProxy
      * @param ISerializer $dataSerializer The data serializer.
      */
     public function __construct($uri, $accountName, $dataSerializer)
-    {   		
-    	if ($uri[strlen($uri)-1] != '/')
-    	{
-    		$uri = $uri . '/';
-    	}
-    	
-    	parent::__construct($dataSerializer, $uri);
-    	
-    	$this->_accountName = $accountName;
+    {           
+        if ($uri[strlen($uri)-1] != '/')
+        {
+            $uri = $uri . '/';
+        }
+        
+        parent::__construct($dataSerializer, $uri);
+        
+        $this->_accountName = $accountName;
         $this->_psrUri = new \GuzzleHttp\Psr7\Uri($uri);
     }
 
@@ -108,43 +108,43 @@ class ServiceRestProxy extends RestProxy
         $path, 
         $statusCode,
         $body = Resources::EMPTY_STRING
-    ) { 	
+    ) {     
         // add query parameters into headers
         $uri = $this->_psrUri;
         if ($path != NULL)
         {
-        	$uri = $uri->withPath($path);
+            $uri = $uri->withPath($path);
         }
         
         if ($queryParams != NULL)
         {
-        	$queryString = Psr7\build_query($queryParams);
-        	$uri = $uri->withQuery($queryString);
+            $queryString = Psr7\build_query($queryParams);
+            $uri = $uri->withQuery($queryString);
         }
         
-    	// add post parameters into bodys
-    	$actualBody = NULL;
-    	if (empty($body))
-    	{
-    		if (empty($headers['content-type']))
-    		{
-    			$headers['content-type'] = 'application/x-www-form-urlencoded';
-    			$actualBody = Psr7\build_query($postParameters);
-    		}
-    	}
-    	else 
-    	{
-    		$actualBody = $body;
-    	}
+        // add post parameters into bodys
+        $actualBody = NULL;
+        if (empty($body))
+        {
+            if (empty($headers['content-type']))
+            {
+                $headers['content-type'] = 'application/x-www-form-urlencoded';
+                $actualBody = Psr7\build_query($postParameters);
+            }
+        }
+        else 
+        {
+            $actualBody = $body;
+        }
         
-    	$request = new Request(
-        		$method, 
-        		$uri,
-        		$headers,
-        		$body);
+        $request = new Request(
+                $method, 
+                $uri,
+                $headers,
+                $body);
         
-    	$client = new \GuzzleHttp\Client(        
-    			array(
+        $client = new \GuzzleHttp\Client(        
+            array(
                 "defaults" => array(
                         "allow_redirects" => true, "exceptions" => true,
                         "decode_content" => true,
@@ -152,58 +152,58 @@ class ServiceRestProxy extends RestProxy
                 'cookies' => true,
                 'verify' => false,
                 // For testing with Fiddler
-                // 'proxy' => "localhost:8888",
+                'proxy' => "localhost:8888",
         ));
-    	
-    	$bodySize = $request->getBody()->getSize();
-    	if ($bodySize > 0)
-    	{
-    		$request = $request->withHeader('content-length', $bodySize);
-    	}
-    	
-    	// Apply filters to the requests
-    	foreach ($this->getFilters() as $filter) {
-    		$request = $filter->handleRequest($request);
-    	}
-    	
-    	try {
-    		$response = $client->send($request);
-    		self::throwIfError(
-    				$response->getStatusCode(), 
-    				$response->getReasonPhrase(), 
-    				$response->getBody(), 
-    				$statusCode);
-    		return $response;
-    	}
-    	catch(\GuzzleHttp\Exception\RequestException $e)
-    	{
-    		if ($e->hasResponse())
-    		{
-    			$response = $e->getResponse();	
-    			self::throwIfError(
-    					$response->getStatusCode(), 
-    					$response->getReasonPhrase(), 
-    					$response->getBody(), 
-    					$statusCode);
-    			return $response;
-    		}
-    		else
-    		{
-    			throw $e;
-    		}
-    	}
+        
+        $bodySize = $request->getBody()->getSize();
+        if ($bodySize > 0)
+        {
+            $request = $request->withHeader('content-length', $bodySize);
+        }
+        
+        // Apply filters to the requests
+        foreach ($this->getFilters() as $filter) {
+            $request = $filter->handleRequest($request);
+        }
+        
+        try {
+            $response = $client->send($request);
+            self::throwIfError(
+                    $response->getStatusCode(), 
+                    $response->getReasonPhrase(), 
+                    $response->getBody(), 
+                    $statusCode);
+            return $response;
+        }
+        catch(\GuzzleHttp\Exception\RequestException $e)
+        {
+            if ($e->hasResponse())
+            {
+                $response = $e->getResponse();    
+                self::throwIfError(
+                        $response->getStatusCode(), 
+                        $response->getReasonPhrase(), 
+                        $response->getBody(), 
+                        $statusCode);
+                return $response;
+            }
+            else
+            {
+                throw $e;
+            }
+        }
     }
     
     protected function sendContext($context)
     {
-    	return $this->send(
-    			$context->getMethod(), 
-    			$context->getHeaders(), 
-    			$context->getQueryParameters(),
-    			$context->getPostParameters(), 
-    			$context->getPath(), 
-    			$context->getStatusCodes(),
-    			$context->getBody());
+        return $this->send(
+                $context->getMethod(), 
+                $context->getHeaders(), 
+                $context->getQueryParameters(),
+                $context->getPostParameters(), 
+                $context->getPath(), 
+                $context->getStatusCodes(),
+                $context->getBody());
     }
     
     /**
@@ -222,11 +222,11 @@ class ServiceRestProxy extends RestProxy
      */
     public static function throwIfError($actual, $reason, $message, $expected)
     {
-    	$expectedStatusCodes = is_array($expected) ? $expected : array($expected);
-    	
-    	if (!in_array($actual, $expectedStatusCodes)) {
-    		throw new ServiceException($actual, $reason, $message);
-    	}
+        $expectedStatusCodes = is_array($expected) ? $expected : array($expected);
+        
+        if (!in_array($actual, $expectedStatusCodes)) {
+            throw new ServiceException($actual, $reason, $message);
+        }
     }
     
     /**
@@ -376,7 +376,7 @@ class ServiceRestProxy extends RestProxy
      */
     public function generateMetadataHeaders($metadata)
     {
-    	$metadataHeaders = array();
+        $metadataHeaders = array();
         
         if (is_array($metadata) && !is_null($metadata)) {
             foreach ($metadata as $key => $value) {
@@ -388,7 +388,7 @@ class ServiceRestProxy extends RestProxy
                 }
                 
                 // Metadata name is case-presrved and case insensitive
-                $headerName					 .= $key;
+                $headerName                     .= $key;
                 $metadataHeaders[$headerName] = $value;
             }
         }
@@ -413,7 +413,7 @@ class ServiceRestProxy extends RestProxy
             );
             
             if ($isMetadataHeader) {
-            	// Metadata name is case-presrved and case insensitive
+                // Metadata name is case-presrved and case insensitive
                 $MetadataName = str_ireplace(
                     Resources::X_MS_META_HEADER_PREFIX,
                     Resources::EMPTY_STRING,
