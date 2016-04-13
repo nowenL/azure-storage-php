@@ -624,7 +624,6 @@ class TableRestProxy extends ServiceRestProxy implements ITable
         $dataSerializer
     ) {
         parent::__construct(
-            // $channel,
             $uri,
             Resources::EMPTY_STRING,
             $dataSerializer

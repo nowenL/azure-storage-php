@@ -408,7 +408,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
         
         $metadata = $this->getMetadataArray($responseHeaders);
         $maxCount = intval(
-            HttpFormatter::getHeader($responseHeaders, Resources::X_MS_APPROXIMATE_MESSAGES_COUNT)
+            Utilities::tryGetValue($responseHeaders, Resources::X_MS_APPROXIMATE_MESSAGES_COUNT)
         );
         
         return new GetQueueMetadataResult($maxCount, $metadata);
@@ -768,8 +768,8 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
         
         $responseHeaders = HttpFormatter::formatHeaders($response->getHeaders());
         
-        $popReceipt      = HttpFormatter::getHeader($responseHeaders, Resources::X_MS_POPRECEIPT);
-        $timeNextVisible = HttpFormatter::getHeader($responseHeaders, Resources::X_MS_TIME_NEXT_VISIBLE);
+        $popReceipt      = Utilities::tryGetValue($responseHeaders, Resources::X_MS_POPRECEIPT);
+        $timeNextVisible = Utilities::tryGetValue($responseHeaders, Resources::X_MS_TIME_NEXT_VISIBLE);
         
         $date   = Utilities::rfc1123ToDateTime($timeNextVisible);
         $result = new UpdateMessageResult();

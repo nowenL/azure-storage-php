@@ -49,19 +49,4 @@ class HttpFormatter
         
         return $result;
     }
-    
-    /**
-     * 
-     * @param array  $headers
-     * @param string $key
-     */
-    public static function getHeader($headers, $key)
-    {
-        if (array_key_exists($key, $headers))
-        {
-            return $headers[$key];
-        }
-        
-        return NULL;
-    }
 }

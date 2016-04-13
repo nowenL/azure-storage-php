@@ -298,9 +298,9 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
         
         $result   = new GetContainerPropertiesResult();
         $metadata = $this->getMetadataArray($responseHeaders);
-        $date     = HttpFormatter::getHeader($responseHeaders, Resources::LAST_MODIFIED);
+        $date     = Utilities::tryGetValue($responseHeaders, Resources::LAST_MODIFIED);
         $date     = Utilities::rfc1123ToDateTime($date);
-        $result->setETag(HttpFormatter::getHeader($responseHeaders, Resources::ETAG));
+        $result->setETag(Utilities::tryGetValue($responseHeaders, Resources::ETAG));
         $result->setMetadata($metadata);
         $result->setLastModified($date);
         
@@ -956,9 +956,9 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
         
         $responseHeaders = HttpFormatter::formatHeaders($response->getHeaders());
         
-        $access       = HttpFormatter::getHeader($responseHeaders, Resources::X_MS_BLOB_PUBLIC_ACCESS);
-        $etag         = HttpFormatter::getHeader($responseHeaders, Resources::ETAG);
-        $modified     = HttpFormatter::getHeader($responseHeaders, Resources::LAST_MODIFIED);
+        $access       = Utilities::tryGetValue($responseHeaders, Resources::X_MS_BLOB_PUBLIC_ACCESS);
+        $etag         = Utilities::tryGetValue($responseHeaders, Resources::ETAG);
+        $modified     = Utilities::tryGetValue($responseHeaders, Resources::LAST_MODIFIED);
         $modifiedDate = Utilities::convertToDateTime($modified);
         $parsed       = $this->dataSerializer->unserialize($response->getBody());
                 

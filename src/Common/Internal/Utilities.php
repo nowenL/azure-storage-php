@@ -429,7 +429,6 @@ class Utilities
         $cloned = clone $value;
         $cloned->setTimezone(new \DateTimeZone('UTC'));
         return str_replace('+0000', 'Z', $cloned->format("Y-m-d\TH:i:s.u0O"));
-        // return str_replace('+0000', 'Z', $cloned->format(\DateTime::ISO8601));
     }
 
     /**
