@@ -1,10 +1,10 @@
 <?php
 
 /**
- * LICENSE: Licensed under the Apache License, Version 2.0 (the "License");
+ * LICENSE: The MIT License (the "License")
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
+ * https://github.com/azure/azure-storage-php/LICENSE
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,9 +16,9 @@
  *
  * @category  Microsoft
  * @package   MicrosoftAzure\Storage\Common\Internal\Authentication
- * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
- * @copyright 2012 Microsoft Corporation
- * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
+ * @author    Azure Storage PHP SDK <dmsh@microsoft.com>
+ * @copyright 2016 Microsoft Corporation
+ * @license   https://github.com/azure/azure-storage-php/LICENSE
  * @link      http://github.com/windowsazure/azure-sdk-for-php
  */
  
@@ -33,9 +33,9 @@ use MicrosoftAzure\Storage\Common\Internal\Utilities;
  *
  * @category  Microsoft
  * @package   MicrosoftAzure\Storage\Common\Internal\Authentication
- * @author    Azure PHP SDK <azurephpsdk@microsoft.com>
- * @copyright 2012 Microsoft Corporation
- * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
+ * @author    Azure Storage PHP SDK <dmsh@microsoft.com>
+ * @copyright 2016 Microsoft Corporation
+ * @license   https://github.com/azure/azure-storage-php/LICENSE
  * @version   Release: 0.4.1_2015-03
  * @link      http://github.com/windowsazure/azure-sdk-for-php
  */
