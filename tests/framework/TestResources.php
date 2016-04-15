@@ -506,6 +506,19 @@ class TestResources
 
         return $entity;
     }
+    
+    public static function getExpectedTestEntity($partitionKey, $rowKey)
+    {
+        $entity = new Entity();
+        $entity->addProperty('PartitionKey', EdmType::STRING, $partitionKey);
+        $entity->addProperty('RowKey', EdmType::STRING, $rowKey);
+        $entity->addProperty('CustomerId', EdmType::INT32, 890);
+        $entity->addProperty('CustomerName', EdmType::STRING, 'John');
+        $entity->addProperty('IsNew', EdmType::BOOLEAN, true);
+        $entity->addProperty('JoinDate', EdmType::DATETIME, Utilities::convertToDateTime('2012-01-26T18:26:19.0000473Z'));
+    
+        return $entity;
+    }
 
     public static function getSimpleJson()
     {
