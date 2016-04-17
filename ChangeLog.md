@@ -4,7 +4,6 @@ ALL
 * Remove all pear dependencies: HTTP_Request2, Mail_mime, and Mail_mimeDecode. Use Guzzle as underlying http client library.
 * Update storage REST API version to 2015-04-05.
 * Change root namespace from "WindowsAzure" to "MicrosoftAzure/Storage".
-* Metadata headers returned from sever now is case-preserved.
 * When set metadata operations contains invalid characters, it throws a ServiceException with 400 bad request error instead of Http_Request2_LogicException.
 
 Blob
