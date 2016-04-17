@@ -32,7 +32,7 @@ namespace MicrosoftAzure\Storage\Common\Internal\Authentication;
  * @author    Azure Storage PHP SDK <dmsh@microsoft.com>
  * @copyright Microsoft Corporation
  * @license   https://github.com/azure/azure-storage-php/LICENSE
- * @version   Release: 0.4.1_2015-03
+ * @version   Release: 0.10.0
  * @link      https://github.com/azure/azure-storage-php
  */
 interface IAuthScheme

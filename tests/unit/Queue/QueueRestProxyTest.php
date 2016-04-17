@@ -44,11 +44,11 @@ use MicrosoftAzure\Storage\Common\ServiceException;
  * Unit tests for QueueRestProxy class
  *
  * @package    MicrosoftAzure\Storage\Tests\Unit\Queue
- * @author     Azure PHP SDK <azurephpsdk@microsoft.com>
- * @copyright  2012 Microsoft Corporation
- * @license    https://github.com/azure/azure-storage-php/LICENSE  Apache License 2.0
- * @version    Release: 0.4.1_2015-03
- * @link       https://github.com/windowsazure/azure-sdk-for-php
+ * @author     Azure Storage PHP SDK <dmsh@microsoft.com>
+ * @copyright  2016 Microsoft Corporation
+ * @license    https://github.com/azure/azure-storage-php/LICENSE
+ * @version    Release: 0.10.0
+ * @link       https://github.com/azure/azure-storage-php
  */
 class QueueRestProxyTest extends QueueServiceRestProxyTestBase
 {

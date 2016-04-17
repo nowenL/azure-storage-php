@@ -296,7 +296,7 @@ class QueueServiceFunctionalTest extends FunctionalTestBase
     private function verifyListQueuesWorker($ret, $options)
     {
         // Uncomment when fixed
-        // https://github.com/WindowsAzure/azure-sdk-for-php/issues/98
+        // https://github.com/azure/azure-storage-php/issues/98
         //$this->assertEquals($accountName, $ret->getAccountName(), 'getAccountName');
 
         $this->assertEquals($options->getMarker(), $ret->getMarker(), 'getMarker');
@@ -381,7 +381,7 @@ class QueueServiceFunctionalTest extends FunctionalTestBase
             if (is_null($options)) {
                 $this->restProxy->createQueue($queue);
             } else {
-                // TODO: https://github.com/WindowsAzure/azure-sdk-for-php/issues/105
+                // TODO: https://github.com/azure/azure-storage-php/issues/105
                 $this->restProxy->createQueue($queue, $options);
             }
             $created = true;

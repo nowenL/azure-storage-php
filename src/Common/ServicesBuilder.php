@@ -49,7 +49,7 @@ use MicrosoftAzure\Storage\Table\Internal\MimeReaderWriter;
  * @author    Azure Storage PHP SDK <dmsh@microsoft.com>
  * @copyright 2016 Microsoft Corporation
  * @license   https://github.com/azure/azure-storage-php/LICENSE
- * @version   Release: 0.4.1_2015-03
+ * @version   Release: 0.10.0
  * @link      https://github.com/azure/azure-storage-php
  */
 class ServicesBuilder
@@ -301,7 +301,7 @@ class ServicesBuilder
     private static function getUserAgent()
     {
         // e.g. User-Agent: Azure-Storage/0.10.0 (PHP 5.5.32)
-        return 'Azure-Storage/0.10.0 (PHP ' . PHP_VERSION . ')'; 
+        return 'Azure-Storage/' . Resources::SDK_VERSION . ' (PHP ' . PHP_VERSION . ')'; 
     }
     
     /**

@@ -265,7 +265,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
         $this->assertNotNull($result->getQueues(), '$result->getQueues');
 
         // TODO: Uncomment when the following issue is fixed:
-        // https://github.com/WindowsAzure/azure-sdk-for-php/issues/98
+        // https://github.com/azure/azure-storage-php/issues/98
         // $this->assertNotNull($result->getAccountName(), '$result->getAccountName()');
         $this->assertEquals('', $result->getMarker(), '$result->getMarker');
         $this->assertNull($result->getMaxResults(), '$result->getMaxResults');
@@ -298,7 +298,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
         $this->assertEquals(3, count($result->getQueues()), 'count($result->getQueues');
         $this->assertEquals(3, $result->getMaxResults(), '$result->getMaxResults');
         // TODO: Uncomment when the following issue is fixed:
-        // https://github.com/WindowsAzure/azure-sdk-for-php/issues/98
+        // https://github.com/azure/azure-storage-php/issues/98
         // $this->assertNotNull($result->getAccountName(), '$result->getAccountName()');
         $this->assertNull($result->getMarker(), '$result->getMarker');
         $queue0 = $result->getQueues();
@@ -307,7 +307,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
         $this->assertNotNull(
                 $queue0->getMetadata(),
                 '$queue0->getMetadata' .
-                ' (https://github.com/WindowsAzure/azure-sdk-for-php/issues/252)');
+                ' (https://github.com/azure/azure-storage-php/issues/252)');
         $this->assertNotNull($queue0->getName(), '$queue0->getName');
         $this->assertNotNull($queue0->getUrl(), '$queue0->getUrl');
 
@@ -316,7 +316,7 @@ class QueueServiceIntegrationTest extends IntegrationTestBase
         $this->assertTrue(count(self::$testQueues) - 3 <= count($result2->getQueues()), 'count');
         $this->assertEquals(0, $result2->getMaxResults(), '$result2->getMaxResults');
         // TODO: Uncomment when the following issue is fixed:
-        // https://github.com/WindowsAzure/azure-sdk-for-php/issues/98
+        // https://github.com/azure/azure-storage-php/issues/98
         // $this->assertNotNull($result2->getAccountName(), '$result2->getAccountName()');
         $this->assertEquals($result->getNextMarker(), $result2->getMarker(), '$result2->getMarker');
         $queue20 = $result2->getQueues();
