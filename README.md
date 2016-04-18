@@ -90,7 +90,7 @@ $queueClient = ServicesBuilder::getInstance()->createQueueService($connectionStr
 
 ## Code samples
 
-You can find samples in the [sample folder](https://github.com/Azure/azure-storage-php/tree/master/samples?)
+You can find samples in the [sample folder](samples)
 
 
 # Migrate from [Azure SDK for PHP](https://github.com/Azure/azure-sdk-for-php/)

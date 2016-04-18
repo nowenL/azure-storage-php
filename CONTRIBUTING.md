@@ -59,7 +59,7 @@ The following are the minimum requirements for any pull request that must be met
 	* You should strive to mimic the style with which we have written the library
 	* Clean, well-commented, well-designed code
 	* Try to limit the number of commits for a feature to 1-2. If you end up having too many we may ask you to squash your changes into fewer commits.
-* [changelog.md](changelog.md) needs to be updated describing the new change
+* [ChangeLog.md](ChangeLog.md) needs to be updated describing the new change
 * Thoroughly test your feature
 
 ### Branching Policy
