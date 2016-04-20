@@ -101,13 +101,14 @@ function peekNextMessageSample($queueClient)
     $messageCount = count($messages);
     if($messageCount <= 0){
         echo "There are no messages.".PHP_EOL;
-    }
-    else{
-        foreach($messages as $message)  {
+    } else {
+        foreach($messages as $message) {
             echo "Peeked message:".PHP_EOL;
             echo "Message Id: ".$message->getMessageId().PHP_EOL;
             echo "Date: ".date_format($message->getInsertionDate(), 'Y-m-d').PHP_EOL;
-            echo "Message text: ".$message->getMessageText().PHP_EOL.PHP_EOL;
+            $msg = $message->getMessageText();
+            // optional: $msg = base64_decode($msg);
+            echo "Message text: ".$msg.PHP_EOL.PHP_EOL;
         }
     }
 }

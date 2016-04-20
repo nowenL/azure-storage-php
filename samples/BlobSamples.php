@@ -32,13 +32,17 @@ use MicrosoftAzure\Storage\Common\ServiceException;
 $connectionString = 'DefaultEndpointsProtocol=https;AccountName=<yourAccount>;AccountKey=<yourKey>';
 $blobClient = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
-// To create a table call createContainer.
+// To create a container call createContainer.
 createContainerSample($blobClient);
 
 // To upload a file as a blob, use the BlobRestProxy->createBlockBlob method. This operation will
 // create the blob if it doesn¡¯t exist, or overwrite it if it does. The code example below assumes 
 // that the container has already been created and uses fopen to open the file as a stream.
 uploadBlobSample($blobClient);
+
+// To download blob into a file, use the BlobRestProxy->getBlob method. The example below assumes
+// the blob to download has been already created.
+downloadBlobSample($blobClient);
 
 // To list the blobs in a container, use the BlobRestProxy->listBlobs method with a foreach loop to loop
 // through the result. The following code outputs the name and URI of each blob in a container.
@@ -84,6 +88,19 @@ function uploadBlobSample($blobClient)
         $error_message = $e->getMessage();
         echo $code.": ".$error_message.PHP_EOL;
     }
+}
+
+function downloadBlobSample($blobClient)
+{
+    try {
+        $getBlobResult = $blobClient->getBlob("mycontainer", "myblob");
+    } catch (ServiceException $e) {
+        $code = $e->getCode();
+        $error_message = $e->getMessage();
+        echo $code.": ".$error_message.PHP_EOL;
+    }
+    
+    file_put_contents("output.txt", $getBlobResult->getContentStream());
 }
 
 function listBlobsSample($blobClient)

@@ -25,6 +25,7 @@ require_once "../vendor/autoload.php";
 
 use MicrosoftAzure\Storage\Common\ServicesBuilder;
 use MicrosoftAzure\Storage\Common\ServiceException;
+use MicrosoftAzure\Storage\Table\Models\BatchOperations;
 use MicrosoftAzure\Storage\Table\Models\Entity;
 use MicrosoftAzure\Storage\Table\Models\EdmType;
 
@@ -40,9 +41,15 @@ createTableSample($tableClient);
 // The system uses PartitionKey to automatically distribute the table¡¯s entities over many storage nodes.
 insertEntitySample($tableClient);
 
+// To add mutiple entities with one call, create a BatchOperations and pass it to TableRestProxy->batch.
+// Note that all these entities must have the same PartitionKey value. BatchOperations supports to update,
+// merge, delete entities as well. You can find more details in:
+//   https://msdn.microsoft.com/library/azure/dd894038.aspx
+batchInsertEntitiesSample($tableClient);
+
 // To query for entities you can call queryEntities. The subset of entities you retrieve will be determined 
 // by the filter you use (for more information, see Querying Tables and Entities):
-//   http://msdn.microsoft.com/en-us/library/windowsazure/dd894031.aspx
+//   https://msdn.microsoft.com/library/azure/dd894031.aspx
 // You can also provide no filter at all.
 queryEntitiesSample($tableClient);
 
@@ -63,7 +70,7 @@ function insertEntitySample($tableClient)
     $entity = new Entity();
     $entity->setPartitionKey("pk");
     $entity->setRowKey("1");
-    $entity->addProperty("PropertyName", EdmType::STRING, "Sample");
+    $entity->addProperty("PropertyName", EdmType::STRING, "Sample1");
     
     try{
         $tableClient->insertEntity("mytable", $entity);
@@ -74,9 +81,31 @@ function insertEntitySample($tableClient)
     }
 }
 
+function batchInsertEntitiesSample($tableClient)
+{
+    $batchOp = new BatchOperations();
+    for ($i = 2; $i < 10; ++$i)
+    {
+        $entity = new Entity();
+        $entity->setPartitionKey("pk");
+        $entity->setRowKey(''.$i);
+        $entity->addProperty("PropertyName", EdmType::STRING, "Sample".$i);
+        
+        $batchOp->addInsertEntity("mytable", $entity);
+    }
+    
+    try {
+        $tableClient->batch($batchOp);
+    } catch(ServiceException $e){
+        $code = $e->getCode();
+        $error_message = $e->getMessage();
+        echo $code.": ".$error_message.PHP_EOL;
+    }
+}
+
 function queryEntitiesSample($tableClient)
 {
-    $filter = "RowKey eq '1'";
+    $filter = "RowKey ne '3'";
     
     try {
         $result = $tableClient->queryEntities("mytable", $filter);
